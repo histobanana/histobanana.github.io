@@ -1,0 +1,793 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex,nofollow,noarchive">
+<meta property="og:type" content="video.other">
+<meta property="og:site_name" content="HistoBanana">
+<meta property="og:title" content="HistoBanana">
+<meta property="og:description" content="HistoBanana is a one-step pixel-space H&amp;E generator trained from scratch, without a VAE or a pathology foundation model, that is also instruction-tuned to segment, grade and detect.">
+<meta property="og:url" content="https://histobanana.github.io/">
+<meta property="og:image" content="https://histobanana.github.io/assets/video/explainer-poster.jpg">
+<meta property="og:image:width" content="1920">
+<meta property="og:image:height" content="1080">
+<meta property="og:video" content="https://histobanana.github.io/assets/video/explainer.mp4">
+<meta property="og:video:url" content="https://histobanana.github.io/assets/video/explainer.mp4">
+<meta property="og:video:secure_url" content="https://histobanana.github.io/assets/video/explainer.mp4">
+<meta property="og:video:type" content="video/mp4">
+<meta property="og:video:width" content="1920">
+<meta property="og:video:height" content="1080">
+<meta name="twitter:card" content="player">
+<meta name="twitter:title" content="HistoBanana">
+<meta name="twitter:description" content="HistoBanana is a one-step pixel-space H&amp;E generator trained from scratch, without a VAE or a pathology foundation model, that is also instruction-tuned to segment, grade and detect.">
+<meta name="twitter:image" content="https://histobanana.github.io/assets/video/explainer-poster.jpg">
+<meta name="twitter:player" content="https://histobanana.github.io/assets/video/player.html">
+<meta name="twitter:player:width" content="1280">
+<meta name="twitter:player:height" content="720">
+<meta name="twitter:player:stream" content="https://histobanana.github.io/assets/video/explainer.mp4">
+<meta name="twitter:player:stream:content_type" content="video/mp4">
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="HistoBanana is a one-step pixel-space H&amp;E generator trained from scratch, without a VAE or a pathology foundation model, that is also instruction-tuned to segment, grade and detect.">
+  <meta name="theme-color" content="#ffca28">
+  <title>HistoBanana</title>
+  <link rel="icon" href="assets/img/banana-icon.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="nav-shell">
+      <a class="brand" href="#top" aria-label="HistoBanana, top of page">
+        <img src="assets/img/banana-icon.png" alt="" width="40" height="30">
+        <span>HistoBanana</span>
+      </a>
+      <nav class="nav-links" aria-label="Page sections">
+        <a href="#video">Video</a>
+        <a href="#method">Method</a>
+        <a href="#generation">Generation</a>
+        <a href="#regions">Regions</a>
+        <a href="#tasks">Tasks</a>
+        <a href="#play">Segment it yourself</a>
+        <a href="#results">Results</a>
+      </nav>
+      <details class="nav-menu">
+        <summary aria-label="Open the section menu">Menu</summary>
+        <div class="nav-menu-list">
+        <a href="#video">Video</a>
+        <a href="#method">Method</a>
+        <a href="#generation">Generation</a>
+        <a href="#regions">Regions</a>
+        <a href="#tasks">Tasks</a>
+        <a href="#play">Segment it yourself</a>
+        <a href="#results">Results</a>
+        </div>
+      </details>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- hero -->
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="eyebrow-dot"></span> Under double-blind review · 2026</div>
+          <h1><span class="title-a">Histo</span><span class="title-b">Banana</span></h1>
+          <p class="subtitle">One-Step H&amp;E Pixel Generators Are General Pathology Learners</p>
+          <p class="claim">A text-to-image generator of H&amp;E histology that works directly on pixels, samples in one network evaluation and uses no VAE and no pathology foundation model. Instruction-tuned on tasks posed as images, the same network learns to segment, grade and detect.</p>
+          <p class="authors">Anonymous authors — under review</p>
+          <div class="publication-links" aria-label="Project resources">
+            <span class="button button-muted" aria-disabled="true">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg>
+              Paper <small>coming soon</small>
+            </span>
+            <span class="button button-muted" aria-disabled="true">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 8-4 4 4 4M16 8l4 4-4 4M13.5 5l-3 14"/></svg>
+              Code <small>coming soon</small>
+            </span>
+            <a class="button button-dark" href="#play">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1-4L16 5l3 3L8 19z"/><path d="M14 7l3 3"/></svg>
+              Segment it yourself
+            </a>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="hero-mosaic" data-hero-mosaic></div>
+          <div class="hero-halo"></div>
+          <img src="assets/img/banana.png" alt="" data-mascot>
+        </div>
+      </div>
+    </section>
+
+    <!-- teaser -->
+    <section class="teaser-section" id="teaser" aria-label="Teaser">
+      <div class="container">
+        <div class="teaser-grid" data-teaser>
+          <figure class="teaser-tile" data-tile="t2i">
+            <div class="tile-stage">
+              <div class="tt-prompt"><span class="tt-label">prompt</span><span class="tt-main"><span class="tt-text" data-tt-text></span><span class="tt-caret" aria-hidden="true"></span><span class="tt-add" data-tt-add hidden></span></span></div>
+              <div class="tt-samples" data-tt-samples></div>
+            </div>
+            <figcaption><strong>Text to H&amp;E patch</strong> <span data-tt-control>one network evaluation, straight to pixels</span></figcaption>
+          </figure>
+          <figure class="teaser-tile" data-tile="zoom" data-zoom="region8k">
+            <div class="tile-stage"><div class="tz-frame" data-tz-frame></div><span class="tz-scale" data-tz-scale></span></div>
+            <figcaption><strong>Regions of any size</strong> a generated 8,192 px region, zooming to full resolution</figcaption>
+          </figure>
+          <figure class="teaser-tile" data-tile="tasks">
+            <div class="tile-stage">
+              <div class="tk-pair">
+                <div class="tk-frame"><img alt="" data-tk-img><span>input</span></div>
+                <div class="tk-arrow" aria-hidden="true">→</div>
+                <div class="tk-frame tk-out"><img alt="" data-tk-img2><canvas width="224" height="224" data-tk-canvas></canvas><span>painted answer</span></div>
+              </div>
+              <div class="tk-instruction" data-tk-text></div>
+            </div>
+            <figcaption><strong>Tasks as images</strong> the tuned model paints its answer next to the input</figcaption>
+          </figure>
+          <figure class="teaser-tile" data-tile="report">
+            <div class="tile-stage">
+              <div class="tt-prompt tr-text"><span class="tt-label">report</span><span class="tt-text" data-tr-text></span></div>
+              <div class="tr-images"><div class="tr-img" data-tr-full><span>8,192 px region</span></div><div class="tr-img" data-tr-detail><span>detail, 0.5 µm/px</span></div></div>
+            </div>
+            <figcaption><strong>From a report to a region</strong> a report summary conditions the whole region</figcaption>
+          </figure>
+        </div>
+        <div class="teaser-bar">
+          <p>All four panels show model outputs. Inputs of the task panel are test images; the report text is a summary of a public TCGA report.</p>
+          <button class="ghost-button" type="button" data-teaser-toggle aria-pressed="false">Pause animation</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- video -->
+    <section class="video-section" id="video">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">Explainer · 107 seconds, no sound</p>
+          <h2>Video overview</h2>
+          <p>Motivation, approach and results in sixteen shots. All numbers are from the main tables of the paper.</p>
+        </div>
+        <div class="video-shell">
+          <video controls muted playsinline preload="metadata" poster="assets/video/explainer-poster.jpg" width="1920" height="1080" aria-label="Explainer video of HistoBanana: motivation, approach and results, without sound">
+            <source src="assets/video/explainer.mp4" type="video/mp4">
+            <source src="assets/video/explainer.webm" type="video/webm">
+          </video>
+        </div>
+      </div>
+    </section>
+
+    <!-- at a glance -->
+    <section class="section tldr-section" id="abstract">
+      <div class="container narrow">
+        <p class="section-kicker">The paper in one paragraph</p>
+        <h2>Abstract</h2>
+        <p class="lead">
+          Generative models of hematoxylin and eosin (H&amp;E) histology have advanced rapidly with latent diffusion and pathology foundation models (FMs). However, their reliance on pretrained latent spaces for generation and FM embeddings for conditioning can propagate the biases of the underlying models, potentially limiting image fidelity and diversity. We train HistoBanana, a one-step pixel-space text-to-image generator, from scratch on public H&amp;E images, with no variational autoencoder or FM. Our results indicate that neither is needed: on held-out patients, HistoBanana sets the state of the art in text-to-image generation, achieving a 22% lower Fréchet distance in H-optimus-1 feature space than the strongest prior model, MuPaD (286 vs. 369). Because sampling takes a single step, the model can be run autoregressively to generate realistic regions of any size, unconditionally or guided by a low-resolution view or a text report, up to whole slides, about five times faster than BigCell. Instruction-tuned on tasks expressed as images, it learns to segment, grade and detect, and its samples serve as synthetic training data for few-shot classification. Our results show that pixel-based generative pretraining delivers state-of-the-art H&amp;E generation without FMs and transfers beyond realistic image generation.
+        </p>
+        <div class="stat-row" aria-label="Numbers from the paper">
+          <div class="stat"><strong>1</strong><span>network evaluation per patch</span></div>
+          <div class="stat"><strong>5.35</strong><span>FID on PanHE · real control 5.39</span></div>
+          <div class="stat"><strong>286</strong><span>H1-FD · best prior model 369</span></div>
+          <div class="stat"><strong>9</strong><span>task families, one set of weights</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- method -->
+    <section class="section" id="method">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">Three models, one network</p>
+          <h2>Method overview</h2>
+        </div>
+
+        <div class="mv-hero" role="img" aria-label="HistoBanana turns a text prompt and known pixels into a 224 pixel patch in one step. The region model and HistoBanana-Instruct both start from it.">
+          <div class="mv-in"><span class="mv-chip">text prompt</span><span class="mv-chip">known pixels</span></div>
+          <i class="mv-arr" aria-hidden="true"></i>
+          <div class="mv-core"><strong>HistoBanana</strong><span>one step · pixels</span></div>
+          <i class="mv-arr" aria-hidden="true"></i>
+          <figure class="mv-node"><img class="mv-t" src="assets/method/sample0.webp" alt="" loading="lazy"><figcaption>224 px patch</figcaption></figure>
+          <div class="mv-fork" aria-hidden="true"></div>
+          <div class="mv-uses">
+            <figure class="mv-node"><img class="mv-t" src="assets/gen/regions/slide_compact/thumb.webp" alt="" loading="lazy"><figcaption>regions, slides</figcaption></figure>
+            <figure class="mv-node"><span class="mv-pair"><img class="mv-t" src="assets/tasks/pannuke/00_he.webp" alt="" loading="lazy"><img class="mv-t" src="assets/method/pannuke_answer.png" alt="" loading="lazy"></span><figcaption>tasks</figcaption></figure>
+          </div>
+        </div>
+
+        <div class="mv-steps">
+          <article class="mv-step">
+            <header><span class="mv-n">1</span><h3>Two-stage training</h3></header>
+            <p>Denoise real patches, then match sets of samples to sets of real patches.</p>
+            <div class="mv-pic" role="img" aria-label="Stage 1: a noisy patch goes in and the clean patch comes out. Stage 2: a set of samples is matched to a set of real patches.">
+              <div class="mv-frame"><span class="mv-tag">denoise</span><div class="mv-row"><img class="mv-t" src="assets/method/noisy.webp" alt="" loading="lazy"><i class="mv-arr" aria-hidden="true"></i><img class="mv-t" src="assets/tasks/beetle/00_he.webp" alt="" loading="lazy"></div></div>
+              <div class="mv-frame mv-grow"><span class="mv-tag">match sets</span><svg class="mv-match" viewBox="0 0 396 114" role="img" aria-label="Six generated samples, each connected to a different real patch"><g class="mv-lines"><path d="M26.0 28.0 C 116.0 28.0, 222.0 28.0, 312.0 28.0" style="--d:0"/><path d="M84.0 28.0 C 174.0 28.0, 164.0 86.0, 254.0 86.0" style="--d:1"/><path d="M142.0 28.0 C 232.0 28.0, 164.0 28.0, 254.0 28.0" style="--d:2"/><path d="M26.0 86.0 C 116.0 86.0, 280.0 86.0, 370.0 86.0" style="--d:3"/><path d="M84.0 86.0 C 174.0 86.0, 280.0 28.0, 370.0 28.0" style="--d:4"/><path d="M142.0 86.0 C 232.0 86.0, 222.0 86.0, 312.0 86.0" style="--d:5"/></g><image href="assets/method/sample0.webp" x="0" y="2" width="52" height="52" clip-path="inset(0 round 7px)"/><image href="assets/method/sample1.webp" x="58" y="2" width="52" height="52" clip-path="inset(0 round 7px)"/><image href="assets/method/sample2.webp" x="116" y="2" width="52" height="52" clip-path="inset(0 round 7px)"/><image href="assets/method/sample3.webp" x="0" y="60" width="52" height="52" clip-path="inset(0 round 7px)"/><image href="assets/method/sample4.webp" x="58" y="60" width="52" height="52" clip-path="inset(0 round 7px)"/><image href="assets/method/sample5.webp" x="116" y="60" width="52" height="52" clip-path="inset(0 round 7px)"/><image href="assets/method/real0.webp" x="228" y="2" width="52" height="52" clip-path="inset(0 round 7px)"/><image href="assets/method/real1.webp" x="286" y="2" width="52" height="52" clip-path="inset(0 round 7px)"/><image href="assets/method/real2.webp" x="344" y="2" width="52" height="52" clip-path="inset(0 round 7px)"/><image href="assets/method/real3.webp" x="228" y="60" width="52" height="52" clip-path="inset(0 round 7px)"/><image href="assets/method/real4.webp" x="286" y="60" width="52" height="52" clip-path="inset(0 round 7px)"/><image href="assets/method/real5.webp" x="344" y="60" width="52" height="52" clip-path="inset(0 round 7px)"/><g class="mv-dots"><circle cx="26.0" cy="28.0" r="5"/><circle cx="84.0" cy="28.0" r="5"/><circle cx="142.0" cy="28.0" r="5"/><circle cx="26.0" cy="86.0" r="5"/><circle cx="84.0" cy="86.0" r="5"/><circle cx="142.0" cy="86.0" r="5"/><circle class="r" cx="254.0" cy="28.0" r="5"/><circle class="r" cx="312.0" cy="28.0" r="5"/><circle class="r" cx="370.0" cy="28.0" r="5"/><circle class="r" cx="254.0" cy="86.0" r="5"/><circle class="r" cx="312.0" cy="86.0" r="5"/><circle class="r" cx="370.0" cy="86.0" r="5"/></g></svg><div class="mv-under"><span>samples · one step</span><span>real patches</span></div></div>
+            </div>
+            <details><summary>Details</summary><p>Training follows Priming. Stage 1 (100k updates of 1,024 patches): a real patch with noise at a randomly drawn, mostly high level goes in, the clean patch comes out; the loss is pixel error plus LPIPS plus a feature distance under our image–text encoder. Stage 2 (25k updates; 64 conditions with 16 samples and 16 real patches each): from pure noise, samples are compared as a set with real patches of the same prompt, in the features of frozen ImageNet encoders, with a Sinkhorn optimal-transport distance. Every real patch has to be matched, so samples cannot all look alike. No VAE, no pathology foundation model.</p></details>
+          </article>
+
+          <article class="mv-step">
+            <header><span class="mv-n">2</span><h3>Conditioning</h3></header>
+            <p>Text fields and known pixels steer every sample.</p>
+            <div class="mv-pic" role="img" aria-label="Prompt fields become 64 text tokens next to 196 image tokens; a patch with known pixels on one side is completed.">
+              <div class="mv-frame mv-grow"><span class="mv-tag">prompt</span><div class="mv-chips"><span class="mv-chip">organ</span><span class="mv-chip">preparation</span><span class="mv-chip">diagnosis</span><span class="mv-chip">scale</span><span class="mv-chip is-opt">notes</span><span class="mv-chip is-opt">fields</span><span class="mv-chip is-opt">caption</span></div>
+                <div class="mv-tokens"><span class="is-text">64 text tokens</span><span>196 image tokens</span></div></div>
+              <div class="mv-frame"><span class="mv-tag">known pixels</span><div class="mv-row"><span class="mv-half"><img class="mv-t" src="assets/tasks/beetle/01_he.webp" alt="" loading="lazy"><img class="mv-t" src="assets/method/noise.png" alt="" loading="lazy"></span><i class="mv-arr" aria-hidden="true"></i><img class="mv-t" src="assets/tasks/beetle/01_he.webp" alt="" loading="lazy"></div></div>
+            </div>
+            <details><summary>Details</summary><p>The prompt is built from a slide's record: organ, preparation, diagnosis and scale, optionally followed by slide notes, pathology fields or a patch caption. A frozen Qwen3-VL-4B encodes it once; a resampler turns it into 64 tokens that sit next to the 196 image tokens (16 × 16 px each). In training each field, and the whole prompt, is dropped at random (10% each), so any subset is a valid prompt, including none. A mask marks known pixels: they replace the noise at those positions and are kept in the output.</p></details>
+          </article>
+
+          <article class="mv-step">
+            <header><span class="mv-n">3</span><h3>Any-size regions</h3></header>
+            <p>Overlapping windows, generated coarse to fine, up to whole slides.</p>
+            <div class="mv-pic" role="img" aria-label="Overlapping windows with one new window continuing its neighbours; three zooms from 8 to 0.5 micrometres per pixel.">
+              <div class="mv-frame"><span class="mv-tag">windows · any order</span><svg class="mv-win" viewBox="0 0 150 116" aria-hidden="true"><g class="w-done"><rect x="4" y="4" width="56" height="56" rx="6"/><rect x="84" y="4" width="56" height="56" rx="6"/><rect x="4" y="56" width="56" height="56" rx="6"/><rect x="84" y="56" width="56" height="56" rx="6"/></g><rect class="w-new" x="44" y="30" width="56" height="56" rx="6"/></svg></div>
+              <div class="mv-frame mv-grow"><span class="mv-tag">coarse to fine</span><div class="mv-row"><figure class="mv-node"><img class="mv-t" src="assets/gen/regions/region8k/thumb.webp" alt="" loading="lazy"><figcaption>8 µm/px</figcaption></figure><i class="mv-arr" aria-hidden="true"></i><figure class="mv-node"><img class="mv-t" src="assets/gen/teaser/region8k_1.webp" alt="" loading="lazy"><figcaption>2 µm/px</figcaption></figure><i class="mv-arr" aria-hidden="true"></i><figure class="mv-node"><img class="mv-t" src="assets/gen/teaser/region8k_2.webp" alt="" loading="lazy"><figcaption>0.5 µm/px</figcaption></figure></div></div>
+            </div>
+            <details><summary>Details</summary><p>A region is a grid of 224 px windows at stride 160, filled in a few rounds in random order. Each window is one call of the patch generator: the 64 px it shares with finished neighbours are given as known pixels, and a context network summarises its surroundings (up to 12 × 12 windows, at a quarter of the resolution). Three such levels form a cascade, each guiding the next with its picture of the same field; the thumbnails are three zooms into one generated region. An 8,192 × 8,192 px region takes 9 + 169 + 2,601 = 2,779 patch evaluations. For a whole slide, a thumbnail or a tissue outline replaces the coarsest level.</p></details>
+          </article>
+
+          <article class="mv-step">
+            <header><span class="mv-n">4</span><h3>Tasks as images</h3></header>
+            <p>Given an H&amp;E frame and an instruction, the model paints the answer.</p>
+            <div class="mv-pic" role="img" aria-label="An H&amp;E frame next to its painted answer frame, and four kinds of painted answers.">
+              <div class="mv-frame"><span class="mv-tag">canvas · one step</span><div class="mv-row"><span class="mv-pair"><img class="mv-t" src="assets/tasks/pannuke/00_he.webp" alt="" loading="lazy"><img class="mv-t is-out" src="assets/method/pannuke_answer.png" alt="" loading="lazy"></span></div></div>
+              <div class="mv-frame mv-grow"><span class="mv-tag">answers</span><div class="mv-row mv-sw"><figure class="mv-node"><img class="mv-t" src="assets/method/beetle_answer.png" alt="" loading="lazy"><figcaption>classes</figcaption></figure><figure class="mv-node"><img class="mv-t" src="assets/method/inst_pannuke_answer.png" alt="" loading="lazy"><figcaption>instances</figcaption></figure><figure class="mv-node"><img class="mv-t" src="assets/method/det_pannuke_answer.png" alt="" loading="lazy"><figcaption>cells</figcaption></figure><figure class="mv-node"><img class="mv-t" src="assets/method/panda_r_answer.png" alt="" loading="lazy"><figcaption>one label</figcaption></figure></div></div>
+            </div>
+            <details><summary>Details</summary><p>Input and answer sit side by side on a canvas of 224 × 448 px. The input half is given as known pixels, the instruction names the classes, and the model paints the answer half in one step: one colour per class, interior and boundary for nucleus instances, a disc per cell, the whole frame in the class colour for classification, a dot per structure for TLS. Each painted pixel is read back as the class with the nearest colour. Instruction tuning on 43 tasks in nine families from 19 datasets gives HistoBanana-Instruct; it is used for tasks only, and the canvas adds no parameters.</p></details>
+          </article>
+        </div>
+        <p class="mv-foot">Pictures in the diagrams are model outputs or public test images.</p>
+      </div>
+    </section>
+
+    <!-- generation -->
+    <section class="section section-soft" id="generation">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">HistoBanana · patches</p>
+          <h2>Image generation</h2>
+          <p>Pick a prompt. Each one is shown with its first eight random seeds, in order, with none removed. Every patch is 224 px and took one network evaluation.</p>
+        </div>
+        <div class="t2i" data-t2i>
+          <div class="task-tabs" role="tablist" aria-label="Prompt group">
+            <button class="task-tab is-active" type="button" role="tab" aria-selected="true" data-group="tumour">Tumours</button>
+            <button class="task-tab" type="button" role="tab" aria-selected="false" data-group="normal">Normal tissue</button>
+            <button class="task-tab" type="button" role="tab" aria-selected="false" data-group="scale">Scale in the prompt</button>
+          </div>
+          <div class="t2i-body">
+            <div class="chip-list" data-t2i-chips aria-label="Prompts"></div>
+            <div class="t2i-main">
+              <div class="prompt-bubble-wide"><span class="prompt-label">Prompt</span><span data-t2i-prompt></span></div>
+              <div class="sample-grid" data-t2i-grid></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sub-heading">
+          <h3>Browse by control</h3>
+          <p>One field of the prompt changes per line; the other fields stay fixed. Fixed seeds, none removed. Prompts can also carry slide notes, pathology fields (stage, grade, morphology) and patch captions; each is shown with and without the extra text, on the same seeds. Besides text, the generator accepts known pixels, and the region model gives every window a summary of its surroundings and accepts a coarse view, a tissue outline or a report summary (see Large regions).</p>
+        </div>
+        <div class="t2i controls" data-controls>
+          <div class="task-tabs" role="tablist" aria-label="Control" data-ctl-tabs></div>
+          <div class="ctl-body" data-ctl-body></div>
+        </div>
+
+        <div class="sub-heading">
+          <h3>Unconditional samples</h3>
+          <p>With an empty prompt the model chooses organ, diagnosis and scale by itself, so the samples below mix all seven training scales, from 0.25 to 16 µm/px.</p>
+        </div>
+        <div class="uncond-grid" data-uncond></div>
+
+        <div class="figure-row">
+          <figure class="wide-paper-figure">
+            <img src="assets/fig/t2i_compute.webp" alt="Scatter plots of FID and H1-FD against GFLOPs per image for HistoBanana and five baselines" loading="lazy" width="2000" height="1044">
+            <figcaption><strong>Quality against inference compute on PanHE.</strong> FID and H1-FD against GFLOPs per image. HistoBanana (star) uses one network evaluation, no VAE and no pathology foundation model.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- regions -->
+    <section class="section" id="regions">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">Region model · up to whole slides</p>
+          <h2>Large regions</h2>
+          <p>Generated regions in a viewer: without a prompt, inside a tissue outline, and from a report summary. Drag to pan; scroll, pinch or use the buttons to zoom. Nothing here is a real slide: the whole-slide examples only borrow the tissue outline of a held-out slide.</p>
+        </div>
+        <div class="viewer-shell" data-viewer>
+          <div class="viewer-thumbs" data-viewer-thumbs role="tablist" aria-label="Generated region"></div>
+          <div class="viewer-stage" data-viewer-stage tabindex="0" aria-label="Zoomable generated region. Use arrow keys to pan, plus and minus to zoom.">
+            <canvas data-viewer-canvas></canvas>
+            <div class="viewer-controls">
+              <button type="button" data-zoom-in aria-label="Zoom in">+</button>
+              <button type="button" data-zoom-out aria-label="Zoom out">−</button>
+              <button type="button" data-zoom-reset aria-label="Reset view"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button>
+            </div>
+            <div class="viewer-scale" data-viewer-scale aria-hidden="true"><span></span><em></em></div>
+            <div class="viewer-hint" data-viewer-hint>Click, then scroll to zoom</div>
+          </div>
+          <div class="viewer-caption" data-viewer-caption aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- tasks -->
+    <section class="section section-soft" id="tasks">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">HistoBanana-Instruct · one set of weights</p>
+          <h2>Tasks as images</h2>
+          <p>Test images, the instruction the model receives, and what it paints. Drag the divider to compare prediction and ground truth, fade the masks to see the tissue, and click a class to hide it. Scores are computed in your browser for the image on screen.</p>
+        </div>
+
+        <div class="task-demo" data-explorer>
+          <div class="task-tabs" role="tablist" aria-label="Task family" data-ex-tabs></div>
+          <div class="chip-list chip-row" data-ex-sets aria-label="Dataset"></div>
+          <div class="task-pipeline">
+            <article class="pipeline-card input-card">
+              <span class="card-label">Input · H&amp;E, 224 px</span>
+              <img class="task-image" alt="" data-ex-input>
+              <span class="card-foot" data-ex-inputfoot></span>
+            </article>
+            <div class="pipeline-arrow">
+              <span class="prompt-label">Instruction</span>
+              <span class="prompt-bubble" data-ex-prompt></span>
+              <span class="model-pill">HistoBanana-Instruct</span>
+              <svg viewBox="0 0 80 16" aria-hidden="true"><path d="M2 8h70M64 2l8 6-8 6"/></svg>
+              <div class="decode-step">
+                <strong>Readout</strong>
+                <span data-ex-readout>nearest class colour per pixel</span>
+              </div>
+            </div>
+            <article class="pipeline-card output-card">
+              <div class="card-heading">
+                <span class="card-label">Prediction <b>|</b> ground truth</span>
+                <span class="comparison-hint">drag the divider</span>
+              </div>
+              <div class="compare" data-ex-compare>
+                <img class="task-image" alt="" data-ex-base>
+                <canvas width="224" height="224" data-ex-canvas></canvas>
+                <div class="compare-divider" data-ex-divider role="slider" tabindex="0" aria-label="Divider between prediction and ground truth" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"><span></span></div>
+                <span class="compare-tag tag-left">prediction</span>
+                <span class="compare-tag tag-right">ground truth</span>
+                <div class="hover-tip" data-ex-tip hidden></div>
+              </div>
+              <label class="slider-row">Mask opacity <input type="range" min="0" max="100" value="70" data-ex-opacity></label>
+            </article>
+          </div>
+          <div class="ex-lower">
+            <div class="legend" data-ex-legend aria-label="Classes; click to hide or show"></div>
+            <div class="ex-metrics" data-ex-metrics aria-live="polite"></div>
+          </div>
+          <div class="task-example-footer">
+            <div><strong data-ex-title></strong> <span class="muted" data-ex-note></span></div>
+            <div class="task-example-nav">
+              <button type="button" data-ex-prev aria-label="Previous example">←</button>
+              <span data-ex-count></span>
+              <button type="button" data-ex-next aria-label="Next example">→</button>
+            </div>
+          </div>
+        </div>
+        <p class="result-note">The examples were selected among high-scoring test predictions, one window per test image and different patients where possible, so they show the model at its best rather than on average. The score of each full test set from the paper is given next to the dataset name; the per-image scores are computed in your browser. For classification, correctly classified tiles come first.</p>
+
+        <div class="tls-block" data-tls>
+          <div class="sub-heading">
+            <h3>TLS detection on whole slides</h3>
+            <p>Tertiary lymphoid structures (TLS) are found by scanning a slide at 4 µm/px in overlapping windows; in each window the model paints a dot per structure. The dot maps of all windows are averaged and thresholded into detections. Over all 678 test slides the paper reports F1 .258 (a detection counts when it lies inside an annotated TLS); the six slides below are among the best of each cohort, so they are not typical.</p>
+          </div>
+          <div class="stage tls-strip">
+            <span class="stage-tag">How a slide is processed</span>
+            <div class="flow">
+              <figure class="node"><img class="tls-step" src="assets/tasks/tls/strip_windows.webp" alt="Slide with overlapping windows over the tissue" loading="lazy"><figcaption>1 · windows over the tissue</figcaption></figure>
+              <i class="arr">→</i>
+              <figure class="node"><img class="tls-step" src="assets/tasks/tls/s0/p0.webp" alt="A field of the slide next to the dots painted for it" loading="lazy"><figcaption>2 · a dot painted per structure</figcaption></figure>
+              <i class="arr">→</i>
+              <figure class="node"><img class="tls-step" src="assets/tasks/tls/strip_map.webp" alt="Slide with the merged dot map" loading="lazy"><figcaption>3 · dot maps merged</figcaption></figure>
+              <i class="arr">→</i>
+              <figure class="node"><img class="tls-step" src="assets/tasks/tls/strip_det.webp" alt="Slide with circles at the detections" loading="lazy"><figcaption>4 · detections</figcaption></figure>
+            </div>
+          </div>
+          <div class="chip-list tls-slides" data-tls-slides aria-label="Test slide"></div>
+          <div class="tls-grid">
+            <div>
+              <div class="tls-stage" data-tls-stage tabindex="0" aria-label="Slide view. Use the buttons, the mouse wheel after a click, or two fingers to zoom; drag to move.">
+                <div class="viewer-controls">
+                  <button type="button" data-tls-zoom="in" aria-label="Zoom in">+</button>
+                  <button type="button" data-tls-zoom="out" aria-label="Zoom out">−</button>
+                  <button type="button" data-tls-zoom="reset" aria-label="Reset view"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button>
+                </div>
+                <div class="tls-inner" data-tls-inner>
+                  <img alt="Low-resolution view of a held-out TCGA slide" data-tls-img>
+                  <img class="tls-heat" alt="" data-tls-heat>
+                  <svg class="tls-dots tls-truth" data-tls-truth aria-hidden="true"></svg>
+                  <svg class="tls-dots" data-tls-dots aria-hidden="true"></svg>
+                </div>
+              </div>
+              <div class="tls-bar">
+                <label class="check"><input type="checkbox" checked data-tls-toggle="heat"> Dot map</label>
+                <label class="check"><input type="checkbox" checked data-tls-toggle="dots"> <i class="dot dot-det"></i>Detections</label>
+                <label class="check"><input type="checkbox" checked data-tls-toggle="truth"> <i class="dot dot-truth"></i>Annotated TLS</label>
+                <label class="slider-row tls-op">Dot map opacity <input type="range" min="10" max="100" value="90" data-tls-opacity></label>
+              </div>
+              <p class="result-note" data-tls-count aria-live="polite"></p>
+              <p class="result-note tls-hint" data-tls-hint>Zoom with the buttons, or click the slide and use the mouse wheel; drag to move. Zooming in loads the slide at 4 µm/px.</p>
+            </div>
+            <div class="tls-detail">
+              <span class="card-label">Detail of the selected spot</span>
+              <img alt="A field of the slide and the model's dot map for it" data-tls-pair>
+              <p class="result-note" data-tls-detailtext>Tap a circle on the slide to see that spot: the tissue on the left, the model's dot map on the right.</p>
+            </div>
+          </div>
+          <div class="tls-scatter">
+            <div>
+              <h4>Detected against annotated TLS, per test slide</h4>
+              <p class="result-note" data-tls-scattertext></p>
+            </div>
+            <svg data-tls-scatter viewBox="0 0 340 340" role="img" aria-label="Scatter plot of detected against annotated TLS per test slide"></svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- play -->
+    <section class="section play-section" id="play">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">Your turn</p>
+          <h2>Segment it yourself</h2>
+          <p>Read the instruction the model gets, paint your answer over the H&amp;E image, then compare with the ground truth and with the model. The model sees the same 224 px image and paints once. The images are test windows on which the model scores high, so it is a strong opponent here.</p>
+        </div>
+
+        <div class="play" data-play tabindex="-1">
+          <div class="play-tasks" role="tablist" aria-label="Task" data-play-tasks></div>
+          <div class="play-main">
+            <div class="play-left">
+              <div class="play-instruction"><span class="prompt-label">Instruction</span><span data-play-instruction></span></div>
+              <div class="play-canvas-wrap" data-play-wrap>
+                <img alt="H&amp;E image to segment" data-play-img draggable="false">
+                <canvas width="224" height="224" data-play-canvas aria-label="Painting canvas"></canvas>
+                <div class="brush-cursor" data-play-cursor hidden></div>
+              </div>
+              <div class="play-meta"><span data-play-count></span><span data-play-scale></span></div>
+            </div>
+            <div class="play-right">
+              <div class="tool-group">
+                <span class="tool-title">Classes <small>keys 1–9</small></span>
+                <div class="palette" data-play-palette role="radiogroup" aria-label="Class to paint"></div>
+              </div>
+              <div class="tool-group">
+                <span class="tool-title">Brush</span>
+                <div class="tool-row">
+                  <button type="button" class="tool is-active" data-tool="brush" aria-pressed="true" title="Brush (B)">Brush</button>
+                  <button type="button" class="tool" data-tool="fill" aria-pressed="false" title="Fill a region (F)">Fill</button>
+                  <button type="button" class="tool" data-tool="lasso" aria-pressed="false" title="Draw an outline, release to fill it (L)">Lasso</button>
+                  <button type="button" class="tool" data-tool="eraser" aria-pressed="false" title="Eraser (E)">Eraser</button>
+                </div>
+                <div class="tool-row">
+                  <button type="button" class="tool" data-play-undo title="Undo (Ctrl+Z)">Undo</button>
+                  <button type="button" class="tool" data-play-redo title="Redo (Ctrl+Y)">Redo</button>
+                  <button type="button" class="tool" data-play-clear title="Clear">Clear</button>
+                  <button type="button" class="tool" data-play-fillrest title="Give every unpainted pixel the selected class">Fill unpainted with <span data-play-fillname>class</span></button>
+                </div>
+                <p class="tool-hint" data-play-hint aria-live="polite"></p>
+                <div class="tool-row" hidden>
+                </div>
+                <label class="slider-row">Size <input type="range" min="1" max="40" value="8" data-play-size aria-label="Brush size"> <output data-play-sizeout>8</output></label>
+                <label class="slider-row">Mask opacity <input type="range" min="10" max="100" value="60" data-play-opacity aria-label="Mask opacity"></label>
+              </div>
+              <div class="tool-row actions">
+                <button type="button" class="button button-dark" data-play-compare>Compare</button>
+                <button type="button" class="button button-light" data-play-next>Next image</button>
+              </div>
+              <p class="shortcut-note"><kbd>1</kbd>–<kbd>9</kbd> class · <kbd>B</kbd> brush · <kbd>F</kbd> fill · <kbd>L</kbd> lasso · <kbd>E</kbd> eraser · <kbd>[</kbd> <kbd>]</kbd> size · <kbd>Ctrl</kbd>+<kbd>Z</kbd> undo · <kbd>Ctrl</kbd>+<kbd>Y</kbd> redo · <kbd>Enter</kbd> compare · <kbd>N</kbd> next</p>
+            </div>
+          </div>
+
+          <div class="play-result" data-play-result hidden>
+            <p class="verdict" data-play-verdict aria-live="polite"></p>
+            <div class="result-panels">
+              <figure><div class="mini" data-mini="user"><img alt=""><canvas width="224" height="224"></canvas></div><figcaption>You<span data-score="user"></span></figcaption></figure>
+              <figure><div class="mini" data-mini="gt"><img alt=""><canvas width="224" height="224"></canvas></div><figcaption>Ground truth<span>the reference</span></figcaption></figure>
+              <figure><div class="mini" data-mini="model"><img alt=""><canvas width="224" height="224"></canvas></div><figcaption>HistoBanana-Instruct<span data-score="model"></span></figcaption></figure>
+            </div>
+            <div class="result-legend" data-play-legend aria-label="Class colours"></div>
+            <div class="result-table-wrap metrics-wrap"><table class="result-table num-table metrics-table">
+              <thead><tr><th scope="col">Metric</th><th scope="col">You</th><th scope="col">HistoBanana-Instruct</th><th scope="col" class="txt">Ahead</th></tr></thead>
+              <tbody data-play-metrics></tbody>
+            </table></div>
+            <div class="tool-row actions">
+              <button type="button" class="button button-light" data-play-edit>Keep painting</button>
+              <button type="button" class="button button-dark" data-play-next2>Next image</button>
+            </div>
+            <p class="result-note">The verdict is a majority vote over mIoU, Dice and pixel agreement; a metric counts for one side when it is ahead by more than 0.02. mIoU is the intersection over union per class, averaged over the classes that appear in the ground truth or in the answer; Dice is averaged the same way; foreground Dice treats every class other than the first as one. For nuclei, bPQ is the binary panoptic quality with connected painted regions as instances. Pixels without a label (grey hatching) are not scored.</p>
+          </div>
+
+          <div class="scoreboard" data-play-board>
+            <div class="scoreboard-head">
+              <h3>Scoreboard</h3>
+              <button type="button" class="ghost-button" data-play-reset>Reset</button>
+            </div>
+            <div class="result-table-wrap"><table class="result-table board-table">
+              <thead><tr><th scope="col">Task</th><th scope="col">Images</th><th scope="col">You ahead</th><th scope="col">Your mean mIoU</th><th scope="col">Model mean mIoU</th></tr></thead>
+              <tbody data-play-boardbody></tbody>
+            </table></div>
+            <p class="result-note">Kept in this browser only. These images were selected among the model's high-scoring test predictions, so the numbers here say little about the benchmark results below.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- results -->
+    <section class="section section-soft results-section" id="results">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">Numbers from the paper</p>
+          <h2>Results</h2>
+          <p>The three main tables. All models are evaluated on patients held out of training, with the exceptions listed in the paper.</p>
+        </div>
+
+        <div class="benchmark-comparison">
+          <div class="comparison-heading">
+            <h3>Patch generation on PanHE</h3>
+            <p>PanHE holds 50k patches at 0.5 µm/px from 1,379 held-out patients and 112 organs. Each text-conditioned image is generated from the prompt of one PanHE patch; distances use 10k images per side. H1-FD is the Fréchet distance in H-optimus-1 features, a pathology foundation model that no generator here uses. Organ and diagnosis adherence are normalised so that 0 is chance and 1 is real data.</p>
+          </div>
+          <div class="result-table-wrap" role="region" aria-label="Text-conditioned and unconditional generation on PanHE" tabindex="0">
+            <table class="result-table num-table">
+              <thead>
+                <tr><th scope="col" rowspan="2">Model</th><th scope="colgroup" colspan="7">Text-conditioned</th><th scope="col">Unconditional†</th><th scope="col" rowspan="2">GFLOPs ↓</th></tr>
+                <tr><th scope="col">FID ↓</th><th scope="col">H1-FD ↓</th><th scope="col">IS</th><th scope="col">H1-IS ↑</th><th scope="col">P / R ↑</th><th scope="col">Organ ↑</th><th scope="col">Diag. ↑</th><th scope="col">FID / H1-FD ↓</th></tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row">BigCell</th><td>40.9</td><td>450</td><td>4.36</td><td>6.6</td><td>.60 / .53</td><td>.13</td><td>.17</td><td>54.6 / 553</td><td>15,397</td></tr>
+                <tr><th scope="row">MuPaD</th><td>32.2</td><td>369</td><td>3.63</td><td>9.1</td><td>.57 / .64</td><td>.15</td><td>.20</td><td>36.9 / 403</td><td>149,462</td></tr>
+                <tr><th scope="row">PathLDM</th><td>65.3</td><td>758</td><td>3.70</td><td>2.3</td><td>.77 / .22</td><td>.00</td><td>.01</td><td>50.6 / 662</td><td>22,031</td></tr>
+                <tr><th scope="row">PathDiff</th><td>100.6</td><td>919</td><td>3.47</td><td>3.3</td><td>.51 / .23</td><td>.01</td><td>.02</td><td>91.4 / 760</td><td>84,911</td></tr>
+                <tr><th scope="row">UniPath</th><td>125.2</td><td>879</td><td>5.45</td><td>5.1</td><td>.24 / .51</td><td>.10</td><td>.11</td><td>–</td><td>41,389</td></tr>
+                <tr class="ours"><th scope="row">HistoBanana (ours)</th><td><strong>5.35</strong></td><td><strong>286</strong></td><td><strong>3.88</strong></td><td><strong>15.7</strong></td><td><strong>.84</strong> / <strong>.76</strong></td><td><strong>.76</strong></td><td><strong>.69</strong></td><td><strong>7.8</strong> / <strong>327</strong></td><td><strong>229</strong></td></tr>
+                <tr class="control"><th scope="row">Real (control)</th><td>5.39</td><td>82.5</td><td>3.89</td><td>28.2</td><td>.83 / .79</td><td>1</td><td>1</td><td>5.39 / 82.5</td><td>–</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="result-note">Bold: best (IS: closest to real). †Ours: random training prompts (empty prompt: FID 13.1); baselines: empty condition; UniPath needs a prompt. The real control is a disjoint set of 10k patches from 425 other held-out patients.</p>
+        </div>
+
+        <div class="benchmark-comparison">
+          <div class="comparison-heading">
+            <h3>Unconditional regions on LargeHE</h3>
+            <p>Kernel Inception Distance × 1000 (0 in expectation for real regions) at three levels: cells (crops at 0.5 µm/px), tissue (2 µm/px) and architecture (8 µm/px), plus one slide-encoder embedding per region. Mean of the held-out HISTAI and TCGA/GTEx sources.</p>
+          </div>
+          <div class="result-table-wrap" role="region" aria-label="Unconditional regions on LargeHE" tabindex="0">
+            <table class="result-table num-table">
+              <thead>
+                <tr><th scope="col" rowspan="2">Method</th><th scope="col" rowspan="2">Pathology FMs it is built on</th><th scope="colgroup" colspan="2">1,024 px</th><th scope="colgroup" colspan="3">8,192 px</th><th scope="colgroup" colspan="3">Real sizes</th></tr>
+                <tr><th scope="col">cell ↓</th><th scope="col">tissue ↓</th><th scope="col">cell ↓</th><th scope="col">tissue ↓</th><th scope="col">arch. ↓</th><th scope="col">cell ↓</th><th scope="col">tissue ↓</th><th scope="col">region ↓</th></tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row">BigCell</th><td class="txt">UNI-2h, TITAN</td><td><strong>34</strong></td><td>52</td><td>91</td><td>99</td><td>243</td><td>69</td><td>104</td><td>1.7</td></tr>
+                <tr><th scope="row">PixCell-1024</th><td class="txt">UNI-2h</td><td>84</td><td>135</td><td>158</td><td>169</td><td>232</td><td>153</td><td>170</td><td>2.5</td></tr>
+                <tr><th scope="row">CytoSyn-v2</th><td class="txt">H0-mini</td><td>214</td><td>201</td><td>224</td><td>211</td><td>405</td><td>221</td><td>235</td><td>2.4</td></tr>
+                <tr class="ours"><th scope="row">HistoBanana (ours)</th><td class="txt">none</td><td>47</td><td><strong>24</strong></td><td><strong>43</strong></td><td><strong>24</strong></td><td><strong>28</strong></td><td><strong>48</strong></td><td><strong>29</strong></td><td><strong>1.1</strong></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="result-note">A 32,768 × 32,768 px region takes 19 min on one A100, against 98 min for BigCell from a UNI-2h grid.</p>
+        </div>
+
+        <div class="benchmark-comparison">
+          <div class="comparison-heading">
+            <h3>Tasks as images</h3>
+            <p>One model, HistoBanana-Instruct, against the best baseline without and with a frozen pathology foundation model. The baselines are trained on the same images and labels, most of them for one dataset or one task.</p>
+          </div>
+          <div class="result-table-wrap" role="region" aria-label="Tasks as images" tabindex="0">
+            <table class="result-table num-table task-table">
+              <thead><tr><th scope="col">Task family</th><th scope="col">Metric ↑</th><th scope="col">FM-free baseline</th><th scope="col">Frozen-FM baseline</th><th scope="col">HistoBanana-Instruct</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">Segmentation, 20 sets‡</th><td class="txt">mIoU</td><td>.594 <small>SegFormer</small></td><td><strong>.603</strong> <small>UNI + decoder</small></td><td>.552</td></tr>
+                <tr><th scope="row">Gleason, PANDA</th><td class="txt">mIoU</td><td>.343 <small>ConvNeXt-V2 probe</small></td><td>.465 <small>UNI probe</small></td><td><strong>.517</strong></td></tr>
+                <tr><th scope="row">Gleason, SICAPv2</th><td class="txt">mIoU</td><td>.343 <small>ConvNeXt-V2 probe</small></td><td><strong>.420</strong> <small>UNI probe</small></td><td>.374</td></tr>
+                <tr><th scope="row">Nucleus instances, 6 sets</th><td class="txt">bPQ</td><td><strong>.677</strong> <small>HoVer-Net</small></td><td>.412 <small>UNI + decoder</small></td><td>.573</td></tr>
+                <tr><th scope="row">Cell detection, 6 sets</th><td class="txt">F1</td><td><strong>.881</strong> <small>HoVer-Net</small></td><td>.704 <small>UNI + decoder</small></td><td>.858</td></tr>
+                <tr><th scope="row">Nuclei, CoNSeP*</th><td class="txt">Dice</td><td><strong>.782</strong> <small>nnU-Net</small></td><td>.719 <small>UNI + decoder</small></td><td>.772</td></tr>
+                <tr><th scope="row">Nuclei, Kumar*</th><td class="txt">Dice</td><td>.807 <small>SegFormer</small></td><td>.788 <small>UNI + decoder</small></td><td><strong>.824</strong></td></tr>
+                <tr><th scope="row">Nuclei, Lizard*</th><td class="txt">Dice</td><td><strong>.737</strong> <small>nnU-Net</small></td><td>.551 <small>UNI + decoder</small></td><td>.685</td></tr>
+                <tr><th scope="row">TLS, 678 slides</th><td class="txt">F1</td><td>–</td><td>.140 <small>H-optimus-0 + decoder</small></td><td><strong>.258</strong></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="result-note">*Zero-shot: the dataset is in no training mix. ‡Dataset and scale pairs. Generation and tasks use separate weights, and no pathologist has assessed the results.</p>
+        </div>
+
+        <div class="more-results">
+          <div class="comparison-heading">
+            <h3>More results</h3>
+            <p>Tables from the appendix of the paper. Open one to read it.</p>
+          </div>
+<!-- more-results:start -->
+<details class="more-table"><summary>The nine task families</summary>
+<div class="result-table-wrap" role="region" aria-label="The nine task families" tabindex="0"><table class="result-table num-table">
+<thead>
+<tr><th scope="col">Family</th><th scope="col">Metric</th><th scope="col">Test</th><th scope="col">HistoBanana-Instruct</th><th scope="col">FM-free baseline</th><th scope="col">Frozen-FM baseline</th></tr>
+</thead><tbody>
+<tr><th scope="row">Tissue segmentation</th><td>mIoU ↑, mean</td><td>6 sets</td><td>.679</td><td><strong>.720</strong> (SegFormer)</td><td>.719 (UNI + decoder)</td></tr>
+<tr><th scope="row">Nuclei segmentation</th><td>mIoU ↑, mean</td><td>4 sets<sup>e</sup></td><td>.389</td><td><strong>.477</strong> (SegFormer)</td><td>.469 (UNI + decoder)</td></tr>
+<tr><th scope="row">Tissue and nuclei</th><td>mIoU ↑, mean</td><td>PUMA<sup>e</sup></td><td>.255</td><td>.366 (SegFormer)</td><td><strong>.400</strong> (UNI + decoder)</td></tr>
+<tr><th scope="row">Virtual IHC</th><td>mIoU ↑, mean</td><td>8 markers</td><td>.612</td><td><strong>.641</strong> (nnU-Net)</td><td>.635 (UNI + decoder)</td></tr>
+<tr><th scope="row">Gleason, PANDA</th><td>mIoU / tumour IoU ↑</td><td>10,670 images</td><td><strong>.517</strong> / <strong>.834</strong></td><td>.343 / .653 (probe<sup>b</sup>)</td><td>.465 / .768 (UNI probe)</td></tr>
+<tr><th scope="row">Gleason, SICAPv2</th><td>mIoU / tumour IoU ↑</td><td>4,006 images</td><td>.374 / <strong>.688</strong></td><td>.343 / .543 (probe<sup>b</sup>)</td><td><strong>.420</strong> / .630 (UNI probe)</td></tr>
+<tr><th scope="row">Nucleus instances</th><td>bPQ ↑, mean</td><td>6 sets<sup>c</sup></td><td>.573</td><td>.583 (nnU-Net), <strong>.677</strong> (HoVer-Net)</td><td>.412 (UNI + decoder)</td></tr>
+<tr><th scope="row">Cell detection</th><td>localisation F1 ↑, mean</td><td>6 sets<sup>c</sup></td><td>.858</td><td>.812 (nnU-Net), <strong>.881</strong> (HoVer-Net)</td><td>.704 (UNI + decoder)</td></tr>
+<tr><th scope="row">TLS detection</th><td>F1 ↑</td><td>678 slides</td><td><strong>.258</strong></td><td>–</td><td>.140 (H-optimus-0 + decoder)</td></tr>
+<tr><th scope="row">Classification</th><td>bal. acc. ↑, mean</td><td>4 sets<sup>d</sup></td><td>.496</td><td>.538 (probe<sup>b</sup>)</td><td><strong>.675</strong> (UNI probe)</td></tr>
+</tbody></table></div>
+<p class="result-note">one row each (Gleason grading: one row per dataset), against the strongest baselines we ran (FM-free: no pathology FM; ImageNet initialisation allowed); best value of each row in bold.
+ <sup>b</sup>ImageNet ConvNeXt-V2-B linear probe.
+<sup>c</sup>MoNuSAC, PUMA, TNBC at 0.5 and 0.25 µm/px (TNBC has no instance maps, so it is zero-shot for HistoBanana-Instruct); nnU-Net and HoVer-Net per dataset; segmentation baselines give instances as connected components, HoVer-Net by its own watershed. Cell detection with every painted component counted as one cell, instead of the distance-transform peaks used in the paper, gives F1 .176.
+<sup>d</sup>BRACS, TCGA-UT-8K, PANDA (two sites). <sup>e</sup>At 0.5 and 0.25 µm/px.</p>
+</details>
+<details class="more-table"><summary>Segmentation per dataset</summary>
+<div class="result-table-wrap" role="region" aria-label="Segmentation per dataset" tabindex="0"><table class="result-table num-table">
+<thead>
+<tr><th scope="col"></th><th scope="col"></th><th scope="col" colspan="4">No foundation model</th><th scope="col" colspan="2">Frozen UNI</th></tr>
+<tr><th scope="col">Dataset</th><th scope="col"><strong>HistoBanana-Instruct</strong></th><th scope="col">U-Net, rand.</th><th scope="col">U-Net, IN</th><th scope="col">SegFormer-B2</th><th scope="col">nnU-Net</th><th scope="col">UNI + lin.</th><th scope="col">UNI + dec.</th></tr>
+<tr><th scope="col"></th><th scope="col">1 model</th><th scope="col">1 multi-task</th><th scope="col">1 multi-task</th><th scope="col">1 multi-task</th><th scope="col">1 per dataset</th><th scope="col">1 multi-task</th><th scope="col">1 multi-task</th></tr>
+</thead><tbody>
+<tr><th scope="row">BEETLE</th><td>.658</td><td>.623</td><td>.690</td><td><strong>.802</strong></td><td>.585</td><td>.637</td><td>.757</td></tr>
+<tr><th scope="row">DigestPath</th><td>.786</td><td>.726</td><td>.788</td><td>.793</td><td>.776</td><td>.796</td><td><strong>.804</strong></td></tr>
+<tr><th scope="row">GlaS</th><td>.859</td><td>.801</td><td>.848</td><td>.856</td><td>.854</td><td><strong>.872</strong></td><td>.868</td></tr>
+<tr><th scope="row">Histo-Seg</th><td>.387</td><td>.330</td><td>.410</td><td>.423</td><td>.402</td><td>.423</td><td><strong>.442</strong></td></tr>
+<tr><th scope="row">SICAPv2</th><td>.677</td><td>.646</td><td>.692</td><td>.694</td><td><strong>.696</strong></td><td>.680</td><td><strong>.696</strong></td></tr>
+<tr><th scope="row">TIGER, whole-slide</th><td>.707</td><td><strong>.767</strong></td><td>.761</td><td>.752</td><td>.752</td><td>.751</td><td>.746</td></tr>
+<tr><th scope="row">MoNuSAC</th><td>.501</td><td>.423</td><td>.521</td><td><strong>.590</strong></td><td>.552</td><td>.416</td><td>.589</td></tr>
+<tr><th scope="row">TNBC</th><td>.206</td><td>.164</td><td>.171</td><td><strong>.309</strong></td><td>.208</td><td>.194</td><td>.299</td></tr>
+<tr><th scope="row">MoNuSAC @0.25 µm/px</th><td>.605</td><td>.554</td><td>.647</td><td><strong>.679</strong></td><td>.675</td><td>.577</td><td>.662</td></tr>
+<tr><th scope="row">TNBC @0.25 µm/px</th><td>.244</td><td>.299</td><td>.319</td><td><strong>.331</strong></td><td>.283</td><td>.281</td><td>.327</td></tr>
+<tr><th scope="row">PUMA</th><td>.222</td><td>.178</td><td>.208</td><td>.355</td><td>.307</td><td>.266</td><td><strong>.399</strong></td></tr>
+<tr><th scope="row">PUMA @0.25 µm/px</th><td>.288</td><td>.286</td><td>.300</td><td>.377</td><td>.325</td><td>.337</td><td><strong>.401</strong></td></tr>
+<tr><th scope="row">SegPath panCK</th><td>.755</td><td>.704</td><td>.748</td><td>.768</td><td>.764</td><td>.772</td><td><strong>.783</strong></td></tr>
+<tr><th scope="row">SegPath αSMA</th><td>.599</td><td>.468</td><td>.556</td><td>.581</td><td>.592</td><td>.606</td><td><strong>.614</strong></td></tr>
+<tr><th scope="row">SegPath CD235a</th><td>.654</td><td>.657</td><td>.679</td><td>.672</td><td><strong>.710</strong></td><td>.635</td><td>.698</td></tr>
+<tr><th scope="row">SegPath CD45RB</th><td>.631</td><td>.616</td><td>.638</td><td>.641</td><td><strong>.660</strong></td><td>.553</td><td>.647</td></tr>
+<tr><th scope="row">SegPath CD3/CD20</th><td>.623</td><td>.613</td><td>.612</td><td>.609</td><td><strong>.650</strong></td><td>.524</td><td>.624</td></tr>
+<tr><th scope="row">SegPath ERG</th><td>.549</td><td>.499</td><td>.499</td><td>.554</td><td>.569</td><td>.553</td><td><strong>.575</strong></td></tr>
+<tr><th scope="row">SegPath MIST1</th><td>.557</td><td>.505</td><td>.512</td><td>.561</td><td><strong>.618</strong></td><td>.556</td><td>.586</td></tr>
+<tr><th scope="row">SegPath MNDA</th><td>.530</td><td>.519</td><td>.526</td><td>.537</td><td><strong>.564</strong></td><td>.529</td><td>.550</td></tr>
+<tr class="ours"><th scope="row">Mean, 20 sets</th><td>.552</td><td>.519</td><td>.556</td><td>.594</td><td>.577</td><td>.548</td><td><strong>.603</strong></td></tr>
+<tr class="group"><th scope="colgroup" colspan="8"><em>Sets without baseline runs</em></th></tr>
+<tr><th scope="row">BCSS</th><td>.189</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td></tr>
+<tr><th scope="row">IGNITE</th><td>.248</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td></tr>
+<tr><th scope="row">TIGER, ROIs</th><td>.340</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td></tr>
+<tr><th scope="row">RINGS</th><td>.875</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td></tr>
+<tr><th scope="row">PanNuke @0.25 µm/px</th><td>.431</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td></tr>
+</tbody></table></div>
+<p class="result-note">(test mIoU ↑), every test set of HistoBanana-Instruct. All baselines train on the same images and labels and are scored on the same test images ; the mean covers the 20 sets they share. U-Net, rand. / IN: random / ImageNet initialisation; UNI + lin. / dec.: linear head / light decoder. Bold: best per row.</p>
+</details>
+<details class="more-table"><summary>Gleason grading per class</summary>
+<div class="result-table-wrap" role="region" aria-label="Gleason grading per class" tabindex="0"><table class="result-table num-table">
+<thead>
+<tr><th scope="col"></th><th scope="col" colspan="3">PANDA (10,670 images, 0.5 µm/px)</th><th scope="col" colspan="3">SICAPv2 (4,006 images, 1 µm/px)</th></tr>
+<tr><th scope="col">Class</th><th scope="col">HistoBanana-Instruct</th><th scope="col">ConvNeXt probe</th><th scope="col">UNI probe</th><th scope="col">HistoBanana-Instruct</th><th scope="col">ConvNeXt probe</th><th scope="col">UNI probe</th></tr>
+</thead><tbody>
+<tr><th scope="row">Background / non-cancerous</th><td><strong>.594</strong></td><td>.522</td><td>.578</td><td><strong>.907</strong></td><td>.774</td><td>.849</td></tr>
+<tr><th scope="row">Stroma</th><td><strong>.873</strong></td><td>.679</td><td>.786</td><td>–</td><td>–</td><td>–</td></tr>
+<tr><th scope="row">Benign epithelium</th><td><strong>.533</strong></td><td>.242</td><td>.418</td><td>–</td><td>–</td><td>–</td></tr>
+<tr><th scope="row">Gleason 3</th><td>.392</td><td>.251</td><td><strong>.393</strong></td><td>.285</td><td>.210</td><td><strong>.324</strong></td></tr>
+<tr><th scope="row">Gleason 4</th><td><strong>.448</strong></td><td>.261</td><td>.419</td><td>.277</td><td>.304</td><td><strong>.389</strong></td></tr>
+<tr><th scope="row">Gleason 5</th><td><strong>.263</strong></td><td>.106</td><td>.196</td><td>.028</td><td>.084</td><td><strong>.116</strong></td></tr>
+<tr><th scope="row">mIoU ↑</th><td><strong>.517</strong></td><td>.343</td><td>.465</td><td>.374</td><td>.343</td><td><strong>.420</strong></td></tr>
+<tr><th scope="row">Gleason 5, predicted / true area</th><td>1.88</td><td>4.54</td><td>2.55</td><td>0.18</td><td>8.56</td><td>5.15</td></tr>
+</tbody></table></div>
+<p class="result-note">(pooled test IoU ↑). Each grade is a separate class; Gleason 5 is 1.1 % of the labelled pixels on both sets (Gleason 3 / 4: 4.1 / 7.2 % on PANDA, 2.9 / 7.1 % on SICAPv2). Probes: logistic regression on the patch tokens of frozen ImageNet ConvNeXt-V2-B and UNI, whose training split also contains slides HistoBanana-Instruct does not train on. First row: PANDA's background class, SICAPv2's non-cancerous class. Area ratio above 1: the grade is over-painted.</p>
+</details>
+<details class="more-table"><summary>Instances, detection and classification per dataset</summary>
+<div class="result-table-wrap" role="region" aria-label="Instances, detection and classification per dataset" tabindex="0"><table class="result-table num-table">
+<thead>
+<tr><th scope="col">Dataset</th><th scope="col">HistoBanana-Instruct</th><th scope="col">nnU-Net</th><th scope="col">UNI + dec. / probe</th><th scope="col">HoVer-Net</th><th scope="col">ConvNeXt probe</th></tr>
+</thead><tbody>
+<tr class="group"><th scope="colgroup" colspan="6"><em>Nucleus instances, bPQ ↑</em></th></tr>
+<tr><th scope="row">MoNuSAC</th><td>.544</td><td>.464</td><td>.263</td><td><strong>.597</strong></td><td>–</td></tr>
+<tr><th scope="row">PUMA</th><td>.601</td><td>.617</td><td>.390</td><td><strong>.722</strong></td><td>–</td></tr>
+<tr><th scope="row">TNBC</th><td>.501</td><td>.595</td><td>.395</td><td><strong>.623</strong></td><td>–</td></tr>
+<tr><th scope="row">MoNuSAC @0.25 µm/px</th><td>.563</td><td>.520</td><td>.410</td><td><strong>.629</strong></td><td>–</td></tr>
+<tr><th scope="row">PUMA @0.25 µm/px</th><td>.663</td><td>.671</td><td>.504</td><td><strong>.784</strong></td><td>–</td></tr>
+<tr><th scope="row">TNBC @0.25 µm/px</th><td>.567</td><td>.631</td><td>.511</td><td><strong>.705</strong></td><td>–</td></tr>
+<tr><th scope="row">PanNuke @0.25 µm/px<sup>†</sup></th><td>.507</td><td>–</td><td>–</td><td>–</td><td>–</td></tr>
+<tr class="group"><th scope="colgroup" colspan="6"><em>Cell detection, localisation F1 ↑</em></th></tr>
+<tr><th scope="row">MoNuSAC</th><td>.814</td><td>.803</td><td>.686</td><td><strong>.843</strong></td><td>–</td></tr>
+<tr><th scope="row">PUMA</th><td>.844</td><td>.842</td><td>.700</td><td><strong>.874</strong></td><td>–</td></tr>
+<tr><th scope="row">TNBC</th><td><strong>.869</strong></td><td>.811</td><td>.651</td><td>.844</td><td>–</td></tr>
+<tr><th scope="row">MoNuSAC @0.25 µm/px</th><td>.849</td><td>.813</td><td>.753</td><td><strong>.882</strong></td><td>–</td></tr>
+<tr><th scope="row">PUMA @0.25 µm/px</th><td>.886</td><td>.809</td><td>.734</td><td><strong>.947</strong></td><td>–</td></tr>
+<tr><th scope="row">TNBC @0.25 µm/px</th><td>.885</td><td>.792</td><td>.703</td><td><strong>.894</strong></td><td>–</td></tr>
+<tr><th scope="row">PanNuke @0.25 µm/px<sup>†</sup></th><td>.815</td><td>–</td><td>–</td><td>–</td><td>–</td></tr>
+<tr class="group"><th scope="colgroup" colspan="6"><em>Classification, balanced accuracy ↑</em></th></tr>
+<tr><th scope="row">BRACS</th><td>.335</td><td>–</td><td><strong>.509</strong></td><td>–</td><td>.424</td></tr>
+<tr><th scope="row">TCGA-UT-8K</th><td>.198</td><td>–</td><td><strong>.605</strong></td><td>–</td><td>.341</td></tr>
+<tr><th scope="row">PANDA, Radboud</th><td>.661</td><td>–</td><td><strong>.747</strong></td><td>–</td><td>.656</td></tr>
+<tr><th scope="row">PANDA, Karolinska</th><td>.791</td><td>–</td><td><strong>.840</strong></td><td>–</td><td>.732</td></tr>
+</tbody></table></div>
+<p class="result-note">the families given as means in the family table. nnU-Net and HoVer-Net are trained per dataset; segmentation baselines give instances as connected components, HoVer-Net by its own watershed; classification baselines are linear probes on frozen features (UNI; ImageNet ConvNeXt-V2-B). TNBC is queried with the MoNuSAC instance and the PUMA detection instruction. <sup>†</sup>No baseline runs; not in the means.</p>
+</details>
+<details class="more-table"><summary>Nuclei on datasets outside the training mix</summary>
+<div class="result-table-wrap" role="region" aria-label="Nuclei on datasets outside the training mix" tabindex="0"><table class="result-table num-table">
+<thead>
+<tr><th scope="col"></th><th scope="col" colspan="4">Nuclei Dice ↑</th><th scope="col" colspan="4">Nuclei bPQ ↑</th></tr>
+<tr><th scope="col">Method</th><th scope="col">CoNSeP</th><th scope="col">Kumar</th><th scope="col">Lizard<sup>‡</sup></th><th scope="col">PanNuke<sup>§</sup></th><th scope="col">CoNSeP</th><th scope="col">Kumar</th><th scope="col">Lizard<sup>‡</sup></th><th scope="col">PanNuke<sup>§</sup></th></tr>
+</thead><tbody>
+<tr class="ours"><th scope="row"><strong>HistoBanana-Instruct (ours)</strong></th><td>.772</td><td><strong>.824</strong></td><td>.685</td><td><strong>.806</strong></td><td>.182</td><td><strong>.424</strong></td><td>.148</td><td>.407</td></tr>
+<tr><th scope="row">U-Net, random init</th><td>.732</td><td>.648</td><td>.600</td><td>.669</td><td>.182</td><td>.274</td><td>.183</td><td>.256</td></tr>
+<tr><th scope="row">SegFormer-B2, ImageNet</th><td>.713</td><td>.807</td><td>.686</td><td>.757</td><td>.133</td><td>.394</td><td>.231</td><td>.345</td></tr>
+<tr><th scope="row">nnU-Net v2</th><td><strong>.782</strong></td><td>.776</td><td><strong>.737</strong></td><td>.784</td><td><strong>.332</strong></td><td>.421</td><td><strong>.358</strong></td><td><strong>.424</strong></td></tr>
+<tr><th scope="row">Frozen UNI + light decoder</th><td>.719</td><td>.788</td><td>.551</td><td>.726</td><td>.136</td><td>.289</td><td>.105</td><td>.263</td></tr>
+</tbody></table></div>
+<p class="result-note">CoNSeP, Kumar and Lizard are in no training mix; <sup>‡</sup>Lizard re-annotates GlaS and DigestPath regions; the 30 regions drawn from GlaS training images, which are in the mix of HistoBanana-Instruct, are excluded (212 of 242 remain; with them, every value changes by less than .01); <sup>§</sup>PanNuke's training folds are in the mix of HistoBanana-Instruct, its test fold is not. Every method is run as its TNBC nuclei task (for HistoBanana-Instruct, the TNBC instruction; for the baselines, their TNBC output), on images at the dataset's native scale (0.25 µm/px; Lizard 0.5 µm/px); instances are 8-connected components of the predicted nuclei.</p>
+</details>
+<!-- more-results:end -->
+        </div>
+
+        <div class="figure-row">
+          <figure class="wide-paper-figure narrow-figure">
+            <img src="assets/fig/kshot.webp" alt="Line plots of few-shot slide classification on PANDA and TCGA-UT-8K with and without synthetic slides" loading="lazy" width="2000" height="879">
+            <figcaption><strong>Synthetic slides for few-shot classification.</strong> One synthetic slide per real slide; logistic regression on frozen TITAN features, mean and standard error over 10 seeds. The gain is largest when real slides are fewest.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- citation -->
+    <section class="section citation-section" id="citation">
+      <div class="container narrow">
+        <div class="section-heading centered">
+          <p class="section-kicker">Citation</p>
+          <h2>BibTeX</h2>
+          <p>The entry will be completed after the review period.</p>
+        </div>
+        <div class="bibtex-shell">
+          <button class="copy-button" type="button" data-copy-bib aria-label="Copy BibTeX">Copy</button>
+          <pre id="bibtex"><code>@misc{anonymous2026histobanana,
+  title  = {HistoBanana: One-Step H\&amp;E Pixel Generators Are General Pathology Learners},
+  author = {Anonymous},
+  year   = {2026},
+  note   = {Under review}
+}</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- credits -->
+    <section class="section credits-section" id="credits">
+      <div class="container narrow">
+        <div class="section-heading">
+          <p class="section-kicker">Image credits</p>
+          <h2>Image credits</h2>
+          <p>All images in the teaser zooms, the generation gallery and the region viewer are generated by HistoBanana. The task demos and the explainer video use test images of public datasets, cropped to 224 px windows and shown with their labels under the licences below. They are for non-commercial research use.</p>
+        </div>
+        <div class="result-table-wrap" role="region" aria-label="Datasets and licences" tabindex="0">
+          <table class="result-table credits-table">
+            <thead><tr><th scope="col">Dataset</th><th scope="col">Used for</th><th scope="col">Licence</th></tr></thead>
+            <tbody data-credits></tbody>
+          </table>
+        </div>
+        <p class="result-note">The overview panels contain a few real patches from the held-out reference set, which is drawn from public collections under CC BY and CC BY-NC family licences. Fonts: Manrope and DM Sans, SIL Open Font License 1.1.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="assets/img/banana-icon.png" alt="" width="48" height="36">
+        <span><strong>HistoBanana</strong><small>One-step H&amp;E pixel generators are general pathology learners.</small></span>
+      </div>
+      <p>Anonymous project page · under review · 2026</p>
+    </div>
+  </footer>
+
+  <script src="assets/data/data.js"></script>
+  <script src="assets/js/metrics.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/paint.js"></script>
+</body>
+</html>

@@ -1,0 +1,7663 @@
+{
+ "sets": {
+  "asma": {
+   "id": "asma",
+   "family": "marker",
+   "title": "aSMA (smooth muscle)",
+   "dataset": "SegPath_aSMA",
+   "mpp": 0.5,
+   "play": false,
+   "instruction": "Predict the aSMA immunofluorescence mask of this H&E image. Classes: marker negative, smooth muscle (aSMA+).",
+   "classes": [
+    {
+     "name": "marker negative",
+     "color": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "smooth muscle (aSMA+)",
+     "color": [
+      255,
+      231,
+      115
+     ]
+    }
+   ],
+   "pool": 160,
+   "examples": [
+    {
+     "miou": 0.8464,
+     "dice": 0.9144,
+     "fg": 0.9655,
+     "he": "assets/tasks/asma/00_he.webp"
+    },
+    {
+     "miou": 0.838,
+     "dice": 0.9106,
+     "fg": 0.9478,
+     "he": "assets/tasks/asma/01_he.webp"
+    },
+    {
+     "miou": 0.8308,
+     "dice": 0.9061,
+     "fg": 0.8663,
+     "he": "assets/tasks/asma/02_he.webp"
+    },
+    {
+     "miou": 0.8002,
+     "dice": 0.8826,
+     "fg": 0.7982,
+     "he": "assets/tasks/asma/03_he.webp"
+    }
+   ],
+   "paper": {
+    "metric": "mIoU",
+    "value": 0.599
+   },
+   "dataset_name": "SegPath aSMA"
+  },
+  "bcss": {
+   "id": "bcss",
+   "family": "tissue",
+   "title": "Breast tissue (17 classes)",
+   "dataset": "BCSS",
+   "mpp": 0.5,
+   "play": false,
+   "instruction": "Segment the tissue regions of this H&E image. Classes: other, tumor / angioinvasion, dcis, stroma, lymphocytic infiltrate, necrosis or debris, normal acinus or duct, fat, blood, blood vessel, nerve, glandular secretions / mucoid material, lymphatics, metaplasia NOS, skin adnexa, plasma cells, other immune infiltrate.",
+   "classes": [
+    {
+     "name": "other",
+     "color": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "tumor / angioinvasion",
+     "color": [
+      115,
+      156,
+      255
+     ]
+    },
+    {
+     "name": "dcis",
+     "color": [
+      89,
+      153,
+      0
+     ]
+    },
+    {
+     "name": "stroma",
+     "color": [
+      255,
+      0,
+      223
+     ]
+    },
+    {
+     "name": "lymphocytic infiltrate",
+     "color": [
+      115,
+      255,
+      232
+     ]
+    },
+    {
+     "name": "necrosis or debris",
+     "color": [
+      153,
+      83,
+      0
+     ]
+    },
+    {
+     "name": "normal acinus or duct",
+     "color": [
+      64,
+      0,
+      255
+     ]
+    },
+    {
+     "name": "fat",
+     "color": [
+      121,
+      255,
+      115
+     ]
+    },
+    {
+     "name": "blood",
+     "color": [
+      153,
+      0,
+      51
+     ]
+    },
+    {
+     "name": "blood vessel",
+     "color": [
+      0,
+      160,
+      255
+     ]
+    },
+    {
+     "name": "nerve",
+     "color": [
+      243,
+      255,
+      115
+     ]
+    },
+    {
+     "name": "glandular secretions / mucoid material",
+     "color": [
+      121,
+      0,
+      153
+     ]
+    },
+    {
+     "name": "lymphatics",
+     "color": [
+      0,
+      153,
+      25
+     ]
+    },
+    {
+     "name": "metaplasia NOS",
+     "color": [
+      255,
+      0,
+      33
+     ]
+    },
+    {
+     "name": "skin adnexa",
+     "color": [
+      115,
+      174,
+      255
+     ]
+    },
+    {
+     "name": "plasma cells",
+     "color": [
+      109,
+      153,
+      0
+     ]
+    },
+    {
+     "name": "other immune infiltrate",
+     "color": [
+      254,
+      0,
+      255
+     ]
+    }
+   ],
+   "pool": 101,
+   "examples": [
+    {
+     "miou": 0.5266,
+     "dice": 0.5842,
+     "fg": 1.0,
+     "he": "assets/tasks/bcss/00_he.webp"
+    },
+    {
+     "miou": 0.5144,
+     "dice": 0.5795,
+     "fg": 1.0,
+     "he": "assets/tasks/bcss/01_he.webp"
+    },
+    {
+     "miou": 0.4728,
+     "dice": 0.538,
+     "fg": 1.0,
+     "he": "assets/tasks/bcss/02_he.webp"
+    },
+    {
+     "miou": 0.43,
+     "dice": 0.4623,
+     "fg": 1.0,
+     "he": "assets/tasks/bcss/03_he.webp"
+    },
+    {
+     "miou": 0.4155,
+     "dice": 0.4523,
+     "fg": 1.0,
+     "he": "assets/tasks/bcss/04_he.webp"
+    },
+    {
+     "miou": 0.4068,
+     "dice": 0.4736,
+     "fg": 1.0,
+     "he": "assets/tasks/bcss/05_he.webp"
+    }
+   ],
+   "paper": {
+    "metric": "mIoU",
+    "value": 0.189
+   },
+   "dataset_name": "BCSS"
+  },
+  "beetle": {
+   "id": "beetle",
+   "family": "tissue",
+   "title": "Breast epithelium",
+   "dataset": "BEETLE",
+   "mpp": 0.5,
+   "play": true,
+   "instruction": "Segment the tissue regions of this H&E image. Classes: other, invasive epithelium, necrosis, non-invasive epithelium.",
+   "classes": [
+    {
+     "name": "other",
+     "color": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "invasive epithelium",
+     "color": [
+      115,
+      156,
+      255
+     ]
+    },
+    {
+     "name": "necrosis",
+     "color": [
+      153,
+      83,
+      0
+     ]
+    },
+    {
+     "name": "non-invasive epithelium",
+     "color": [
+      255,
+      249,
+      115
+     ]
+    }
+   ],
+   "pool": 77,
+   "examples": [
+    {
+     "miou": 0.9457,
+     "dice": 0.9721,
+     "fg": 1.0,
+     "he": "assets/tasks/beetle/00_he.webp"
+    },
+    {
+     "miou": 0.8979,
+     "dice": 0.9439,
+     "fg": 1.0,
+     "he": "assets/tasks/beetle/01_he.webp"
+    },
+    {
+     "miou": 0.6266,
+     "dice": 0.6458,
+     "fg": 0.9852,
+     "he": "assets/tasks/beetle/02_he.webp"
+    },
+    {
+     "miou": 0.907,
+     "dice": 0.9512,
+     "fg": 1.0,
+     "he": "assets/tasks/beetle/03_he.webp"
+    },
+    {
+     "miou": 0.893,
+     "dice": 0.943,
+     "fg": 1.0,
+     "he": "assets/tasks/beetle/04_he.webp"
+    },
+    {
+     "miou": 0.888,
+     "dice": 0.9377,
+     "fg": 1.0,
+     "he": "assets/tasks/beetle/05_he.webp"
+    },
+    {
+     "miou": 0.876,
+     "dice": 0.9304,
+     "fg": 1.0,
+     "he": "assets/tasks/beetle/06_he.webp"
+    },
+    {
+     "miou": 0.8635,
+     "dice": 0.9231,
+     "fg": 1.0,
+     "he": "assets/tasks/beetle/07_he.webp"
+    },
+    {
+     "miou": 0.8547,
+     "dice": 0.9211,
+     "fg": 1.0,
+     "he": "assets/tasks/beetle/08_he.webp"
+    },
+    {
+     "miou": 0.8466,
+     "dice": 0.915,
+     "fg": 1.0,
+     "he": "assets/tasks/beetle/09_he.webp"
+    }
+   ],
+   "paper": {
+    "metric": "mIoU",
+    "value": 0.658
+   },
+   "dataset_name": "BEETLE"
+  },
+  "cd235a": {
+   "id": "cd235a",
+   "family": "marker",
+   "title": "CD235a (red blood cells)",
+   "dataset": "SegPath_CD235a",
+   "mpp": 0.5,
+   "play": false,
+   "instruction": "Predict the CD235a immunofluorescence mask of this H&E image. Classes: marker negative, red blood cell (CD235a+).",
+   "classes": [
+    {
+     "name": "marker negative",
+     "color": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "red blood cell (CD235a+)",
+     "color": [
+      0,
+      255,
+      62
+     ]
+    }
+   ],
+   "pool": 135,
+   "examples": [
+    {
+     "miou": 0.9258,
+     "dice": 0.9604,
+     "fg": 0.9273,
+     "he": "assets/tasks/cd235a/00_he.webp"
+    },
+    {
+     "miou": 0.9247,
+     "dice": 0.9596,
+     "fg": 0.9232,
+     "he": "assets/tasks/cd235a/01_he.webp"
+    },
+    {
+     "miou": 0.8831,
+     "dice": 0.9368,
+     "fg": 0.9011,
+     "he": "assets/tasks/cd235a/02_he.webp"
+    },
+    {
+     "miou": 0.8649,
+     "dice": 0.9228,
+     "fg": 0.8514,
+     "he": "assets/tasks/cd235a/03_he.webp"
+    }
+   ],
+   "paper": {
+    "metric": "mIoU",
+    "value": 0.654
+   },
+   "dataset_name": "SegPath CD235a"
+  },
+  "cd3cd20": {
+   "id": "cd3cd20",
+   "family": "marker",
+   "title": "CD3/CD20 (lymphocytes)",
+   "dataset": "SegPath_CD3CD20",
+   "mpp": 0.5,
+   "play": true,
+   "instruction": "Predict the CD3CD20 immunofluorescence mask of this H&E image. Classes: marker negative, lymphocyte (CD3/CD20+).",
+   "classes": [
+    {
+     "name": "marker negative",
+     "color": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "lymphocyte (CD3/CD20+)",
+     "color": [
+      115,
+      191,
+      255
+     ]
+    }
+   ],
+   "pool": 91,
+   "examples": [
+    {
+     "miou": 0.7472,
+     "dice": 0.8463,
+     "fg": 0.7445,
+     "he": "assets/tasks/cd3cd20/00_he.webp"
+    },
+    {
+     "miou": 0.7305,
+     "dice": 0.8272,
+     "fg": 0.6859,
+     "he": "assets/tasks/cd3cd20/01_he.webp"
+    },
+    {
+     "miou": 0.7198,
+     "dice": 0.8293,
+     "fg": 0.7342,
+     "he": "assets/tasks/cd3cd20/02_he.webp"
+    },
+    {
+     "miou": 0.7148,
+     "dice": 0.8235,
+     "fg": 0.7141,
+     "he": "assets/tasks/cd3cd20/03_he.webp"
+    },
+    {
+     "miou": 0.7141,
+     "dice": 0.8105,
+     "fg": 0.6459,
+     "he": "assets/tasks/cd3cd20/04_he.webp"
+    },
+    {
+     "miou": 0.7067,
+     "dice": 0.8047,
+     "fg": 0.6374,
+     "he": "assets/tasks/cd3cd20/05_he.webp"
+    },
+    {
+     "miou": 0.7037,
+     "dice": 0.8004,
+     "fg": 0.625,
+     "he": "assets/tasks/cd3cd20/06_he.webp"
+    },
+    {
+     "miou": 0.7009,
+     "dice": 0.8031,
+     "fg": 0.6445,
+     "he": "assets/tasks/cd3cd20/07_he.webp"
+    },
+    {
+     "miou": 0.7008,
+     "dice": 0.8065,
+     "fg": 0.6618,
+     "he": "assets/tasks/cd3cd20/08_he.webp"
+    },
+    {
+     "miou": 0.7002,
+     "dice": 0.7974,
+     "fg": 0.6198,
+     "he": "assets/tasks/cd3cd20/09_he.webp"
+    }
+   ],
+   "paper": {
+    "metric": "mIoU",
+    "value": 0.623
+   },
+   "dataset_name": "SegPath CD3CD20"
+  },
+  "cd45rb": {
+   "id": "cd45rb",
+   "family": "marker",
+   "title": "CD45RB (leukocytes)",
+   "dataset": "SegPath_CD45RB",
+   "mpp": 0.5,
+   "play": false,
+   "instruction": "Predict the CD45RB immunofluorescence mask of this H&E image. Classes: marker negative, leukocyte (CD45RB+).",
+   "classes": [
+    {
+     "name": "marker negative",
+     "color": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "leukocyte (CD45RB+)",
+     "color": [
+      255,
+      115,
+      122
+     ]
+    }
+   ],
+   "pool": 160,
+   "examples": [
+    {
+     "miou": 0.7541,
+     "dice": 0.8445,
+     "fg": 0.7112,
+     "he": "assets/tasks/cd45rb/00_he.webp"
+    },
+    {
+     "miou": 0.7446,
+     "dice": 0.8329,
+     "fg": 0.6775,
+     "he": "assets/tasks/cd45rb/01_he.webp"
+    },
+    {
+     "miou": 0.7397,
+     "dice": 0.8302,
+     "fg": 0.6766,
+     "he": "assets/tasks/cd45rb/02_he.webp"
+    },
+    {
+     "miou": 0.7278,
+     "dice": 0.8231,
+     "fg": 0.6721,
+     "he": "assets/tasks/cd45rb/03_he.webp"
+    }
+   ],
+   "paper": {
+    "metric": "mIoU",
+    "value": 0.631
+   },
+   "dataset_name": "SegPath CD45RB"
+  },
+  "det_monusac": {
+   "id": "det_monusac",
+   "family": "det",
+   "title": "Cell detection (four organs)",
+   "dataset": "MoNuSAC",
+   "mpp": 0.25,
+   "play": false,
+   "instruction": "Detect the cells of this H&E image at 0.25 um/px (40x): one dot at the centre of each nucleus, coloured by cell type. Classes: background, epithelial, lymphocyte, neutrophil, macrophage.",
+   "classes": [
+    {
+     "name": "background",
+     "color": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "epithelial",
+     "color": [
+      0,
+      153,
+      6
+     ]
+    },
+    {
+     "name": "lymphocyte",
+     "color": [
+      115,
+      191,
+      255
+     ]
+    },
+    {
+     "name": "neutrophil",
+     "color": [
+      222,
+      0,
+      255
+     ]
+    },
+    {
+     "name": "macrophage",
+     "color": [
+      153,
+      44,
+      0
+     ]
+    }
+   ],
+   "pool": 61,
+   "examples": [
+    {
+     "miou": 0.8995,
+     "dice": 0.9449,
+     "fg": 0.8967,
+     "extra": {
+      "name": "F1",
+      "value": 1.0,
+      "found": 7,
+      "annotated": 7
+     },
+     "he": "assets/tasks/det_monusac/00_he.webp"
+    },
+    {
+     "miou": 0.8035,
+     "dice": 0.888,
+     "fg": 0.8296,
+     "extra": {
+      "name": "F1",
+      "value": 0.8788,
+      "found": 37,
+      "annotated": 29
+     },
+     "he": "assets/tasks/det_monusac/01_he.webp"
+    },
+    {
+     "miou": 0.7261,
+     "dice": 0.8284,
+     "fg": 0.7052,
+     "extra": {
+      "name": "F1",
+      "value": 0.8485,
+      "found": 18,
+      "annotated": 15
+     },
+     "he": "assets/tasks/det_monusac/02_he.webp"
+    },
+    {
+     "miou": 0.7732,
+     "dice": 0.8663,
+     "fg": 0.7851,
+     "extra": {
+      "name": "F1",
+      "value": 0.8444,
+      "found": 21,
+      "annotated": 24
+     },
+     "he": "assets/tasks/det_monusac/03_he.webp"
+    }
+   ],
+   "paper": {
+    "metric": "F1",
+    "value": 0.849
+   },
+   "dataset_name": "MoNuSAC"
+  },
+  "det_pannuke": {
+   "id": "det_pannuke",
+   "family": "det",
+   "title": "Cell detection (pan-cancer)",
+   "dataset": "PanNuke",
+   "mpp": 0.25,
+   "play": false,
+   "instruction": "Detect the cells of this H&E image at 0.25 um/px (40x): one dot at the centre of each nucleus, coloured by cell type. Classes: background, epithelial, neoplastic, inflammatory, connective, dead.",
+   "classes": [
+    {
+     "name": "background",
+     "color": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "epithelial",
+     "color": [
+      0,
+      153,
+      6
+     ]
+    },
+    {
+     "name": "neoplastic",
+     "color": [
+      255,
+      0,
+      65
+     ]
+    },
+    {
+     "name": "inflammatory",
+     "color": [
+      0,
+      2,
+      255
+     ]
+    },
+    {
+     "name": "connective",
+     "color": [
+      157,
+      255,
+      115
+     ]
+    },
+    {
+     "name": "dead",
+     "color": [
+      0,
+      225,
+      255
+     ]
+    }
+   ],
+   "pool": 160,
+   "examples": [
+    {
+     "miou": 0.8487,
+     "dice": 0.9155,
+     "fg": 0.862,
+     "extra": {
+      "name": "F1",
+      "value": 0.9778,
+      "found": 23,
+      "annotated": 22
+     },
+     "he": "assets/tasks/det_pannuke/00_he.webp"
+    },
+    {
+     "miou": 0.8664,
+     "dice": 0.9279,
+     "fg": 0.8956,
+     "extra": {
+      "name": "F1",
+      "value": 0.9429,
+      "found": 33,
+      "annotated": 37
+     },
+     "he": "assets/tasks/det_pannuke/01_he.webp"
+    },
+    {
+     "miou": 0.8599,
+     "dice": 0.9219,
+     "fg": 0.8678,
+     "extra": {
+      "name": "F1",
+      "value": 0.9412,
+      "found": 17,
+      "annotated": 17
+     },
+     "he": "assets/tasks/det_pannuke/02_he.webp"
+    },
+    {
+     "miou": 0.5687,
+     "dice": 0.6121,
+     "fg": 0.8798,
+     "extra": {
+      "name": "F1",
+      "value": 0.9302,
+      "found": 20,
+      "annotated": 23
+     },
+     "he": "assets/tasks/det_pannuke/03_he.webp"
+    },
+    {
+     "miou": 0.5491,
+     "dice": 0.5999,
+     "fg": 0.8381,
+     "extra": {
+      "name": "F1",
+      "value": 0.913,
+      "found": 23,
+      "annotated": 23
+     },
+     "he": "assets/tasks/det_pannuke/04_he.webp"
+    },
+    {
+     "miou": 0.555,
+     "dice": 0.6039,
+     "fg": 0.8694,
+     "extra": {
+      "name": "F1",
+      "value": 0.9091,
+      "found": 25,
+      "annotated": 30
+     },
+     "he": "assets/tasks/det_pannuke/05_he.webp"
+    },
+    {
+     "miou": 0.8184,
+     "dice": 0.8969,
+     "fg": 0.8366,
+     "extra": {
+      "name": "F1",
+      "value": 0.898,
+      "found": 25,
+      "annotated": 24
+     },
+     "he": "assets/tasks/det_pannuke/06_he.webp"
+    },
+    {
+     "miou": 0.4315,
+     "dice": 0.4965,
+     "fg": 0.8013,
+     "extra": {
+      "name": "F1",
+      "value": 0.8889,
+      "found": 20,
+      "annotated": 16
+     },
+     "he": "assets/tasks/det_pannuke/07_he.webp"
+    }
+   ],
+   "paper": {
+    "metric": "F1",
+    "value": 0.815
+   },
+   "dataset_name": "PanNuke"
+  },
+  "erg": {
+   "id": "erg",
+   "family": "marker",
+   "title": "ERG (endothelium)",
+   "dataset": "SegPath_ERG",
+   "mpp": 0.5,
+   "play": false,
+   "instruction": "Predict the ERG immunofluorescence mask of this H&E image. Classes: marker negative, endothelium (ERG+).",
+   "classes": [
+    {
+     "name": "marker negative",
+     "color": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "endothelium (ERG+)",
+     "color": [
+      153,
+      0,
+      90
+     ]
+    }
+   ],
+   "pool": 6,
+   "examples": [
+    {
+     "miou": 0.5661,
+     "dice": 0.6321,
+     "fg": 0.2796,
+     "he": "assets/tasks/erg/00_he.webp"
+    },
+    {
+     "miou": 0.5595,
+     "dice": 0.6286,
+     "fg": 0.2793,
+     "he": "assets/tasks/erg/01_he.webp"
+    },
+    {
+     "miou": 0.5411,
+     "dice": 0.6043,
+     "fg": 0.2347,
+     "he": "assets/tasks/erg/02_he.webp"
+    },
+    {
+     "miou": 0.5254,
+     "dice": 0.5813,
+     "fg": 0.1907,
+     "he": "assets/tasks/erg/03_he.webp"
+    }
+   ],
+   "paper": {
+    "metric": "mIoU",
+    "value": 0.549
+   },
+   "dataset_name": "SegPath ERG"
+  },
+  "histoseg": {
+   "id": "histoseg",
+   "family": "tissue",
+   "title": "Skin layers",
+   "dataset": "Histo-Seg",
+   "mpp": 0.5,
+   "play": false,
+   "instruction": "Segment the tissue regions of this H&E image. Classes: background, basal cell carcinoma / squamous cell carcinoma, intraepidermal carcinoma, inflammation, epidermis, papillary dermis, reticular dermis, keratin, hypodermis, hair follicles, glands.",
+   "classes": [
+    {
+     "name": "background",
+     "color": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "basal cell carcinoma / squamous cell carcinoma",
+     "color": [
+      115,
+      156,
+      255
+     ]
+    },
+    {
+     "name": "intraepidermal carcinoma",
+     "color": [
+      89,
+      153,
+      0
+     ]
+    },
+    {
+     "name": "inflammation",
+     "color": [
+      115,
+      255,
+      232
+     ]
+    },
+    {
+     "name": "epidermis",
+     "color": [
+      0,
+      255,
+      127
+     ]
+    },
+    {
+     "name": "papillary dermis",
+     "color": [
+      255,
+      144,
+      115
+     ]
+    },
+    {
+     "name": "reticular dermis",
+     "color": [
+      0,
+      13,
+      153
+     ]
+    },
+    {
+     "name": "keratin",
+     "color": [
+      96,
+      255,
+      0
+     ]
+    },
+    {
+     "name": "hypodermis",
+     "color": [
+      255,
+      115,
+      209
+     ]
+    },
+    {
+     "name": "hair follicles",
+     "color": [
+      0,
+      147,
+      153
+     ]
+    },
+    {
+     "name": "glands",
+     "color": [
+      255,
+      191,
+      0
+     ]
+    }
+   ],
+   "pool": 128,
+   "examples": [
+    {
+     "miou": 0.4424,
+     "dice": 0.5078,
+     "fg": 0.99,
+     "he": "assets/tasks/histoseg/00_he.webp"
+    },
+    {
+     "miou": 0.4326,
+     "dice": 0.4669,
+     "fg": 0.9714,
+     "he": "assets/tasks/histoseg/01_he.webp"
+    },
+    {
+     "miou": 0.382,
+     "dice": 0.4039,
+     "fg": 0.9797,
+     "he": "assets/tasks/histoseg/02_he.webp"
+    },
+    {
+     "miou": 0.3758,
+     "dice": 0.4,
+     "fg": 0.9898,
+     "he": "assets/tasks/histoseg/03_he.webp"
+    },
+    {
+     "miou": 0.3699,
+     "dice": 0.4123,
+     "fg": 0.9915,
+     "he": "assets/tasks/histoseg/04_he.webp"
+    },
+    {
+     "miou": 0.3688,
+     "dice": 0.4164,
+     "fg": 0.9811,
+     "he": "assets/tasks/histoseg/05_he.webp"
+    }
+   ],
+   "paper": {
+    "metric": "mIoU",
+    "value": 0.387
+   },
+   "dataset_name": "Histo-Seg"
+  },
+  "ignite": {
+   "id": "ignite",
+   "family": "tissue",
+   "title": "Lung tissue",
+   "dataset": "IGNITE",
+   "mpp": 0.5,
+   "play": false,
+   "instruction": "Segment the tissue regions of this H&E image. Classes: background, tumor epithelium, stroma, inflammation, necrotic tissue, reactive epithelium / bronchial epithelium, fatty tissue, erythrocytes, mucus/plasma/fluids, alveolar tissue, cartilage/bone, macrophages, muscle, liver, keratinization.",
+   "classes": [
+    {
+     "name": "background",
+     "color": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "tumor epithelium",
+     "color": [
+      115,
+      156,
+      255
+     ]
+    },
+    {
+     "name": "stroma",
+     "color": [
+      255,
+      0,
+      223
+     ]
+    },
+    {
+     "name": "inflammation",
+     "color": [
+      115,
+      255,
+      232
+     ]
+    },
+    {
+     "name": "necrotic tissue",
+     "color": [
+      153,
+      83,
+      0
+     ]
+    },
+    {
+     "name": "reactive epithelium / bronchial epithelium",
+     "color": [
+      64,
+      0,
+      255
+     ]
+    },
+    {
+     "name": "fatty tissue",
+     "color": [
+      121,
+      255,
+      115
+     ]
+    },
+    {
+     "name": "erythrocytes",
+     "color": [
+      153,
+      0,
+      51
+     ]
+    },
+    {
+     "name": "mucus/plasma/fluids",
+     "color": [
+      121,
+      0,
+      153
+     ]
+    },
+    {
+     "name": "alveolar tissue",
+     "color": [
+      115,
+      255,
+      214
+     ]
+    },
+    {
+     "name": "cartilage/bone",
+     "color": [
+      153,
+      63,
+      0
+     ]
+    },
+    {
+     "name": "macrophages",
+     "color": [
+      31,
+      0,
+      255
+     ]
+    },
+    {
+     "name": "muscle",
+     "color": [
+      139,
+      255,
+      115
+     ]
+    },
+    {
+     "name": "liver",
+     "color": [
+      153,
+      0,
+      71
+     ]
+    },
+    {
+     "name": "keratinization",
+     "color": [
+      0,
+      192,
+      255
+     ]
+    }
+   ],
+   "pool": 138,
+   "examples": [
+    {
+     "miou": 0.9602,
+     "dice": 0.9794,
+     "fg": 1.0,
+     "he": "assets/tasks/ignite/00_he.webp"
+    },
+    {
+     "miou": 0.6174,
+     "dice": 0.641,
+     "fg": 1.0,
+     "he": "assets/tasks/ignite/01_he.webp"
+    },
+    {
+     "miou": 0.6033,
+     "dice": 0.6325,
+     "fg": 0.9869,
+     "he": "assets/tasks/ignite/02_he.webp"
+    },
+    {
+     "miou": 0.5826,
+     "dice": 0.6218,
+     "fg": 1.0,
+     "he": "assets/tasks/ignite/03_he.webp"
+    },
+    {
+     "miou": 0.5785,
+     "dice": 0.6183,
+     "fg": 1.0,
+     "he": "assets/tasks/ignite/04_he.webp"
+    },
+    {
+     "miou": 0.5169,
+     "dice": 0.5819,
+     "fg": 1.0,
+     "he": "assets/tasks/ignite/05_he.webp"
+    }
+   ],
+   "paper": {
+    "metric": "mIoU",
+    "value": 0.248
+   },
+   "dataset_name": "IGNITE"
+  },
+  "inst_monusac": {
+   "id": "inst_monusac",
+   "family": "inst",
+   "title": "Nucleus instances (four organs)",
+   "dataset": "MoNuSAC",
+   "mpp": 0.25,
+   "play": false,
+   "instruction": "Segment every nucleus of this H&E image at 0.25 um/px (40x) as an instance map: the nucleus interior and a 2-pixel nucleus boundary. Classes: background, nucleus interior, nucleus boundary.",
+   "classes": [
+    {
+     "name": "background",
+     "color": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "nucleus interior",
+     "color": [
+      129,
+      255,
+      0
+     ]
+    },
+    {
+     "name": "nucleus boundary",
+     "color": [
+      255,
+      115,
+      226
+     ]
+    }
+   ],
+   "pool": 71,
+   "examples": [
+    {
+     "miou": 0.6968,
+     "dice": 0.8018,
+     "fg": 0.9105,
+     "extra": {
+      "name": "bPQ",
+      "value": 0.7531
+     },
+     "he": "assets/tasks/inst_monusac/00_he.webp"
+    },
+    {
+     "miou": 0.6997,
+     "dice": 0.8097,
+     "fg": 0.8602,
+     "extra": {
+      "name": "bPQ",
+      "value": 0.72
+     },
+     "he": "assets/tasks/inst_monusac/01_he.webp"
+    },
+    {
+     "miou": 0.6199,
+     "dice": 0.7088,
+     "fg": 0.8477,
+     "extra": {
+      "name": "bPQ",
+      "value": 0.716
+     },
+     "he": "assets/tasks/inst_monusac/02_he.webp"
+    },
+    {
+     "miou": 0.6646,
+     "dice": 0.7872,
+     "fg": 0.8492,
+     "extra": {
+      "name": "bPQ",
+      "value": 0.7103
+     },
+     "he": "assets/tasks/inst_monusac/03_he.webp"
+    }
+   ],
+   "paper": {
+    "metric": "bPQ",
+    "value": 0.563
+   },
+   "dataset_name": "MoNuSAC"
+  },
+  "inst_pannuke": {
+   "id": "inst_pannuke",
+   "family": "inst",
+   "title": "Nucleus instances (pan-cancer)",
+   "dataset": "PanNuke",
+   "mpp": 0.25,
+   "play": false,
+   "instruction": "Segment every nucleus of this H&E image at 0.25 um/px (40x) as an instance map: the nucleus interior and a 2-pixel nucleus boundary. Classes: background, nucleus interior, nucleus boundary.",
+   "classes": [
+    {
+     "name": "background",
+     "color": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "nucleus interior",
+     "color": [
+      129,
+      255,
+      0
+     ]
+    },
+    {
+     "name": "nucleus boundary",
+     "color": [
+      255,
+      115,
+      226
+     ]
+    }
+   ],
+   "pool": 160,
+   "examples": [
+    {
+     "miou": 0.7819,
+     "dice": 0.8671,
+     "fg": 0.9365,
+     "extra": {
+      "name": "bPQ",
+      "value": 0.7946
+     },
+     "he": "assets/tasks/inst_pannuke/00_he.webp"
+    },
+    {
+     "miou": 0.749,
+     "dice": 0.8433,
+     "fg": 0.9241,
+     "extra": {
+      "name": "bPQ",
+      "value": 0.7931
+     },
+     "he": "assets/tasks/inst_pannuke/01_he.webp"
+    },
+    {
+     "miou": 0.8047,
+     "dice": 0.8838,
+     "fg": 0.925,
+     "extra": {
+      "name": "bPQ",
+      "value": 0.7826
+     },
+     "he": "assets/tasks/inst_pannuke/02_he.webp"
+    },
+    {
+     "miou": 0.7977,
+     "dice": 0.8771,
+     "fg": 0.9601,
+     "extra": {
+      "name": "bPQ",
+      "value": 0.7823
+     },
+     "he": "assets/tasks/inst_pannuke/03_he.webp"
+    },
+    {
+     "miou": 0.7392,
+     "dice": 0.8383,
+     "fg": 0.8825,
+     "extra": {
+      "name": "bPQ",
+      "value": 0.7695
+     },
+     "he": "assets/tasks/inst_pannuke/04_he.webp"
+    },
+    {
+     "miou": 0.7443,
+     "dice": 0.8436,
+     "fg": 0.9261,
+     "extra": {
+      "name": "bPQ",
+      "value": 0.759
+     },
+     "he": "assets/tasks/inst_pannuke/05_he.webp"
+    },
+    {
+     "miou": 0.7034,
+     "dice": 0.8192,
+     "fg": 0.9136,
+     "extra": {
+      "name": "bPQ",
+      "value": 0.7579
+     },
+     "he": "assets/tasks/inst_pannuke/06_he.webp"
+    },
+    {
+     "miou": 0.7719,
+     "dice": 0.8615,
+     "fg": 0.9311,
+     "extra": {
+      "name": "bPQ",
+      "value": 0.7491
+     },
+     "he": "assets/tasks/inst_pannuke/07_he.webp"
+    }
+   ],
+   "paper": {
+    "metric": "bPQ",
+    "value": 0.507
+   },
+   "dataset_name": "PanNuke"
+  },
+  "mist1": {
+   "id": "mist1",
+   "family": "marker",
+   "title": "MIST1 (plasma cells)",
+   "dataset": "SegPath_MIST1",
+   "mpp": 0.5,
+   "play": false,
+   "instruction": "Predict the MIST1 immunofluorescence mask of this H&E image. Classes: marker negative, plasma cell (MIST1+).",
+   "classes": [
+    {
+     "name": "marker negative",
+     "color": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "plasma cell (MIST1+)",
+     "color": [
+      128,
+      153,
+      0
+     ]
+    }
+   ],
+   "pool": 13,
+   "examples": [
+    {
+     "miou": 0.6834,
+     "dice": 0.7856,
+     "fg": 0.607,
+     "he": "assets/tasks/mist1/00_he.webp"
+    },
+    {
+     "miou": 0.6114,
+     "dice": 0.6969,
+     "fg": 0.4126,
+     "he": "assets/tasks/mist1/01_he.webp"
+    },
+    {
+     "miou": 0.596,
+     "dice": 0.6813,
+     "fg": 0.387,
+     "he": "assets/tasks/mist1/02_he.webp"
+    },
+    {
+     "miou": 0.5923,
+     "dice": 0.6772,
+     "fg": 0.3801,
+     "he": "assets/tasks/mist1/03_he.webp"
+    }
+   ],
+   "paper": {
+    "metric": "mIoU",
+    "value": 0.557
+   },
+   "dataset_name": "SegPath MIST1"
+  },
+  "mnda": {
+   "id": "mnda",
+   "family": "marker",
+   "title": "MNDA (myeloid cells)",
+   "dataset": "SegPath_MNDA",
+   "mpp": 0.5,
+   "play": false,
+   "instruction": "Predict the MNDA immunofluorescence mask of this H&E image. Classes: marker negative, myeloid cell (MNDA+).",
+   "classes": [
+    {
+     "name": "marker negative",
+     "color": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "myeloid cell (MNDA+)",
+     "color": [
+      82,
+      0,
+      153
+     ]
+    }
+   ],
+   "pool": 40,
+   "examples": [
+    {
+     "miou": 0.6263,
+     "dice": 0.7202,
+     "fg": 0.4671,
+     "he": "assets/tasks/mnda/00_he.webp"
+    },
+    {
+     "miou": 0.5883,
+     "dice": 0.6675,
+     "fg": 0.3549,
+     "he": "assets/tasks/mnda/01_he.webp"
+    },
+    {
+     "miou": 0.5537,
+     "dice": 0.6143,
+     "fg": 0.2451,
+     "he": "assets/tasks/mnda/02_he.webp"
+    },
+    {
+     "miou": 0.5479,
+     "dice": 0.6061,
+     "fg": 0.2294,
+     "he": "assets/tasks/mnda/03_he.webp"
+    }
+   ],
+   "paper": {
+    "metric": "mIoU",
+    "value": 0.53
+   },
+   "dataset_name": "SegPath MNDA"
+  },
+  "monusac": {
+   "id": "monusac",
+   "family": "nuclei",
+   "title": "Nuclei by type (four organs)",
+   "dataset": "MoNuSAC",
+   "mpp": 0.25,
+   "play": false,
+   "instruction": "Segment the nuclei of this H&E image at 0.25 um/px (40x) by cell type. Classes: background, epithelial, lymphocyte, neutrophil, macrophage.",
+   "classes": [
+    {
+     "name": "background",
+     "color": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "epithelial",
+     "color": [
+      0,
+      153,
+      6
+     ]
+    },
+    {
+     "name": "lymphocyte",
+     "color": [
+      115,
+      191,
+      255
+     ]
+    },
+    {
+     "name": "neutrophil",
+     "color": [
+      222,
+      0,
+      255
+     ]
+    },
+    {
+     "name": "macrophage",
+     "color": [
+      153,
+      44,
+      0
+     ]
+    }
+   ],
+   "pool": 61,
+   "examples": [
+    {
+     "miou": 0.8693,
+     "dice": 0.9262,
+     "fg": 0.8612,
+     "he": "assets/tasks/monusac/00_he.webp"
+    },
+    {
+     "miou": 0.8679,
+     "dice": 0.9283,
+     "fg": 0.8969,
+     "he": "assets/tasks/monusac/01_he.webp"
+    },
+    {
+     "miou": 0.8638,
+     "dice": 0.9256,
+     "fg": 0.8883,
+     "he": "assets/tasks/monusac/02_he.webp"
+    },
+    {
+     "miou": 0.8582,
+     "dice": 0.9208,
+     "fg": 0.8643,
+     "he": "assets/tasks/monusac/03_he.webp"
+    },
+    {
+     "miou": 0.8576,
+     "dice": 0.9211,
+     "fg": 0.8721,
+     "he": "assets/tasks/monusac/04_he.webp"
+    },
+    {
+     "miou": 0.8543,
+     "dice": 0.9196,
+     "fg": 0.8753,
+     "he": "assets/tasks/monusac/05_he.webp"
+    }
+   ],
+   "paper": {
+    "metric": "mIoU",
+    "value": 0.605
+   },
+   "dataset_name": "MoNuSAC"
+  },
+  "panck": {
+   "id": "panck",
+   "family": "marker",
+   "title": "panCK (epithelium)",
+   "dataset": "SegPath_panCK",
+   "mpp": 0.5,
+   "play": true,
+   "instruction": "Predict the panCK immunofluorescence mask of this H&E image. Classes: marker negative, epithelium (panCK+).",
+   "classes": [
+    {
+     "name": "marker negative",
+     "color": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "epithelium (panCK+)",
+     "color": [
+      0,
+      153,
+      6
+     ]
+    }
+   ],
+   "pool": 160,
+   "examples": [
+    {
+     "miou": 0.9356,
+     "dice": 0.9661,
+     "fg": 0.9395,
+     "he": "assets/tasks/panck/00_he.webp"
+    },
+    {
+     "miou": 0.916,
+     "dice": 0.955,
+     "fg": 0.9196,
+     "he": "assets/tasks/panck/01_he.webp"
+    },
+    {
+     "miou": 0.9148,
+     "dice": 0.9543,
+     "fg": 0.9192,
+     "he": "assets/tasks/panck/02_he.webp"
+    },
+    {
+     "miou": 0.9011,
+     "dice": 0.9466,
+     "fg": 0.908,
+     "he": "assets/tasks/panck/03_he.webp"
+    },
+    {
+     "miou": 0.8974,
+     "dice": 0.9452,
+     "fg": 0.9179,
+     "he": "assets/tasks/panck/04_he.webp"
+    },
+    {
+     "miou": 0.891,
+     "dice": 0.9412,
+     "fg": 0.9058,
+     "he": "assets/tasks/panck/05_he.webp"
+    },
+    {
+     "miou": 0.876,
+     "dice": 0.9332,
+     "fg": 0.9061,
+     "he": "assets/tasks/panck/06_he.webp"
+    },
+    {
+     "miou": 0.8754,
+     "dice": 0.933,
+     "fg": 0.9092,
+     "he": "assets/tasks/panck/07_he.webp"
+    },
+    {
+     "miou": 0.8563,
+     "dice": 0.921,
+     "fg": 0.8797,
+     "he": "assets/tasks/panck/08_he.webp"
+    },
+    {
+     "miou": 0.8469,
+     "dice": 0.9143,
+     "fg": 0.8591,
+     "he": "assets/tasks/panck/09_he.webp"
+    }
+   ],
+   "paper": {
+    "metric": "mIoU",
+    "value": 0.755
+   },
+   "dataset_name": "SegPath panCK"
+  },
+  "panda": {
+   "id": "panda",
+   "family": "grade",
+   "title": "Gleason grading (PANDA)",
+   "dataset": "PANDA",
+   "mpp": 0.5,
+   "play": true,
+   "instruction": "Segment the Gleason grades of this prostate H&E image at 0.5 um/px. Classes: background, stroma, benign epithelium, Gleason 3, Gleason 4, Gleason 5.",
+   "classes": [
+    {
+     "name": "background",
+     "color": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "stroma",
+     "color": [
+      0,
+      0,
+      255
+     ]
+    },
+    {
+     "name": "benign epithelium",
+     "color": [
+      0,
+      255,
+      255
+     ]
+    },
+    {
+     "name": "Gleason 3",
+     "color": [
+      255,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "Gleason 4",
+     "color": [
+      255,
+      128,
+      0
+     ]
+    },
+    {
+     "name": "Gleason 5",
+     "color": [
+      255,
+      255,
+      0
+     ]
+    }
+   ],
+   "pool": 320,
+   "examples": [
+    {
+     "miou": 0.9609,
+     "dice": 0.9798,
+     "fg": 1.0,
+     "he": "assets/tasks/panda/00_he.webp"
+    },
+    {
+     "miou": 0.9517,
+     "dice": 0.9753,
+     "fg": 1.0,
+     "he": "assets/tasks/panda/01_he.webp"
+    },
+    {
+     "miou": 0.9502,
+     "dice": 0.974,
+     "fg": 1.0,
+     "he": "assets/tasks/panda/02_he.webp"
+    },
+    {
+     "miou": 0.9496,
+     "dice": 0.9741,
+     "fg": 1.0,
+     "he": "assets/tasks/panda/03_he.webp"
+    },
+    {
+     "miou": 0.9463,
+     "dice": 0.9721,
+     "fg": 1.0,
+     "he": "assets/tasks/panda/04_he.webp"
+    },
+    {
+     "miou": 0.9427,
+     "dice": 0.9705,
+     "fg": 1.0,
+     "he": "assets/tasks/panda/05_he.webp"
+    },
+    {
+     "miou": 0.9407,
+     "dice": 0.9691,
+     "fg": 1.0,
+     "he": "assets/tasks/panda/06_he.webp"
+    },
+    {
+     "miou": 0.9361,
+     "dice": 0.9664,
+     "fg": 1.0,
+     "he": "assets/tasks/panda/07_he.webp"
+    },
+    {
+     "miou": 0.9351,
+     "dice": 0.9664,
+     "fg": 1.0,
+     "he": "assets/tasks/panda/08_he.webp"
+    },
+    {
+     "miou": 0.9312,
+     "dice": 0.9644,
+     "fg": 1.0,
+     "he": "assets/tasks/panda/09_he.webp"
+    }
+   ],
+   "paper": {
+    "metric": "mIoU",
+    "value": 0.517
+   },
+   "dataset_name": "PANDA"
+  },
+  "panda_k": {
+   "id": "panda_k",
+   "family": "cls",
+   "title": "Cancer in a tile (PANDA, Karolinska)",
+   "dataset": "PANDA",
+   "mpp": 0.5,
+   "play": false,
+   "instruction": "Classify this H&E image at 0.5 um/px (prostate) and paint the output with the colour of its class. Classes: benign, cancer.",
+   "classes": [
+    {
+     "name": "benign",
+     "color": [
+      115,
+      156,
+      255
+     ]
+    },
+    {
+     "name": "cancer",
+     "color": [
+      89,
+      153,
+      0
+     ]
+    }
+   ],
+   "pool": 96,
+   "pool_accuracy": 0.7917,
+   "examples": [
+    {
+     "label": 0,
+     "pred": 0,
+     "share": [
+      1.0,
+      0.0
+     ],
+     "miou": 1.0,
+     "dice": 1.0,
+     "fg": 1.0,
+     "he": "assets/tasks/panda_k/00_he.webp"
+    },
+    {
+     "label": 1,
+     "pred": 1,
+     "share": [
+      0.0,
+      1.0
+     ],
+     "miou": 1.0,
+     "dice": 1.0,
+     "fg": 1.0,
+     "he": "assets/tasks/panda_k/01_he.webp"
+    },
+    {
+     "label": 0,
+     "pred": 0,
+     "share": [
+      1.0,
+      0.0
+     ],
+     "miou": 1.0,
+     "dice": 1.0,
+     "fg": 1.0,
+     "he": "assets/tasks/panda_k/02_he.webp"
+    },
+    {
+     "label": 1,
+     "pred": 1,
+     "share": [
+      0.0,
+      1.0
+     ],
+     "miou": 1.0,
+     "dice": 1.0,
+     "fg": 1.0,
+     "he": "assets/tasks/panda_k/03_he.webp"
+    },
+    {
+     "label": 0,
+     "pred": 0,
+     "share": [
+      1.0,
+      0.0
+     ],
+     "miou": 1.0,
+     "dice": 1.0,
+     "fg": 1.0,
+     "he": "assets/tasks/panda_k/04_he.webp"
+    },
+    {
+     "label": 1,
+     "pred": 1,
+     "share": [
+      0.0,
+      1.0
+     ],
+     "miou": 1.0,
+     "dice": 1.0,
+     "fg": 1.0,
+     "he": "assets/tasks/panda_k/05_he.webp"
+    },
+    {
+     "label": 0,
+     "pred": 1,
+     "share": [
+      0.0,
+      1.0
+     ],
+     "miou": 0.0,
+     "dice": 0.0,
+     "fg": 0.0,
+     "he": "assets/tasks/panda_k/06_he.webp"
+    },
+    {
+     "label": 0,
+     "pred": 1,
+     "share": [
+      0.0,
+      1.0
+     ],
+     "miou": 0.0,
+     "dice": 0.0,
+     "fg": 0.0,
+     "he": "assets/tasks/panda_k/07_he.webp"
+    }
+   ],
+   "paper": {
+    "metric": "balanced accuracy",
+    "value": 0.791
+   },
+   "dataset_name": "PANDA"
+  },
+  "panda_r": {
+   "id": "panda_r",
+   "family": "cls",
+   "title": "Gleason pattern of a tile (PANDA, Radboud)",
+   "dataset": "PANDA",
+   "mpp": 0.5,
+   "play": false,
+   "instruction": "Classify this H&E image at 0.5 um/px (prostate, Gleason pattern) and paint the output with the colour of its class. Classes: benign, Gleason 3, Gleason 4, Gleason 5.",
+   "classes": [
+    {
+     "name": "benign",
+     "color": [
+      115,
+      156,
+      255
+     ]
+    },
+    {
+     "name": "Gleason 3",
+     "color": [
+      89,
+      153,
+      0
+     ]
+    },
+    {
+     "name": "Gleason 4",
+     "color": [
+      255,
+      0,
+      223
+     ]
+    },
+    {
+     "name": "Gleason 5",
+     "color": [
+      115,
+      255,
+      232
+     ]
+    }
+   ],
+   "pool": 96,
+   "pool_accuracy": 0.7917,
+   "examples": [
+    {
+     "label": 0,
+     "pred": 0,
+     "share": [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "miou": 1.0,
+     "dice": 1.0,
+     "fg": 1.0,
+     "he": "assets/tasks/panda_r/00_he.webp"
+    },
+    {
+     "label": 1,
+     "pred": 1,
+     "share": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+     ],
+     "miou": 1.0,
+     "dice": 1.0,
+     "fg": 1.0,
+     "he": "assets/tasks/panda_r/01_he.webp"
+    },
+    {
+     "label": 2,
+     "pred": 2,
+     "share": [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+     ],
+     "miou": 1.0,
+     "dice": 1.0,
+     "fg": 1.0,
+     "he": "assets/tasks/panda_r/02_he.webp"
+    },
+    {
+     "label": 3,
+     "pred": 3,
+     "share": [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+     ],
+     "miou": 1.0,
+     "dice": 1.0,
+     "fg": 1.0,
+     "he": "assets/tasks/panda_r/03_he.webp"
+    },
+    {
+     "label": 0,
+     "pred": 0,
+     "share": [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "miou": 1.0,
+     "dice": 1.0,
+     "fg": 1.0,
+     "he": "assets/tasks/panda_r/04_he.webp"
+    },
+    {
+     "label": 1,
+     "pred": 1,
+     "share": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+     ],
+     "miou": 1.0,
+     "dice": 1.0,
+     "fg": 1.0,
+     "he": "assets/tasks/panda_r/05_he.webp"
+    },
+    {
+     "label": 2,
+     "pred": 2,
+     "share": [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+     ],
+     "miou": 1.0,
+     "dice": 1.0,
+     "fg": 1.0,
+     "he": "assets/tasks/panda_r/06_he.webp"
+    },
+    {
+     "label": 3,
+     "pred": 3,
+     "share": [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+     ],
+     "miou": 0.5,
+     "dice": 0.5,
+     "fg": 1.0,
+     "he": "assets/tasks/panda_r/07_he.webp"
+    },
+    {
+     "label": 0,
+     "pred": 0,
+     "share": [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "miou": 1.0,
+     "dice": 1.0,
+     "fg": 1.0,
+     "he": "assets/tasks/panda_r/08_he.webp"
+    },
+    {
+     "label": 1,
+     "pred": 1,
+     "share": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+     ],
+     "miou": 1.0,
+     "dice": 1.0,
+     "fg": 1.0,
+     "he": "assets/tasks/panda_r/09_he.webp"
+    },
+    {
+     "label": 0,
+     "pred": 1,
+     "share": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+     ],
+     "miou": 0.0,
+     "dice": 0.0,
+     "fg": 0.0,
+     "he": "assets/tasks/panda_r/10_he.webp"
+    },
+    {
+     "label": 3,
+     "pred": 2,
+     "share": [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+     ],
+     "miou": 0.0,
+     "dice": 0.0,
+     "fg": 1.0,
+     "he": "assets/tasks/panda_r/11_he.webp"
+    }
+   ],
+   "paper": {
+    "metric": "balanced accuracy",
+    "value": 0.661
+   },
+   "dataset_name": "PANDA"
+  },
+  "pannuke": {
+   "id": "pannuke",
+   "family": "nuclei",
+   "title": "Nuclei by type (pan-cancer)",
+   "dataset": "PanNuke",
+   "mpp": 0.25,
+   "play": true,
+   "instruction": "Segment the nuclei of this H&E image at 0.25 um/px (40x) by cell type. Classes: background, epithelial, neoplastic, inflammatory, connective, dead.",
+   "classes": [
+    {
+     "name": "background",
+     "color": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "epithelial",
+     "color": [
+      0,
+      153,
+      6
+     ]
+    },
+    {
+     "name": "neoplastic",
+     "color": [
+      255,
+      0,
+      65
+     ]
+    },
+    {
+     "name": "inflammatory",
+     "color": [
+      0,
+      2,
+      255
+     ]
+    },
+    {
+     "name": "connective",
+     "color": [
+      157,
+      255,
+      115
+     ]
+    },
+    {
+     "name": "dead",
+     "color": [
+      0,
+      225,
+      255
+     ]
+    }
+   ],
+   "pool": 160,
+   "examples": [
+    {
+     "miou": 0.9547,
+     "dice": 0.9766,
+     "fg": 0.9624,
+     "he": "assets/tasks/pannuke/00_he.webp"
+    },
+    {
+     "miou": 0.9313,
+     "dice": 0.9644,
+     "fg": 0.9573,
+     "he": "assets/tasks/pannuke/01_he.webp"
+    },
+    {
+     "miou": 0.9013,
+     "dice": 0.9477,
+     "fg": 0.9277,
+     "he": "assets/tasks/pannuke/02_he.webp"
+    },
+    {
+     "miou": 0.8978,
+     "dice": 0.9446,
+     "fg": 0.9044,
+     "he": "assets/tasks/pannuke/03_he.webp"
+    },
+    {
+     "miou": 0.8356,
+     "dice": 0.9087,
+     "fg": 0.9088,
+     "he": "assets/tasks/pannuke/04_he.webp"
+    },
+    {
+     "miou": 0.8351,
+     "dice": 0.9075,
+     "fg": 0.854,
+     "he": "assets/tasks/pannuke/05_he.webp"
+    },
+    {
+     "miou": 0.8292,
+     "dice": 0.9059,
+     "fg": 0.8776,
+     "he": "assets/tasks/pannuke/06_he.webp"
+    },
+    {
+     "miou": 0.8174,
+     "dice": 0.8902,
+     "fg": 0.9434,
+     "he": "assets/tasks/pannuke/07_he.webp"
+    },
+    {
+     "miou": 0.8053,
+     "dice": 0.8901,
+     "fg": 0.849,
+     "he": "assets/tasks/pannuke/08_he.webp"
+    },
+    {
+     "miou": 0.7995,
+     "dice": 0.8831,
+     "fg": 0.9239,
+     "he": "assets/tasks/pannuke/09_he.webp"
+    }
+   ],
+   "paper": {
+    "metric": "mIoU",
+    "value": 0.431
+   },
+   "dataset_name": "PanNuke"
+  },
+  "puma": {
+   "id": "puma",
+   "family": "nuclei",
+   "title": "Tissue and nuclei (melanoma)",
+   "dataset": "PUMA",
+   "mpp": 0.25,
+   "play": false,
+   "instruction": "Segment the tissue regions and the nuclei (by cell type) of this H&E image at 0.25 um/px (40x). Classes: white background / no nucleus, tumor, stroma, necrosis, blood vessel, epidermis, epithelium, tumor, lymphocyte, plasma cell, neutrophil, histiocyte, stroma, endothelium, apoptosis, melanophage.",
+   "classes": [
+    {
+     "name": "white background / no nucleus",
+     "color": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "tumor",
+     "color": [
+      115,
+      156,
+      255
+     ]
+    },
+    {
+     "name": "stroma",
+     "color": [
+      255,
+      0,
+      223
+     ]
+    },
+    {
+     "name": "necrosis",
+     "color": [
+      153,
+      83,
+      0
+     ]
+    },
+    {
+     "name": "blood vessel",
+     "color": [
+      0,
+      160,
+      255
+     ]
+    },
+    {
+     "name": "epidermis",
+     "color": [
+      0,
+      255,
+      127
+     ]
+    },
+    {
+     "name": "epithelium",
+     "color": [
+      0,
+      153,
+      6
+     ]
+    },
+    {
+     "name": "tumor",
+     "color": [
+      255,
+      0,
+      65
+     ]
+    },
+    {
+     "name": "lymphocyte",
+     "color": [
+      115,
+      191,
+      255
+     ]
+    },
+    {
+     "name": "plasma cell",
+     "color": [
+      128,
+      153,
+      0
+     ]
+    },
+    {
+     "name": "neutrophil",
+     "color": [
+      222,
+      0,
+      255
+     ]
+    },
+    {
+     "name": "histiocyte",
+     "color": [
+      153,
+      44,
+      0
+     ]
+    },
+    {
+     "name": "stroma",
+     "color": [
+      157,
+      255,
+      115
+     ]
+    },
+    {
+     "name": "endothelium",
+     "color": [
+      153,
+      0,
+      90
+     ]
+    },
+    {
+     "name": "apoptosis",
+     "color": [
+      0,
+      225,
+      255
+     ]
+    },
+    {
+     "name": "melanophage",
+     "color": [
+      14,
+      153,
+      0
+     ]
+    }
+   ],
+   "pool": 9,
+   "examples": [
+    {
+     "miou": 0.3546,
+     "dice": 0.4026,
+     "fg": 1.0,
+     "he": "assets/tasks/puma/00_he.webp"
+    },
+    {
+     "miou": 0.3072,
+     "dice": 0.3467,
+     "fg": 1.0,
+     "he": "assets/tasks/puma/01_he.webp"
+    },
+    {
+     "miou": 0.2875,
+     "dice": 0.3292,
+     "fg": 1.0,
+     "he": "assets/tasks/puma/02_he.webp"
+    },
+    {
+     "miou": 0.1908,
+     "dice": 0.2344,
+     "fg": 1.0,
+     "he": "assets/tasks/puma/03_he.webp"
+    }
+   ],
+   "paper": {
+    "metric": "mIoU",
+    "value": 0.288
+   },
+   "dataset_name": "PUMA"
+  },
+  "sicap": {
+   "id": "sicap",
+   "family": "tissue",
+   "title": "Prostate cancer regions",
+   "dataset": "SICAPv2",
+   "mpp": 0.5,
+   "play": false,
+   "instruction": "Segment the tissue regions of this H&E image. Classes: non-cancerous, Gleason 3 / Gleason 4 / Gleason 5.",
+   "classes": [
+    {
+     "name": "non-cancerous",
+     "color": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "Gleason 3 / Gleason 4 / Gleason 5",
+     "color": [
+      115,
+      156,
+      255
+     ]
+    }
+   ],
+   "pool": 160,
+   "examples": [
+    {
+     "miou": 0.9475,
+     "dice": 0.9726,
+     "fg": 0.951,
+     "he": "assets/tasks/sicap/00_he.webp"
+    },
+    {
+     "miou": 0.9421,
+     "dice": 0.9697,
+     "fg": 0.991,
+     "he": "assets/tasks/sicap/01_he.webp"
+    },
+    {
+     "miou": 0.9312,
+     "dice": 0.9641,
+     "fg": 0.9816,
+     "he": "assets/tasks/sicap/02_he.webp"
+    },
+    {
+     "miou": 0.905,
+     "dice": 0.9497,
+     "fg": 0.928,
+     "he": "assets/tasks/sicap/03_he.webp"
+    },
+    {
+     "miou": 0.9039,
+     "dice": 0.9494,
+     "fg": 0.9619,
+     "he": "assets/tasks/sicap/04_he.webp"
+    },
+    {
+     "miou": 0.8659,
+     "dice": 0.9242,
+     "fg": 0.8591,
+     "he": "assets/tasks/sicap/05_he.webp"
+    }
+   ],
+   "paper": {
+    "metric": "mIoU",
+    "value": 0.677
+   },
+   "dataset_name": "SICAPv2"
+  },
+  "sicap_grade": {
+   "id": "sicap_grade",
+   "family": "grade",
+   "title": "Gleason grading (SICAPv2)",
+   "dataset": "SICAPv2",
+   "mpp": 1.0,
+   "play": false,
+   "instruction": "Segment the Gleason grades of this prostate H&E image at 1 um/px. Classes: non-cancerous, Gleason 3, Gleason 4, Gleason 5.",
+   "classes": [
+    {
+     "name": "non-cancerous",
+     "color": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "Gleason 3",
+     "color": [
+      255,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "Gleason 4",
+     "color": [
+      255,
+      128,
+      0
+     ]
+    },
+    {
+     "name": "Gleason 5",
+     "color": [
+      255,
+      255,
+      0
+     ]
+    }
+   ],
+   "pool": 320,
+   "examples": [
+    {
+     "miou": 0.9709,
+     "dice": 0.9852,
+     "fg": 0.9829,
+     "he": "assets/tasks/sicap_grade/00_he.webp"
+    },
+    {
+     "miou": 0.903,
+     "dice": 0.949,
+     "fg": 0.9545,
+     "he": "assets/tasks/sicap_grade/01_he.webp"
+    },
+    {
+     "miou": 0.8636,
+     "dice": 0.9246,
+     "fg": 0.8751,
+     "he": "assets/tasks/sicap_grade/02_he.webp"
+    },
+    {
+     "miou": 0.8613,
+     "dice": 0.9254,
+     "fg": 0.921,
+     "he": "assets/tasks/sicap_grade/03_he.webp"
+    },
+    {
+     "miou": 0.8098,
+     "dice": 0.8949,
+     "fg": 0.892,
+     "he": "assets/tasks/sicap_grade/04_he.webp"
+    },
+    {
+     "miou": 0.6906,
+     "dice": 0.8016,
+     "fg": 0.6661,
+     "he": "assets/tasks/sicap_grade/05_he.webp"
+    },
+    {
+     "miou": 0.6218,
+     "dice": 0.6432,
+     "fg": 0.985,
+     "he": "assets/tasks/sicap_grade/06_he.webp"
+    },
+    {
+     "miou": 0.6091,
+     "dice": 0.6365,
+     "fg": 0.9439,
+     "he": "assets/tasks/sicap_grade/07_he.webp"
+    }
+   ],
+   "paper": {
+    "metric": "mIoU",
+    "value": 0.374
+   },
+   "dataset_name": "SICAPv2"
+  },
+  "tiger": {
+   "id": "tiger",
+   "family": "tissue",
+   "title": "Breast tumour regions",
+   "dataset": "TIGER_wsirois",
+   "mpp": 0.5,
+   "play": true,
+   "instruction": "Segment the tissue regions of this H&E image. Classes: rest, invasive tumor, in-situ tumor, tumor-associated stroma, inflamed stroma, necrosis not in-situ, healthy glands.",
+   "classes": [
+    {
+     "name": "rest",
+     "color": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "invasive tumor",
+     "color": [
+      115,
+      156,
+      255
+     ]
+    },
+    {
+     "name": "in-situ tumor",
+     "color": [
+      89,
+      153,
+      0
+     ]
+    },
+    {
+     "name": "tumor-associated stroma",
+     "color": [
+      255,
+      0,
+      223
+     ]
+    },
+    {
+     "name": "inflamed stroma",
+     "color": [
+      115,
+      255,
+      232
+     ]
+    },
+    {
+     "name": "necrosis not in-situ",
+     "color": [
+      153,
+      83,
+      0
+     ]
+    },
+    {
+     "name": "healthy glands",
+     "color": [
+      64,
+      0,
+      255
+     ]
+    }
+   ],
+   "pool": 160,
+   "examples": [
+    {
+     "miou": 0.9175,
+     "dice": 0.9565,
+     "fg": 1.0,
+     "he": "assets/tasks/tiger/00_he.webp"
+    },
+    {
+     "miou": 0.88,
+     "dice": 0.9347,
+     "fg": 1.0,
+     "he": "assets/tasks/tiger/01_he.webp"
+    },
+    {
+     "miou": 0.8709,
+     "dice": 0.9293,
+     "fg": 1.0,
+     "he": "assets/tasks/tiger/02_he.webp"
+    },
+    {
+     "miou": 0.8123,
+     "dice": 0.8921,
+     "fg": 1.0,
+     "he": "assets/tasks/tiger/03_he.webp"
+    },
+    {
+     "miou": 0.8062,
+     "dice": 0.8849,
+     "fg": 1.0,
+     "he": "assets/tasks/tiger/04_he.webp"
+    },
+    {
+     "miou": 0.803,
+     "dice": 0.8875,
+     "fg": 1.0,
+     "he": "assets/tasks/tiger/05_he.webp"
+    },
+    {
+     "miou": 0.769,
+     "dice": 0.8582,
+     "fg": 1.0,
+     "he": "assets/tasks/tiger/06_he.webp"
+    },
+    {
+     "miou": 0.7507,
+     "dice": 0.8484,
+     "fg": 1.0,
+     "he": "assets/tasks/tiger/07_he.webp"
+    },
+    {
+     "miou": 0.7258,
+     "dice": 0.8407,
+     "fg": 1.0,
+     "he": "assets/tasks/tiger/08_he.webp"
+    },
+    {
+     "miou": 0.7185,
+     "dice": 0.8209,
+     "fg": 1.0,
+     "he": "assets/tasks/tiger/09_he.webp"
+    }
+   ],
+   "paper": {
+    "metric": "mIoU",
+    "value": 0.34
+   },
+   "dataset_name": "TIGER (regions of interest)"
+  },
+  "tigerbulk": {
+   "id": "tigerbulk",
+   "family": "tissue",
+   "title": "Tumour bulk",
+   "dataset": "TIGER_wsibulk",
+   "mpp": 0.5,
+   "play": false,
+   "instruction": "Segment the tissue regions of this H&E image. Classes: outside tumor bulk, tumor bulk.",
+   "classes": [
+    {
+     "name": "outside tumor bulk",
+     "color": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "tumor bulk",
+     "color": [
+      179,
+      115,
+      255
+     ]
+    }
+   ],
+   "pool": 160,
+   "examples": [
+    {
+     "miou": 0.9668,
+     "dice": 0.983,
+     "fg": 0.9953,
+     "he": "assets/tasks/tigerbulk/00_he.webp"
+    },
+    {
+     "miou": 0.9507,
+     "dice": 0.9745,
+     "fg": 0.9903,
+     "he": "assets/tasks/tigerbulk/01_he.webp"
+    },
+    {
+     "miou": 0.9485,
+     "dice": 0.9735,
+     "fg": 0.9842,
+     "he": "assets/tasks/tigerbulk/02_he.webp"
+    },
+    {
+     "miou": 0.9462,
+     "dice": 0.9721,
+     "fg": 0.9896,
+     "he": "assets/tasks/tigerbulk/03_he.webp"
+    }
+   ],
+   "paper": {
+    "metric": "mIoU",
+    "value": 0.707
+   },
+   "dataset_name": "TIGER (tumour bulk)"
+  },
+  "tnbc": {
+   "id": "tnbc",
+   "family": "nuclei",
+   "title": "Nuclei by type (breast, brain)",
+   "dataset": "TNBC",
+   "mpp": 0.25,
+   "play": false,
+   "instruction": "Segment the nuclei of this H&E image at 0.25 um/px (40x) by cell type. Classes: background, unknown, epithelial, cancerous, lymphocyte/plasmocyte, fibroblast, endothelial, necrosis, glial, neuron, mitosis, adipocyte, myo-epithelial.",
+   "classes": [
+    {
+     "name": "background",
+     "color": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "unknown",
+     "color": [
+      161,
+      115,
+      255
+     ]
+    },
+    {
+     "name": "epithelial",
+     "color": [
+      0,
+      153,
+      6
+     ]
+    },
+    {
+     "name": "cancerous",
+     "color": [
+      255,
+      0,
+      65
+     ]
+    },
+    {
+     "name": "lymphocyte/plasmocyte",
+     "color": [
+      115,
+      191,
+      255
+     ]
+    },
+    {
+     "name": "fibroblast",
+     "color": [
+      157,
+      255,
+      115
+     ]
+    },
+    {
+     "name": "endothelial",
+     "color": [
+      153,
+      0,
+      90
+     ]
+    },
+    {
+     "name": "necrosis",
+     "color": [
+      0,
+      225,
+      255
+     ]
+    },
+    {
+     "name": "glial",
+     "color": [
+      0,
+      52,
+      153
+     ]
+    },
+    {
+     "name": "neuron",
+     "color": [
+      161,
+      255,
+      0
+     ]
+    },
+    {
+     "name": "mitosis",
+     "color": [
+      255,
+      115,
+      244
+     ]
+    },
+    {
+     "name": "adipocyte",
+     "color": [
+      0,
+      153,
+      120
+     ]
+    },
+    {
+     "name": "myo-epithelial",
+     "color": [
+      255,
+      126,
+      0
+     ]
+    }
+   ],
+   "pool": 10,
+   "examples": [
+    {
+     "miou": 0.6102,
+     "dice": 0.6368,
+     "fg": 0.8949,
+     "he": "assets/tasks/tnbc/00_he.webp"
+    },
+    {
+     "miou": 0.477,
+     "dice": 0.5531,
+     "fg": 0.6639,
+     "he": "assets/tasks/tnbc/01_he.webp"
+    },
+    {
+     "miou": 0.5944,
+     "dice": 0.6281,
+     "fg": 0.8697,
+     "he": "assets/tasks/tnbc/02_he.webp"
+    },
+    {
+     "miou": 0.4232,
+     "dice": 0.4574,
+     "fg": 0.8553,
+     "he": "assets/tasks/tnbc/03_he.webp"
+    }
+   ],
+   "paper": {
+    "metric": "mIoU",
+    "value": 0.244
+   },
+   "dataset_name": "TNBC"
+  }
+ },
+ "families": [
+  {
+   "id": "tissue",
+   "title": "Tissue segmentation",
+   "sets": [
+    "tiger",
+    "beetle",
+    "sicap",
+    "bcss",
+    "histoseg",
+    "ignite",
+    "tigerbulk"
+   ],
+   "readout": "nearest class colour per pixel"
+  },
+  {
+   "id": "grade",
+   "title": "Gleason grading",
+   "sets": [
+    "panda",
+    "sicap_grade"
+   ],
+   "readout": "nearest class colour per pixel"
+  },
+  {
+   "id": "nuclei",
+   "title": "Nuclei by type",
+   "sets": [
+    "pannuke",
+    "monusac",
+    "tnbc",
+    "puma"
+   ],
+   "readout": "nearest class colour per pixel"
+  },
+  {
+   "id": "inst",
+   "title": "Nucleus instances",
+   "sets": [
+    "inst_pannuke",
+    "inst_monusac"
+   ],
+   "readout": "each connected interior region is one nucleus"
+  },
+  {
+   "id": "det",
+   "title": "Cell detection",
+   "sets": [
+    "det_pannuke",
+    "det_monusac"
+   ],
+   "readout": "one cell per painted disc, typed by its colour"
+  },
+  {
+   "id": "marker",
+   "title": "Virtual IHC",
+   "sets": [
+    "panck",
+    "cd3cd20",
+    "asma",
+    "cd235a",
+    "cd45rb",
+    "erg",
+    "mist1",
+    "mnda"
+   ],
+   "readout": "nearest class colour per pixel"
+  },
+  {
+   "id": "cls",
+   "title": "Classification",
+   "sets": [
+    "panda_r",
+    "panda_k"
+   ],
+   "readout": "the colour painted on most pixels is the class"
+  }
+ ],
+ "play": [
+  {
+   "id": "panda",
+   "title": "Prostate glands and Gleason grade"
+  },
+  {
+   "id": "beetle",
+   "title": "Breast epithelium"
+  },
+  {
+   "id": "tiger",
+   "title": "Breast tumour regions"
+  },
+  {
+   "id": "pannuke",
+   "title": "Nuclei by type"
+  },
+  {
+   "id": "panck",
+   "title": "Virtual IHC: panCK"
+  },
+  {
+   "id": "cd3cd20",
+   "title": "Virtual IHC: CD3/CD20"
+  }
+ ],
+ "t2i": [
+  {
+   "id": "c00",
+   "group": "tumour",
+   "prompt": "H&E, FFPE, breast, infiltrating duct carcinoma, nos. 0.5 \u00b5m per pixel.",
+   "organ": "breast",
+   "diagnosis": "infiltrating duct carcinoma, nos",
+   "scale": 0.5,
+   "dense": [
+    0,
+    3,
+    4,
+    6
+   ],
+   "tissue": [
+    0.92,
+    0.51,
+    0.73,
+    0.84,
+    0.92,
+    0.62,
+    0.82,
+    0.61
+   ]
+  },
+  {
+   "id": "c03",
+   "group": "tumour",
+   "prompt": "H&E, FFPE, lung, adenocarcinoma, nos. 0.5 \u00b5m per pixel.",
+   "organ": "lung",
+   "diagnosis": "adenocarcinoma, nos",
+   "scale": 0.5,
+   "dense": [
+    1,
+    3,
+    4,
+    5
+   ],
+   "tissue": [
+    0.72,
+    0.83,
+    0.48,
+    0.85,
+    0.89,
+    0.9,
+    0.72,
+    0.8
+   ]
+  },
+  {
+   "id": "c04",
+   "group": "tumour",
+   "prompt": "H&E, FFPE, lung, squamous cell carcinoma, nos. 0.5 \u00b5m per pixel.",
+   "organ": "lung",
+   "diagnosis": "squamous cell carcinoma, nos",
+   "scale": 0.5,
+   "dense": [
+    3,
+    4,
+    5,
+    6
+   ],
+   "tissue": [
+    0.49,
+    0.62,
+    0.39,
+    0.89,
+    0.98,
+    0.88,
+    0.84,
+    0.76
+   ]
+  },
+  {
+   "id": "c05",
+   "group": "tumour",
+   "prompt": "H&E, FFPE, colon, adenocarcinoma, nos. 0.5 \u00b5m per pixel.",
+   "organ": "colon",
+   "diagnosis": "adenocarcinoma, nos",
+   "scale": 0.5,
+   "dense": [
+    1,
+    7
+   ],
+   "tissue": [
+    0.72,
+    0.98,
+    0.53,
+    0.72,
+    0.46,
+    0.4,
+    0.26,
+    1.0
+   ]
+  },
+  {
+   "id": "c08",
+   "group": "tumour",
+   "prompt": "H&E, FFPE, prostate gland, acinar cell carcinoma. 0.5 \u00b5m per pixel.",
+   "organ": "prostate gland",
+   "diagnosis": "acinar cell carcinoma",
+   "scale": 0.5,
+   "dense": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "tissue": [
+    0.94,
+    0.94,
+    0.87,
+    0.8,
+    0.97,
+    0.82,
+    0.95,
+    0.78
+   ]
+  },
+  {
+   "id": "c09",
+   "group": "tumour",
+   "prompt": "H&E, FFPE, kidney, clear cell adenocarcinoma, nos. 0.5 \u00b5m per pixel.",
+   "organ": "kidney",
+   "diagnosis": "clear cell adenocarcinoma, nos",
+   "scale": 0.5,
+   "dense": [
+    4
+   ],
+   "tissue": [
+    0.77,
+    0.25,
+    0.55,
+    0.11,
+    0.93,
+    0.65,
+    0.45,
+    0.24
+   ]
+  },
+  {
+   "id": "c12",
+   "group": "tumour",
+   "prompt": "H&E, FFPE, liver and intrahepatic bile ducts, hepatocellular carcinoma, nos. 0.5 \u00b5m per pixel.",
+   "organ": "liver and intrahepatic bile ducts",
+   "diagnosis": "hepatocellular carcinoma, nos",
+   "scale": 0.5,
+   "dense": [
+    0,
+    1,
+    3,
+    4,
+    6
+   ],
+   "tissue": [
+    0.85,
+    0.91,
+    0.38,
+    0.95,
+    0.99,
+    0.65,
+    0.84,
+    0.59
+   ]
+  },
+  {
+   "id": "c14",
+   "group": "tumour",
+   "prompt": "H&E, FFPE, thyroid gland, papillary adenocarcinoma, nos. 0.5 \u00b5m per pixel.",
+   "organ": "thyroid gland",
+   "diagnosis": "papillary adenocarcinoma, nos",
+   "scale": 0.5,
+   "dense": [
+    1,
+    3,
+    4,
+    5,
+    6,
+    7
+   ],
+   "tissue": [
+    0.26,
+    1.0,
+    0.34,
+    0.9,
+    0.9,
+    0.92,
+    0.99,
+    0.82
+   ]
+  },
+  {
+   "id": "c15",
+   "group": "tumour",
+   "prompt": "H&E, FFPE, skin, malignant melanoma, nos. 0.5 \u00b5m per pixel.",
+   "organ": "skin",
+   "diagnosis": "malignant melanoma, nos",
+   "scale": 0.5,
+   "dense": [
+    0,
+    1,
+    2,
+    3,
+    7
+   ],
+   "tissue": [
+    0.92,
+    0.89,
+    0.96,
+    0.95,
+    0.54,
+    0.74,
+    0.19,
+    0.96
+   ]
+  },
+  {
+   "id": "c18",
+   "group": "tumour",
+   "prompt": "H&E, FFPE, brain, glioblastoma. 0.5 \u00b5m per pixel.",
+   "organ": "brain",
+   "diagnosis": "glioblastoma",
+   "scale": 0.5,
+   "dense": [
+    1,
+    4,
+    7
+   ],
+   "tissue": [
+    0.77,
+    0.83,
+    0.68,
+    0.41,
+    0.95,
+    0.36,
+    0.53,
+    0.99
+   ]
+  },
+  {
+   "id": "c20",
+   "group": "tumour",
+   "prompt": "H&E, FFPE, testis, seminoma, nos. 0.5 \u00b5m per pixel.",
+   "organ": "testis",
+   "diagnosis": "seminoma, nos",
+   "scale": 0.5,
+   "dense": [
+    0,
+    2,
+    3,
+    4
+   ],
+   "tissue": [
+    0.98,
+    0.35,
+    0.89,
+    0.87,
+    0.83,
+    0.79,
+    0.37,
+    0.72
+   ]
+  },
+  {
+   "id": "c22",
+   "group": "tumour",
+   "prompt": "H&E, FFPE, corpus uteri, endometrioid adenocarcinoma, nos. 0.5 \u00b5m per pixel.",
+   "organ": "corpus uteri",
+   "diagnosis": "endometrioid adenocarcinoma, nos",
+   "scale": 0.5,
+   "dense": [
+    1,
+    2,
+    4,
+    5,
+    7
+   ],
+   "tissue": [
+    0.72,
+    0.92,
+    0.99,
+    0.54,
+    0.99,
+    0.94,
+    0.56,
+    0.99
+   ]
+  },
+  {
+   "id": "c25",
+   "group": "normal",
+   "prompt": "H&E, FFPE, breast, normal donor tissue. 0.5 \u00b5m per pixel.",
+   "organ": "breast",
+   "diagnosis": "normal donor tissue",
+   "scale": 0.5,
+   "dense": [
+    0
+   ],
+   "tissue": [
+    0.78,
+    0.37,
+    0.4,
+    0.78,
+    0.26,
+    0.33,
+    0.14,
+    0.78
+   ]
+  },
+  {
+   "id": "c27",
+   "group": "normal",
+   "prompt": "H&E, FFPE, transverse colon, normal donor tissue. 0.5 \u00b5m per pixel.",
+   "organ": "transverse colon",
+   "diagnosis": "normal donor tissue",
+   "scale": 0.5,
+   "dense": [
+    0,
+    3
+   ],
+   "tissue": [
+    0.85,
+    0.55,
+    0.47,
+    0.91,
+    0.6,
+    0.58,
+    0.6,
+    0.72
+   ]
+  },
+  {
+   "id": "c29",
+   "group": "normal",
+   "prompt": "H&E, FFPE, liver, normal donor tissue. 0.5 \u00b5m per pixel.",
+   "organ": "liver",
+   "diagnosis": "normal donor tissue",
+   "scale": 0.5,
+   "dense": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+   ],
+   "tissue": [
+    0.95,
+    0.97,
+    0.92,
+    0.98,
+    0.99,
+    0.92,
+    0.97,
+    0.96
+   ]
+  },
+  {
+   "id": "c30",
+   "group": "normal",
+   "prompt": "H&E, FFPE, renal cortex, normal donor tissue. 0.5 \u00b5m per pixel.",
+   "organ": "renal cortex",
+   "diagnosis": "normal donor tissue",
+   "scale": 0.5,
+   "dense": [
+    1,
+    3,
+    4,
+    6
+   ],
+   "tissue": [
+    0.5,
+    0.84,
+    0.79,
+    0.83,
+    0.97,
+    0.41,
+    0.96,
+    0.78
+   ]
+  },
+  {
+   "id": "c32",
+   "group": "normal",
+   "prompt": "H&E, FFPE, pancreas, normal donor tissue. 0.5 \u00b5m per pixel.",
+   "organ": "pancreas",
+   "diagnosis": "normal donor tissue",
+   "scale": 0.5,
+   "dense": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    7
+   ],
+   "tissue": [
+    0.92,
+    0.92,
+    0.89,
+    0.86,
+    0.94,
+    0.79,
+    0.18,
+    0.96
+   ]
+  },
+  {
+   "id": "c33",
+   "group": "normal",
+   "prompt": "H&E, FFPE, skin of lower leg, normal donor tissue. 0.5 \u00b5m per pixel.",
+   "organ": "skin of lower leg",
+   "diagnosis": "normal donor tissue",
+   "scale": 0.5,
+   "dense": [
+    0,
+    4,
+    5,
+    6
+   ],
+   "tissue": [
+    0.89,
+    0.77,
+    0.78,
+    0.78,
+    0.92,
+    0.95,
+    0.83,
+    0.24
+   ]
+  },
+  {
+   "id": "c35",
+   "group": "normal",
+   "prompt": "H&E, FFPE, heart, normal donor tissue. 0.5 \u00b5m per pixel.",
+   "organ": "heart",
+   "diagnosis": "normal donor tissue",
+   "scale": 0.5,
+   "dense": [
+    0,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+   ],
+   "tissue": [
+    0.95,
+    0.55,
+    0.91,
+    0.96,
+    0.95,
+    0.9,
+    0.95,
+    0.89
+   ]
+  },
+  {
+   "id": "c38",
+   "group": "normal",
+   "prompt": "H&E, FFPE, spleen, normal donor tissue. 0.5 \u00b5m per pixel.",
+   "organ": "spleen",
+   "diagnosis": "normal donor tissue",
+   "scale": 0.5,
+   "dense": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    6,
+    7
+   ],
+   "tissue": [
+    0.98,
+    0.99,
+    0.99,
+    0.96,
+    0.99,
+    0.73,
+    0.99,
+    0.98
+   ]
+  },
+  {
+   "id": "c43",
+   "group": "scale",
+   "prompt": "H&E, FFPE, breast, infiltrating duct carcinoma, nos. 0.25 \u00b5m per pixel.",
+   "organ": "breast",
+   "diagnosis": "infiltrating duct carcinoma, nos",
+   "scale": 0.25,
+   "dense": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+   ],
+   "tissue": [
+    0.93,
+    0.87,
+    0.86,
+    0.91,
+    0.99,
+    0.87,
+    0.87,
+    0.84
+   ]
+  },
+  {
+   "id": "c44",
+   "group": "scale",
+   "prompt": "H&E, FFPE, breast, infiltrating duct carcinoma, nos. 0.5 \u00b5m per pixel.",
+   "organ": "breast",
+   "diagnosis": "infiltrating duct carcinoma, nos",
+   "scale": 0.5,
+   "dense": [
+    1,
+    5,
+    6
+   ],
+   "tissue": [
+    0.54,
+    0.92,
+    0.41,
+    0.06,
+    0.06,
+    0.96,
+    1.0,
+    0.06
+   ]
+  },
+  {
+   "id": "c45",
+   "group": "scale",
+   "prompt": "H&E, FFPE, breast, infiltrating duct carcinoma, nos. 1 \u00b5m per pixel.",
+   "organ": "breast",
+   "diagnosis": "infiltrating duct carcinoma, nos",
+   "scale": 1,
+   "dense": [
+    0,
+    2,
+    4,
+    5,
+    6,
+    7
+   ],
+   "tissue": [
+    0.95,
+    0.79,
+    0.98,
+    0.58,
+    0.81,
+    0.98,
+    0.96,
+    0.89
+   ]
+  },
+  {
+   "id": "c46",
+   "group": "scale",
+   "prompt": "H&E, FFPE, breast, infiltrating duct carcinoma, nos. 2 \u00b5m per pixel.",
+   "organ": "breast",
+   "diagnosis": "infiltrating duct carcinoma, nos",
+   "scale": 2,
+   "dense": [
+    0,
+    1,
+    5,
+    6
+   ],
+   "tissue": [
+    0.99,
+    0.81,
+    0.72,
+    0.61,
+    0.51,
+    0.88,
+    0.89,
+    0.73
+   ]
+  },
+  {
+   "id": "c47",
+   "group": "scale",
+   "prompt": "H&E, FFPE, colon, adenocarcinoma, nos. 0.25 \u00b5m per pixel.",
+   "organ": "colon",
+   "diagnosis": "adenocarcinoma, nos",
+   "scale": 0.25,
+   "dense": [
+    0,
+    1,
+    2,
+    3,
+    5,
+    6,
+    7
+   ],
+   "tissue": [
+    0.96,
+    0.87,
+    0.91,
+    0.95,
+    0.69,
+    0.93,
+    0.99,
+    1.0
+   ]
+  },
+  {
+   "id": "c48",
+   "group": "scale",
+   "prompt": "H&E, FFPE, colon, adenocarcinoma, nos. 0.5 \u00b5m per pixel.",
+   "organ": "colon",
+   "diagnosis": "adenocarcinoma, nos",
+   "scale": 0.5,
+   "dense": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    6
+   ],
+   "tissue": [
+    0.94,
+    0.92,
+    0.92,
+    0.98,
+    0.81,
+    0.55,
+    0.98,
+    0.13
+   ]
+  },
+  {
+   "id": "c49",
+   "group": "scale",
+   "prompt": "H&E, FFPE, colon, adenocarcinoma, nos. 1 \u00b5m per pixel.",
+   "organ": "colon",
+   "diagnosis": "adenocarcinoma, nos",
+   "scale": 1,
+   "dense": [
+    0,
+    1,
+    3,
+    4,
+    5
+   ],
+   "tissue": [
+    0.98,
+    0.97,
+    0.5,
+    0.84,
+    0.88,
+    0.91,
+    0.67,
+    0.64
+   ]
+  },
+  {
+   "id": "c50",
+   "group": "scale",
+   "prompt": "H&E, FFPE, colon, adenocarcinoma, nos. 2 \u00b5m per pixel.",
+   "organ": "colon",
+   "diagnosis": "adenocarcinoma, nos",
+   "scale": 2,
+   "dense": [
+    0,
+    1,
+    4,
+    5,
+    6
+   ],
+   "tissue": [
+    0.97,
+    0.93,
+    0.5,
+    0.58,
+    0.95,
+    0.9,
+    0.88,
+    0.78
+   ]
+  }
+ ],
+ "regions": [
+  {
+   "id": "region8k",
+   "title": "Unconditional region, 8,192 x 8,192 px (4.1 mm) at 0.5 um/px",
+   "width": 8192,
+   "height": 8192,
+   "levels": 4,
+   "tile": 512,
+   "mpp": 0.5,
+   "full_px": [
+    8192,
+    8192
+   ],
+   "read": null
+  },
+  {
+   "id": "slide_two",
+   "title": "Unconditional whole slide inside the tissue outline of a held-out slide",
+   "width": 5912,
+   "height": 6144,
+   "levels": 4,
+   "tile": 512,
+   "mpp": 2.4862,
+   "full_px": [
+    29398,
+    30550
+   ],
+   "read": {
+    "organ": "lung",
+    "diagnosis": "adenocarcinoma"
+   }
+  },
+  {
+   "id": "slide_elong",
+   "title": "Unconditional whole slide inside the tissue outline of a held-out slide",
+   "width": 6144,
+   "height": 4166,
+   "levels": 4,
+   "tile": 512,
+   "mpp": 1.9574,
+   "full_px": [
+    24052,
+    16308
+   ],
+   "read": {
+    "organ": "lung",
+    "diagnosis": "adenocarcinoma"
+   }
+  },
+  {
+   "id": "slide_compact",
+   "title": "Unconditional whole slide inside the tissue outline of a held-out slide",
+   "width": 3455,
+   "height": 6144,
+   "levels": 4,
+   "tile": 512,
+   "mpp": 2.368,
+   "full_px": [
+    16362,
+    29098
+   ],
+   "read": {
+    "organ": "liver",
+    "diagnosis": "hepatocellular carcinoma"
+   }
+  },
+  {
+   "id": "report_b",
+   "title": "Region generated from a report summary, 8,192 x 8,192 px at 0.5 um/px",
+   "width": 896,
+   "height": 896,
+   "levels": 1,
+   "tile": 512,
+   "mpp": 4.5714,
+   "full_px": [
+    8192,
+    8192
+   ],
+   "read": null,
+   "report": "Lung superior left upper lobe resection shows Grade 3 squamous cell carcinoma, 4.0 x 3.2 x 2.5 cm, subpleural, with focal pleural invasion; VVG confirms pleural involvement.",
+   "organ": "lung",
+   "full": "assets/gen/report/report_b_full.webp",
+   "detail": "assets/gen/report/report_b_detail.webp"
+  },
+  {
+   "id": "report_a",
+   "title": "Region generated from a report summary, 8,192 x 8,192 px at 0.5 um/px",
+   "width": 896,
+   "height": 896,
+   "levels": 1,
+   "tile": 512,
+   "mpp": 4.5714,
+   "full_px": [
+    8192,
+    8192
+   ],
+   "read": null,
+   "report": "Basaloid squamous cell carcinoma in left and right upper lobe lung tissues, 1.4 cm and 1.1 cm, respectively; resection margins negative; lymph nodes negative for malignancy.",
+   "organ": "lung",
+   "full": "assets/gen/report/report_a_full.webp",
+   "detail": "assets/gen/report/report_a_detail.webp"
+  }
+ ],
+ "teaser": {
+  "region8k": {
+   "full": [
+    8192,
+    8192
+   ],
+   "frames": [
+    {
+     "side": 4096,
+     "y": 3936,
+     "x": 3936
+    },
+    {
+     "side": 2048,
+     "y": 5216,
+     "x": 4448
+    },
+    {
+     "side": 512,
+     "y": 5984,
+     "x": 5216
+    }
+   ]
+  },
+  "slide_two": {
+   "full": [
+    5912,
+    6144
+   ],
+   "frames": [
+    {
+     "side": 5912,
+     "y": 232,
+     "x": 0
+    },
+    {
+     "side": 2048,
+     "y": 2456,
+     "x": 408
+    },
+    {
+     "side": 512,
+     "y": 3224,
+     "x": 1176
+    }
+   ]
+  }
+ },
+ "controls": {
+  "organs": {
+   "title": "Organ",
+   "cols": 6,
+   "n": 12,
+   "lines": [
+    {
+     "label": "skin",
+     "prompt": "H&E, FFPE, skin. 0.5 \u00b5m per pixel.",
+     "lead": 0,
+     "tissue": [
+      0.99,
+      0.51,
+      0.93,
+      0.83,
+      0.57,
+      0.16
+     ]
+    },
+    {
+     "label": "breast",
+     "prompt": "H&E, FFPE, breast. 0.5 \u00b5m per pixel.",
+     "lead": 0,
+     "tissue": [
+      0.88,
+      0.43,
+      0.52,
+      0.11,
+      0.18,
+      0.8
+     ]
+    },
+    {
+     "label": "lung",
+     "prompt": "H&E, FFPE, lung. 0.5 \u00b5m per pixel.",
+     "lead": 4,
+     "tissue": [
+      0.69,
+      0.44,
+      0.67,
+      0.41,
+      0.83,
+      0.97
+     ]
+    },
+    {
+     "label": "brain",
+     "prompt": "H&E, FFPE, brain. 0.5 \u00b5m per pixel.",
+     "lead": 3,
+     "tissue": [
+      0.61,
+      0.65,
+      0.32,
+      0.86,
+      1.0,
+      0.97
+     ]
+    },
+    {
+     "label": "kidney",
+     "prompt": "H&E, FFPE, kidney. 0.5 \u00b5m per pixel.",
+     "lead": 0,
+     "tissue": [
+      0.82,
+      0.94,
+      0.91,
+      0.74,
+      0.85,
+      0.15
+     ]
+    },
+    {
+     "label": "cervix",
+     "prompt": "H&E, FFPE, cervix. 0.5 \u00b5m per pixel.",
+     "lead": 4,
+     "tissue": [
+      0.67,
+      0.39,
+      0.74,
+      0.68,
+      0.88,
+      0.53
+     ]
+    },
+    {
+     "label": "colon",
+     "prompt": "H&E, FFPE, colon. 0.5 \u00b5m per pixel.",
+     "lead": 0,
+     "tissue": [
+      0.93,
+      0.71,
+      0.7,
+      0.78,
+      0.41,
+      0.41
+     ]
+    },
+    {
+     "label": "stomach",
+     "prompt": "H&E, FFPE, stomach. 0.5 \u00b5m per pixel.",
+     "lead": 3,
+     "tissue": [
+      0.54,
+      0.39,
+      0.26,
+      0.94,
+      0.53,
+      0.07
+     ]
+    },
+    {
+     "label": "endometrium",
+     "prompt": "H&E, FFPE, endometrium. 0.5 \u00b5m per pixel.",
+     "lead": 4,
+     "tissue": [
+      0.44,
+      0.52,
+      0.16,
+      0.11,
+      0.64,
+      0.14
+     ]
+    },
+    {
+     "label": "ovary",
+     "prompt": "H&E, FFPE, ovary. 0.5 \u00b5m per pixel.",
+     "lead": 1,
+     "tissue": [
+      0.7,
+      0.9,
+      0.95,
+      0.57,
+      0.79,
+      0.51
+     ]
+    },
+    {
+     "label": "prostate",
+     "prompt": "H&E, FFPE, prostate. 0.5 \u00b5m per pixel.",
+     "lead": 0,
+     "tissue": [
+      0.95,
+      0.98,
+      0.8,
+      0.66,
+      0.95,
+      0.89
+     ]
+    },
+    {
+     "label": "colorectum",
+     "prompt": "H&E, FFPE, colorectum. 0.5 \u00b5m per pixel.",
+     "lead": 2,
+     "tissue": [
+      0.04,
+      0.37,
+      0.6,
+      0.29,
+      0.51,
+      0.22
+     ]
+    }
+   ]
+  },
+  "diagnoses": {
+   "title": "Diagnosis",
+   "cols": 4,
+   "n": 16,
+   "lines": [
+    {
+     "label": "skin: nevus",
+     "prompt": "H&E, FFPE, skin, nevus. 0.5 \u00b5m per pixel.",
+     "lead": 0,
+     "tissue": [
+      1.0,
+      0.78,
+      0.97,
+      0.93
+     ]
+    },
+    {
+     "label": "skin: seborrheic keratosis",
+     "prompt": "H&E, FFPE, skin, seborrheic keratosis. 0.5 \u00b5m per pixel.",
+     "lead": 0,
+     "tissue": [
+      0.98,
+      0.63,
+      0.82,
+      0.23
+     ]
+    },
+    {
+     "label": "skin: malignant melanoma",
+     "prompt": "H&E, FFPE, skin, malignant melanoma, nos. 0.5 \u00b5m per pixel.",
+     "lead": 0,
+     "tissue": [
+      0.91,
+      0.51,
+      0.78,
+      0.39
+     ]
+    },
+    {
+     "label": "skin: atypical fibroxanthoma",
+     "prompt": "H&E, FFPE, skin, atypical fibroxanthoma. 0.5 \u00b5m per pixel.",
+     "lead": 3,
+     "tissue": [
+      0.53,
+      0.64,
+      0.27,
+      0.83
+     ]
+    },
+    {
+     "label": "breast: primary breast cancer",
+     "prompt": "H&E, FFPE, breast, primary breast cancer. 0.5 \u00b5m per pixel.",
+     "lead": 1,
+     "tissue": [
+      0.48,
+      0.84,
+      0.84,
+      0.62
+     ]
+    },
+    {
+     "label": "breast: normal donor tissue",
+     "prompt": "H&E, FFPE, breast, normal donor tissue. 0.5 \u00b5m per pixel.",
+     "lead": 0,
+     "tissue": [
+      0.69,
+      0.19,
+      0.26,
+      0.47
+     ]
+    },
+    {
+     "label": "breast: infiltrating duct carcinoma",
+     "prompt": "H&E, FFPE, breast, infiltrating duct carcinoma, nos. 0.5 \u00b5m per pixel.",
+     "lead": 0,
+     "tissue": [
+      0.98,
+      0.86,
+      0.76,
+      0.86
+     ]
+    },
+    {
+     "label": "breast: invasive carcinoma of no special type, grade ii (tubule formation: 3, nuclear grade: 2, mitoses: 1)",
+     "prompt": "H&E, FFPE, breast, invasive carcinoma of no special type, grade ii (tubule formation: 3, nuclear grade: 2, mitoses: 1). 0.5 \u00b5m per pixel.",
+     "lead": 3,
+     "tissue": [
+      0.49,
+      0.39,
+      0.32,
+      0.9
+     ]
+    },
+    {
+     "label": "lung: adenocarcinoma",
+     "prompt": "H&E, FFPE, lung, adenocarcinoma, nos. 0.5 \u00b5m per pixel.",
+     "lead": 1,
+     "tissue": [
+      0.68,
+      0.94,
+      0.19,
+      0.05
+     ]
+    },
+    {
+     "label": "lung: normal donor tissue",
+     "prompt": "H&E, FFPE, lung, normal donor tissue. 0.5 \u00b5m per pixel.",
+     "lead": 1,
+     "tissue": [
+      0.69,
+      0.87,
+      0.97,
+      0.59
+     ]
+    },
+    {
+     "label": "lung: non-small cell lung cancer",
+     "prompt": "H&E, FFPE, lung, non-small cell lung cancer. 0.5 \u00b5m per pixel.",
+     "lead": 1,
+     "tissue": [
+      0.67,
+      0.9,
+      0.63,
+      0.63
+     ]
+    },
+    {
+     "label": "lung: squamous cell carcinoma",
+     "prompt": "H&E, FFPE, lung, squamous cell carcinoma, nos. 0.5 \u00b5m per pixel.",
+     "lead": 1,
+     "tissue": [
+      0.06,
+      0.95,
+      0.64,
+      0.45
+     ]
+    },
+    {
+     "label": "brain: glioblastoma",
+     "prompt": "H&E, FFPE, brain, glioblastoma. 0.5 \u00b5m per pixel.",
+     "lead": 2,
+     "tissue": [
+      0.67,
+      0.16,
+      0.93,
+      0.71
+     ]
+    },
+    {
+     "label": "brain: brain metastasis",
+     "prompt": "H&E, FFPE, brain, brain metastasis. 0.5 \u00b5m per pixel.",
+     "lead": 0,
+     "tissue": [
+      1.0,
+      0.31,
+      0.95,
+      0.15
+     ]
+    },
+    {
+     "label": "brain: medulloblastoma",
+     "prompt": "H&E, FFPE, brain, medulloblastoma, nos. 0.5 \u00b5m per pixel.",
+     "lead": 2,
+     "tissue": [
+      0.75,
+      0.46,
+      0.8,
+      0.5
+     ]
+    },
+    {
+     "label": "brain: mixed glioma",
+     "prompt": "H&E, FFPE, brain, mixed glioma. 0.5 \u00b5m per pixel.",
+     "lead": 1,
+     "tissue": [
+      0.63,
+      0.87,
+      0.72,
+      0.94
+     ]
+    }
+   ]
+  },
+  "scale": {
+   "title": "Scale",
+   "cols": 2,
+   "n": 21,
+   "lines": [
+    {
+     "label": "cervix \u00b7 0.25 \u00b5m/px",
+     "prompt": "H&E, FFPE, cervix. 0.25 \u00b5m per pixel.",
+     "lead": 0,
+     "tissue": [
+      1.0,
+      0.8
+     ]
+    },
+    {
+     "label": "cervix \u00b7 0.5 \u00b5m/px",
+     "prompt": "H&E, FFPE, cervix. 0.5 \u00b5m per pixel.",
+     "lead": 0,
+     "tissue": [
+      1.0,
+      0.51
+     ]
+    },
+    {
+     "label": "cervix \u00b7 1 \u00b5m/px",
+     "prompt": "H&E, FFPE, cervix. 1 \u00b5m per pixel.",
+     "lead": 0,
+     "tissue": [
+      1.0,
+      0.86
+     ]
+    },
+    {
+     "label": "cervix \u00b7 2 \u00b5m/px",
+     "prompt": "H&E, FFPE, cervix. 2 \u00b5m per pixel.",
+     "lead": 0,
+     "tissue": [
+      1.0,
+      0.86
+     ]
+    },
+    {
+     "label": "cervix \u00b7 4 \u00b5m/px",
+     "prompt": "H&E, FFPE, cervix. 4 \u00b5m per pixel.",
+     "lead": 0,
+     "tissue": [
+      1.0,
+      0.74
+     ]
+    },
+    {
+     "label": "cervix \u00b7 8 \u00b5m/px",
+     "prompt": "H&E, FFPE, cervix. 8 \u00b5m per pixel.",
+     "lead": 0,
+     "tissue": [
+      1.0,
+      0.64
+     ]
+    },
+    {
+     "label": "cervix \u00b7 16 \u00b5m/px",
+     "prompt": "H&E, FFPE, cervix. 16 \u00b5m per pixel.",
+     "lead": 0,
+     "tissue": [
+      0.98,
+      0.67
+     ]
+    },
+    {
+     "label": "skin \u00b7 0.25 \u00b5m/px",
+     "prompt": "H&E, FFPE, skin. 0.25 \u00b5m per pixel.",
+     "lead": 0,
+     "tissue": [
+      0.97,
+      0.76
+     ]
+    },
+    {
+     "label": "skin \u00b7 0.5 \u00b5m/px",
+     "prompt": "H&E, FFPE, skin. 0.5 \u00b5m per pixel.",
+     "lead": 0,
+     "tissue": [
+      0.89,
+      0.56
+     ]
+    },
+    {
+     "label": "skin \u00b7 1 \u00b5m/px",
+     "prompt": "H&E, FFPE, skin. 1 \u00b5m per pixel.",
+     "lead": 0,
+     "tissue": [
+      0.99,
+      0.76
+     ]
+    },
+    {
+     "label": "skin \u00b7 2 \u00b5m/px",
+     "prompt": "H&E, FFPE, skin. 2 \u00b5m per pixel.",
+     "lead": 0,
+     "tissue": [
+      0.99,
+      0.79
+     ]
+    },
+    {
+     "label": "skin \u00b7 4 \u00b5m/px",
+     "prompt": "H&E, FFPE, skin. 4 \u00b5m per pixel.",
+     "lead": 0,
+     "tissue": [
+      0.92,
+      0.78
+     ]
+    },
+    {
+     "label": "skin \u00b7 8 \u00b5m/px",
+     "prompt": "H&E, FFPE, skin. 8 \u00b5m per pixel.",
+     "lead": 0,
+     "tissue": [
+      0.85,
+      0.75
+     ]
+    },
+    {
+     "label": "skin \u00b7 16 \u00b5m/px",
+     "prompt": "H&E, FFPE, skin. 16 \u00b5m per pixel.",
+     "lead": 0,
+     "tissue": [
+      0.83,
+      0.72
+     ]
+    },
+    {
+     "label": "endometrium \u00b7 0.25 \u00b5m/px",
+     "prompt": "H&E, FFPE, endometrium. 0.25 \u00b5m per pixel.",
+     "lead": 0,
+     "tissue": [
+      0.88,
+      0.68
+     ]
+    },
+    {
+     "label": "endometrium \u00b7 0.5 \u00b5m/px",
+     "prompt": "H&E, FFPE, endometrium. 0.5 \u00b5m per pixel.",
+     "lead": 0,
+     "tissue": [
+      0.69,
+      0.3
+     ]
+    },
+    {
+     "label": "endometrium \u00b7 1 \u00b5m/px",
+     "prompt": "H&E, FFPE, endometrium. 1 \u00b5m per pixel.",
+     "lead": 0,
+     "tissue": [
+      0.76,
+      0.59
+     ]
+    },
+    {
+     "label": "endometrium \u00b7 2 \u00b5m/px",
+     "prompt": "H&E, FFPE, endometrium. 2 \u00b5m per pixel.",
+     "lead": 0,
+     "tissue": [
+      0.76,
+      0.56
+     ]
+    },
+    {
+     "label": "endometrium \u00b7 4 \u00b5m/px",
+     "prompt": "H&E, FFPE, endometrium. 4 \u00b5m per pixel.",
+     "lead": 0,
+     "tissue": [
+      0.72,
+      0.57
+     ]
+    },
+    {
+     "label": "endometrium \u00b7 8 \u00b5m/px",
+     "prompt": "H&E, FFPE, endometrium. 8 \u00b5m per pixel.",
+     "lead": 0,
+     "tissue": [
+      0.67,
+      0.58
+     ]
+    },
+    {
+     "label": "endometrium \u00b7 16 \u00b5m/px",
+     "prompt": "H&E, FFPE, endometrium. 16 \u00b5m per pixel.",
+     "lead": 0,
+     "tissue": [
+      0.64,
+      0.58
+     ]
+    }
+   ]
+  },
+  "prep": {
+   "title": "Preparation",
+   "cols": 3,
+   "n": 8,
+   "lines": [
+    {
+     "label": "skin \u00b7 FFPE",
+     "prompt": "H&E, FFPE, skin. 0.5 \u00b5m per pixel.",
+     "lead": 0,
+     "tissue": [
+      0.99,
+      0.51,
+      0.93
+     ]
+    },
+    {
+     "label": "skin \u00b7 frozen section",
+     "prompt": "H&E, frozen section, skin. 0.5 \u00b5m per pixel.",
+     "lead": 0,
+     "tissue": [
+      1.0,
+      0.64,
+      0.83
+     ]
+    },
+    {
+     "label": "breast \u00b7 FFPE",
+     "prompt": "H&E, FFPE, breast. 0.5 \u00b5m per pixel.",
+     "lead": 0,
+     "tissue": [
+      0.88,
+      0.43,
+      0.51
+     ]
+    },
+    {
+     "label": "breast \u00b7 frozen section",
+     "prompt": "H&E, frozen section, breast. 0.5 \u00b5m per pixel.",
+     "lead": 0,
+     "tissue": [
+      0.93,
+      0.73,
+      0.82
+     ]
+    },
+    {
+     "label": "lung \u00b7 FFPE",
+     "prompt": "H&E, FFPE, lung. 0.5 \u00b5m per pixel.",
+     "lead": 0,
+     "tissue": [
+      0.69,
+      0.44,
+      0.67
+     ]
+    },
+    {
+     "label": "lung \u00b7 frozen section",
+     "prompt": "H&E, frozen section, lung. 0.5 \u00b5m per pixel.",
+     "lead": 0,
+     "tissue": [
+      0.76,
+      0.36,
+      0.7
+     ]
+    },
+    {
+     "label": "brain \u00b7 FFPE",
+     "prompt": "H&E, FFPE, brain. 0.5 \u00b5m per pixel.",
+     "lead": 1,
+     "tissue": [
+      0.61,
+      0.65,
+      0.32
+     ]
+    },
+    {
+     "label": "brain \u00b7 frozen section",
+     "prompt": "H&E, frozen section, brain. 0.5 \u00b5m per pixel.",
+     "lead": 1,
+     "tissue": [
+      0.54,
+      0.63,
+      0.39
+     ]
+    }
+   ]
+  },
+  "order": {
+   "width": 752,
+   "height": 208,
+   "rounds": 58
+  },
+  "notes": {
+   "title": "Slide notes",
+   "cols": 3,
+   "n": 6,
+   "lines": [
+    {
+     "label": "with the note",
+     "prompt": "H&E, FFPE, breast, normal donor tissue. 0.5 \u00b5m per pixel.",
+     "note": "2 pieces; fatty tissue without ducts or fibrous stroma",
+     "intro": "H&E, FFPE, breast, normal donor tissue. 0.5 \u00b5m per pixel.",
+     "how": "Slide note, given as a second text segment",
+     "organ": "breast",
+     "source": "GTEx",
+     "lead": 0,
+     "tissue": [
+      0.77,
+      0.7,
+      0.64
+     ]
+    },
+    {
+     "label": "without the note",
+     "prompt": "H&E, FFPE, breast, normal donor tissue. 0.5 \u00b5m per pixel.",
+     "lead": 0,
+     "tissue": [
+      1.0,
+      0.13,
+      0.24
+     ]
+    },
+    {
+     "label": "with the note",
+     "prompt": "H&E, FFPE, liver, normal donor tissue. 0.5 \u00b5m per pixel.",
+     "note": "2 pieces; 10% macrovesicular steatosis, moderate congestion",
+     "intro": "H&E, FFPE, liver, normal donor tissue. 0.5 \u00b5m per pixel.",
+     "how": "Slide note, given as a second text segment",
+     "organ": "liver",
+     "source": "GTEx",
+     "lead": 0,
+     "tissue": [
+      0.97,
+      0.92,
+      0.95
+     ]
+    },
+    {
+     "label": "without the note",
+     "prompt": "H&E, FFPE, liver, normal donor tissue. 0.5 \u00b5m per pixel.",
+     "lead": 0,
+     "tissue": [
+      1.0,
+      0.93,
+      0.99
+     ]
+    },
+    {
+     "label": "with the note",
+     "prompt": "H&E, FFPE, tibial artery, normal donor tissue. 0.5 \u00b5m per pixel.",
+     "note": "2 pieces, focal Monckeberg sclerosis (delineated), ~50% occlusive atherosis up to ~0.4mm thick",
+     "intro": "H&E, FFPE, tibial artery, normal donor tissue. 0.5 \u00b5m per pixel.",
+     "how": "Slide note, given as a second text segment",
+     "organ": "tibial artery",
+     "source": "GTEx",
+     "lead": 0,
+     "tissue": [
+      0.89,
+      0.87,
+      0.84
+     ]
+    },
+    {
+     "label": "without the note",
+     "prompt": "H&E, FFPE, tibial artery, normal donor tissue. 0.5 \u00b5m per pixel.",
+     "lead": 0,
+     "tissue": [
+      1.0,
+      0.88,
+      0.95
+     ]
+    }
+   ],
+   "best": {
+    "example": 0,
+    "seeds": [
+     0
+    ],
+    "rule": "breast note; the seed whose image without the note is dense tissue"
+   }
+  },
+  "context": {
+   "items": [
+    {
+     "suffix": "",
+     "box": [
+      0.29411764705882354,
+      0.29411764705882354,
+      0.4117647058823529
+     ],
+     "round": 48,
+     "neighbourhood_share": 0.917
+    },
+    {
+     "suffix": "2",
+     "box": [
+      0.29411764705882354,
+      0.29411764705882354,
+      0.4117647058823529
+     ],
+     "round": 53,
+     "neighbourhood_share": 0.917
+    }
+   ],
+   "rounds": 58,
+   "box": [
+    0.29411764705882354,
+    0.29411764705882354,
+    0.4117647058823529
+   ],
+   "round": 48
+  },
+  "fields": {
+   "title": "Pathology fields",
+   "cols": 3,
+   "n": 6,
+   "lines": [
+    {
+     "label": "with the fields",
+     "prompt": "H&E, FFPE, cervix uteri, mucinous adenocarcinoma, endocervical type. 0.5 \u00b5m per pixel.",
+     "note": "tumour sample, primary tumor, stage IB1, grade G2, ICD-O-3 morphology 8482/3, cystic, mucinous and serous neoplasms.",
+     "intro": "H&E, FFPE, cervix uteri, mucinous adenocarcinoma, endocervical type. 0.5 \u00b5m per pixel.",
+     "how": "Pathology fields, appended to the prompt",
+     "organ": "cervix uteri",
+     "source": "TCGA",
+     "lead": 0,
+     "tissue": [
+      0.99,
+      0.66,
+      0.9
+     ]
+    },
+    {
+     "label": "without the fields",
+     "prompt": "H&E, FFPE, cervix uteri, mucinous adenocarcinoma, endocervical type. 0.5 \u00b5m per pixel.",
+     "lead": 0,
+     "tissue": [
+      0.99,
+      0.76,
+      0.94
+     ]
+    },
+    {
+     "label": "with the fields",
+     "prompt": "H&E, frozen section, ovary, serous cystadenocarcinoma, nos. 0.5 \u00b5m per pixel.",
+     "note": "tumour sample, primary tumor, stage IIIC, grade G3, ICD-O-3 morphology 8441/3, cystic, mucinous and serous neoplasms.",
+     "intro": "H&E, frozen section, ovary, serous cystadenocarcinoma, nos. 0.5 \u00b5m per pixel.",
+     "how": "Pathology fields, appended to the prompt",
+     "organ": "ovary",
+     "source": "TCGA",
+     "lead": 0,
+     "tissue": [
+      1.0,
+      0.53,
+      0.84
+     ]
+    },
+    {
+     "label": "without the fields",
+     "prompt": "H&E, frozen section, ovary, serous cystadenocarcinoma, nos. 0.5 \u00b5m per pixel.",
+     "lead": 0,
+     "tissue": [
+      1.0,
+      0.54,
+      0.84
+     ]
+    },
+    {
+     "label": "with the fields",
+     "prompt": "H&E, FFPE, liver and intrahepatic bile ducts, hepatocellular carcinoma, nos. 0.5 \u00b5m per pixel.",
+     "note": "tumour sample, primary tumor, stage I, grade G3, ICD-O-3 morphology 8170/3, adenomas and adenocarcinomas.",
+     "intro": "H&E, FFPE, liver and intrahepatic bile ducts, hepatocellular carcinoma, nos. 0.5 \u00b5m per pixel.",
+     "how": "Pathology fields, appended to the prompt",
+     "organ": "liver and intrahepatic bile ducts",
+     "source": "TCGA",
+     "lead": 0,
+     "tissue": [
+      1.0,
+      0.85,
+      0.98
+     ]
+    },
+    {
+     "label": "without the fields",
+     "prompt": "H&E, FFPE, liver and intrahepatic bile ducts, hepatocellular carcinoma, nos. 0.5 \u00b5m per pixel.",
+     "lead": 0,
+     "tissue": [
+      1.0,
+      0.87,
+      0.98
+     ]
+    }
+   ],
+   "best": {
+    "example": 0,
+    "seeds": [
+     0,
+     2
+    ],
+    "diff": 12.4
+   }
+  },
+  "captions": {
+   "title": "Patch captions",
+   "cols": 3,
+   "n": 6,
+   "lines": [
+    {
+     "label": "with the caption",
+     "prompt": "H&E, FFPE, rectum, adenocarcinoma, nos. 0.75 \u00b5m per pixel.",
+     "note": "The tissue image displays well-differentiated, orderly spindle-shaped smooth muscle cells typical of the rectum's muscularis propria. Nuclei are elongated, centrally located, within eosinophilic cytoplasm. Minor inflammatory infiltration is present. No signs of dysplasia or malignancy are evident. Variability in cell density suggests mild injury or normal variation. Overall, the tissue appears healthy.",
+     "intro": "H&E, FFPE, rectum, adenocarcinoma, nos. 0.75 \u00b5m per pixel.",
+     "how": "Patch caption, given as a second text segment",
+     "organ": "rectum",
+     "source": "PathGen",
+     "lead": 0,
+     "tissue": [
+      0.83,
+      0.8,
+      0.82
+     ]
+    },
+    {
+     "label": "without the caption",
+     "prompt": "H&E, FFPE, rectum, adenocarcinoma, nos. 0.75 \u00b5m per pixel.",
+     "lead": 0,
+     "tissue": [
+      0.85,
+      0.86,
+      0.91
+     ]
+    },
+    {
+     "label": "with the caption",
+     "prompt": "H&E, FFPE, liver and intrahepatic bile ducts, hepatocellular carcinoma, nos. 0.75 \u00b5m per pixel.",
+     "note": "The liver tissue shows dense cellular infiltration with medium to large cells, high nuclear-to-cytoplasmic ratios, pleomorphic, hyperchromatic nuclei, and prominent nucleoli, indicative of high proliferation. Disrupted hepatic architecture, irregular cells, mitotic figures, necrosis, and hepatocyte loss suggest a malignant neoplasm, likely hepatosplenic T-cell lymphoma.",
+     "intro": "H&E, FFPE, liver and intrahepatic bile ducts, hepatocellular carcinoma, nos. 0.75 \u00b5m per pixel.",
+     "how": "Patch caption, given as a second text segment",
+     "organ": "liver and intrahepatic bile ducts",
+     "source": "PathGen",
+     "lead": 0,
+     "tissue": [
+      0.97,
+      0.95,
+      0.98
+     ]
+    },
+    {
+     "label": "without the caption",
+     "prompt": "H&E, FFPE, liver and intrahepatic bile ducts, hepatocellular carcinoma, nos. 0.75 \u00b5m per pixel.",
+     "lead": 0,
+     "tissue": [
+      0.89,
+      0.89,
+      0.9
+     ]
+    },
+    {
+     "label": "with the caption",
+     "prompt": "H&E, FFPE, bronchus and lung, squamous cell carcinoma, nos. 0.75 \u00b5m per pixel.",
+     "note": "The microscopic image displays a heterogeneous cell population with pleomorphism, large hyperchromatic and irregular-shaped nuclei (nuclear atypia), high nuclear to cytoplasmic ratios, and eosinophilic or vacuolated cytoplasm. Features like mucin, disorganized tissue architecture, and scattered inflammatory cells suggest a diagnosis of mucinous adenocarcinoma of the lung.",
+     "intro": "H&E, FFPE, bronchus and lung, squamous cell carcinoma, nos. 0.75 \u00b5m per pixel.",
+     "how": "Patch caption, given as a second text segment",
+     "organ": "bronchus and lung",
+     "source": "PathGen",
+     "lead": 0,
+     "tissue": [
+      0.75,
+      0.7,
+      0.71
+     ]
+    },
+    {
+     "label": "without the caption",
+     "prompt": "H&E, FFPE, bronchus and lung, squamous cell carcinoma, nos. 0.75 \u00b5m per pixel.",
+     "lead": 0,
+     "tissue": [
+      0.86,
+      0.83,
+      0.86
+     ]
+    }
+   ],
+   "best": {
+    "example": 1,
+    "seeds": [
+     0,
+     2
+    ],
+    "diff": 38.8
+   }
+  }
+ },
+ "uncond": {
+  "tissue": [
+   1.0,
+   0.72,
+   0.97,
+   0.85,
+   0.9,
+   0.16,
+   0.98,
+   0.86,
+   0.91,
+   0.57,
+   0.94,
+   0.88,
+   0.9,
+   0.91,
+   0.72,
+   0.62,
+   0.13,
+   0.89,
+   0.73,
+   0.79,
+   0.56,
+   0.57,
+   0.82,
+   0.6
+  ],
+  "dense": [
+   0,
+   2,
+   3,
+   4,
+   6,
+   7,
+   8,
+   10,
+   11,
+   12,
+   13,
+   17,
+   22
+  ]
+ },
+ "tls": {
+  "slides": [
+   {
+    "dir": "s0",
+    "organ": "lung (squamous cell carcinoma)",
+    "width": 1600,
+    "height": 734,
+    "mpp": 12.28,
+    "field_um": 1280,
+    "det": [
+     [
+      0.42036,
+      0.19044
+     ],
+     [
+      0.42997,
+      0.14458
+     ],
+     [
+      0.58229,
+      0.78581
+     ],
+     [
+      0.59109,
+      0.73574
+     ]
+    ],
+    "truth": [
+     [
+      0.42096,
+      0.19028
+     ],
+     [
+      0.43162,
+      0.14422
+     ],
+     [
+      0.5931,
+      0.73515
+     ],
+     [
+      0.58237,
+      0.78519
+     ]
+    ],
+    "n_det": 4,
+    "n_truth": 4,
+    "tp": 4,
+    "f1": 1.0,
+    "details": [
+     {
+      "kind": "det",
+      "y": 0.42036,
+      "x": 0.19044,
+      "file": "p0.webp"
+     },
+     {
+      "kind": "det",
+      "y": 0.42997,
+      "x": 0.14458,
+      "file": "p1.webp"
+     },
+     {
+      "kind": "det",
+      "y": 0.58229,
+      "x": 0.78581,
+      "file": "p2.webp"
+     },
+     {
+      "kind": "det",
+      "y": 0.59109,
+      "x": 0.73574,
+      "file": "p3.webp"
+     }
+    ]
+   },
+   {
+    "dir": "s1",
+    "organ": "kidney (clear cell)",
+    "width": 1600,
+    "height": 1045,
+    "mpp": 19.15,
+    "field_um": 1280,
+    "det": [
+     [
+      0.45004,
+      0.90196
+     ],
+     [
+      0.68319,
+      0.93671
+     ],
+     [
+      0.69196,
+      0.27905
+     ],
+     [
+      0.76594,
+      0.96381
+     ],
+     [
+      0.77557,
+      0.30623
+     ]
+    ],
+    "truth": [
+     [
+      0.69261,
+      0.27942
+     ],
+     [
+      0.68294,
+      0.93647
+     ],
+     [
+      0.78099,
+      0.30677
+     ],
+     [
+      0.77008,
+      0.96439
+     ]
+    ],
+    "n_det": 5,
+    "n_truth": 4,
+    "tp": 4,
+    "f1": 0.889,
+    "details": [
+     {
+      "kind": "det",
+      "y": 0.45004,
+      "x": 0.90196,
+      "file": "p0.webp"
+     },
+     {
+      "kind": "det",
+      "y": 0.68319,
+      "x": 0.93671,
+      "file": "p1.webp"
+     },
+     {
+      "kind": "det",
+      "y": 0.69196,
+      "x": 0.27905,
+      "file": "p2.webp"
+     },
+     {
+      "kind": "det",
+      "y": 0.76594,
+      "x": 0.96381,
+      "file": "p3.webp"
+     },
+     {
+      "kind": "det",
+      "y": 0.77557,
+      "x": 0.30623,
+      "file": "p4.webp"
+     }
+    ]
+   },
+   {
+    "dir": "s2",
+    "organ": "bladder",
+    "width": 1600,
+    "height": 1396,
+    "mpp": 16.72,
+    "field_um": 1280,
+    "det": [
+     [
+      0.31994,
+      0.43487
+     ],
+     [
+      0.38797,
+      0.3075
+     ],
+     [
+      0.47776,
+      0.42663
+     ],
+     [
+      0.83786,
+      0.66394
+     ]
+    ],
+    "truth": [
+     [
+      0.38351,
+      0.30867
+     ],
+     [
+      0.31996,
+      0.43924
+     ],
+     [
+      0.1777,
+      0.20376
+     ],
+     [
+      0.83854,
+      0.66516
+     ],
+     [
+      0.59103,
+      0.68125
+     ],
+     [
+      0.4771,
+      0.42649
+     ]
+    ],
+    "n_det": 4,
+    "n_truth": 6,
+    "tp": 4,
+    "f1": 0.8,
+    "details": [
+     {
+      "kind": "det",
+      "y": 0.31994,
+      "x": 0.43487,
+      "file": "p0.webp"
+     },
+     {
+      "kind": "det",
+      "y": 0.38797,
+      "x": 0.3075,
+      "file": "p1.webp"
+     },
+     {
+      "kind": "det",
+      "y": 0.47776,
+      "x": 0.42663,
+      "file": "p2.webp"
+     },
+     {
+      "kind": "det",
+      "y": 0.83786,
+      "x": 0.66394,
+      "file": "p3.webp"
+     },
+     {
+      "kind": "truth",
+      "y": 0.1777,
+      "x": 0.20376,
+      "file": "p4.webp"
+     },
+     {
+      "kind": "truth",
+      "y": 0.59103,
+      "x": 0.68125,
+      "file": "p5.webp"
+     }
+    ]
+   },
+   {
+    "dir": "s3",
+    "organ": "lung (squamous cell carcinoma)",
+    "width": 1600,
+    "height": 1181,
+    "mpp": 9.98,
+    "field_um": 1280,
+    "det": [
+     [
+      0.18296,
+      0.20023
+     ],
+     [
+      0.26117,
+      0.75472
+     ],
+     [
+      0.29433,
+      0.7004
+     ],
+     [
+      0.29625,
+      0.70376
+     ],
+     [
+      0.30113,
+      0.74496
+     ],
+     [
+      0.30333,
+      0.77438
+     ],
+     [
+      0.30802,
+      0.74762
+     ],
+     [
+      0.32387,
+      0.45452
+     ],
+     [
+      0.33508,
+      0.76247
+     ],
+     [
+      0.34271,
+      0.75329
+     ],
+     [
+      0.34479,
+      0.71932
+     ],
+     [
+      0.34663,
+      0.57084
+     ],
+     [
+      0.36252,
+      0.63925
+     ],
+     [
+      0.39562,
+      0.47096
+     ],
+     [
+      0.40384,
+      0.47901
+     ],
+     [
+      0.41834,
+      0.67235
+     ],
+     [
+      0.45189,
+      0.51711
+     ],
+     [
+      0.47094,
+      0.56275
+     ],
+     [
+      0.47743,
+      0.40164
+     ],
+     [
+      0.49032,
+      0.30564
+     ],
+     [
+      0.49717,
+      0.51922
+     ],
+     [
+      0.50816,
+      0.20668
+     ],
+     [
+      0.51222,
+      0.45426
+     ],
+     [
+      0.53135,
+      0.55533
+     ],
+     [
+      0.52932,
+      0.30404
+     ],
+     [
+      0.52946,
+      0.31722
+     ],
+     [
+      0.53174,
+      0.61025
+     ],
+     [
+      0.53068,
+      0.59982
+     ],
+     [
+      0.54137,
+      0.30764
+     ],
+     [
+      0.55143,
+      0.14235
+     ],
+     [
+      0.55222,
+      0.13555
+     ],
+     [
+      0.55474,
+      0.27068
+     ],
+     [
+      0.56173,
+      0.41152
+     ],
+     [
+      0.56417,
+      0.45468
+     ],
+     [
+      0.56581,
+      0.5251
+     ],
+     [
+      0.58242,
+      0.44919
+     ],
+     [
+      0.58421,
+      0.15828
+     ],
+     [
+      0.60115,
+      0.2014
+     ],
+     [
+      0.6001,
+      0.34291
+     ],
+     [
+      0.60413,
+      0.39162
+     ],
+     [
+      0.61433,
+      0.3977
+     ],
+     [
+      0.6303,
+      0.2293
+     ],
+     [
+      0.6319,
+      0.17095
+     ],
+     [
+      0.63766,
+      0.42301
+     ],
+     [
+      0.6439,
+      0.29114
+     ],
+     [
+      0.66388,
+      0.24678
+     ],
+     [
+      0.6699,
+      0.17826
+     ],
+     [
+      0.67813,
+      0.40405
+     ],
+     [
+      0.68067,
+      0.35991
+     ],
+     [
+      0.69158,
+      0.47918
+     ],
+     [
+      0.7027,
+      0.15333
+     ],
+     [
+      0.70999,
+      0.481
+     ],
+     [
+      0.73672,
+      0.23871
+     ],
+     [
+      0.74287,
+      0.18994
+     ],
+     [
+      0.74144,
+      0.3397
+     ],
+     [
+      0.74521,
+      0.46826
+     ],
+     [
+      0.75621,
+      0.29668
+     ],
+     [
+      0.76945,
+      0.46003
+     ],
+     [
+      0.77115,
+      0.18759
+     ],
+     [
+      0.77324,
+      0.10134
+     ],
+     [
+      0.7736,
+      0.23714
+     ],
+     [
+      0.79174,
+      0.28487
+     ],
+     [
+      0.80102,
+      0.33811
+     ],
+     [
+      0.80207,
+      0.11465
+     ],
+     [
+      0.81538,
+      0.17156
+     ],
+     [
+      0.82291,
+      0.24279
+     ],
+     [
+      0.82947,
+      0.21397
+     ],
+     [
+      0.85283,
+      0.2579
+     ],
+     [
+      0.86333,
+      0.38256
+     ],
+     [
+      0.86581,
+      0.31061
+     ],
+     [
+      0.873,
+      0.31591
+     ],
+     [
+      0.87559,
+      0.23198
+     ],
+     [
+      0.88467,
+      0.19582
+     ],
+     [
+      0.89139,
+      0.13265
+     ],
+     [
+      0.92775,
+      0.37913
+     ],
+     [
+      0.95291,
+      0.25332
+     ]
+    ],
+    "truth": [
+     [
+      0.88689,
+      0.39607
+     ],
+     [
+      0.64338,
+      0.29299
+     ],
+     [
+      0.57666,
+      0.45223
+     ],
+     [
+      0.74263,
+      0.19608
+     ],
+     [
+      0.68476,
+      0.47841
+     ],
+     [
+      0.47763,
+      0.40162
+     ],
+     [
+      0.33978,
+      0.75636
+     ],
+     [
+      0.74188,
+      0.46895
+     ],
+     [
+      0.29501,
+      0.70182
+     ],
+     [
+      0.61019,
+      0.39639
+     ],
+     [
+      0.77255,
+      0.10086
+     ],
+     [
+      0.87006,
+      0.3124
+     ],
+     [
+      0.39759,
+      0.4725
+     ],
+     [
+      0.77449,
+      0.18839
+     ],
+     [
+      0.68691,
+      0.40188
+     ],
+     [
+      0.68338,
+      0.3579
+     ],
+     [
+      0.63737,
+      0.42297
+     ],
+     [
+      0.3666,
+      0.60316
+     ],
+     [
+      0.53403,
+      0.30889
+     ],
+     [
+      0.48943,
+      0.30531
+     ],
+     [
+      0.79294,
+      0.28515
+     ],
+     [
+      0.55632,
+      0.26937
+     ],
+     [
+      0.85246,
+      0.25702
+     ],
+     [
+      0.63017,
+      0.22786
+     ],
+     [
+      0.80356,
+      0.11325
+     ],
+     [
+      0.55292,
+      0.1383
+     ],
+     [
+      0.60243,
+      0.20408
+     ],
+     [
+      0.41837,
+      0.67502
+     ],
+     [
+      0.75598,
+      0.29634
+     ],
+     [
+      0.88001,
+      0.19811
+     ],
+     [
+      0.59988,
+      0.34293
+     ],
+     [
+      0.77309,
+      0.24079
+     ],
+     [
+      0.80336,
+      0.33818
+     ],
+     [
+      0.45537,
+      0.51543
+     ],
+     [
+      0.86206,
+      0.38249
+     ],
+     [
+      0.35931,
+      0.63881
+     ],
+     [
+      0.43772,
+      0.41816
+     ],
+     [
+      0.3035,
+      0.77326
+     ],
+     [
+      0.74018,
+      0.33893
+     ],
+     [
+      0.3231,
+      0.45431
+     ],
+     [
+      0.6677,
+      0.17608
+     ],
+     [
+      0.8293,
+      0.21151
+     ],
+     [
+      0.73622,
+      0.23588
+     ],
+     [
+      0.30554,
+      0.74655
+     ],
+     [
+      0.2635,
+      0.7587
+     ],
+     [
+      0.63216,
+      0.17281
+     ],
+     [
+      0.66541,
+      0.24131
+     ],
+     [
+      0.56077,
+      0.41302
+     ],
+     [
+      0.5314,
+      0.55418
+     ],
+     [
+      0.82319,
+      0.24315
+     ],
+     [
+      0.51246,
+      0.45483
+     ],
+     [
+      0.79804,
+      0.16096
+     ],
+     [
+      0.8158,
+      0.17054
+     ],
+     [
+      0.34457,
+      0.57719
+     ],
+     [
+      0.58223,
+      0.36203
+     ],
+     [
+      0.88001,
+      0.23079
+     ],
+     [
+      0.36115,
+      0.60038
+     ],
+     [
+      0.89142,
+      0.34765
+     ]
+    ],
+    "n_det": 76,
+    "n_truth": 58,
+    "tp": 51,
+    "f1": 0.761,
+    "details": [
+     {
+      "kind": "det",
+      "y": 0.18296,
+      "x": 0.20023,
+      "file": "p0.webp"
+     },
+     {
+      "kind": "det",
+      "y": 0.26117,
+      "x": 0.75472,
+      "file": "p1.webp"
+     },
+     {
+      "kind": "det",
+      "y": 0.29433,
+      "x": 0.7004,
+      "file": "p2.webp"
+     },
+     {
+      "kind": "det",
+      "y": 0.29625,
+      "x": 0.70376,
+      "file": "p3.webp"
+     },
+     {
+      "kind": "det",
+      "y": 0.30113,
+      "x": 0.74496,
+      "file": "p4.webp"
+     },
+     {
+      "kind": "det",
+      "y": 0.30333,
+      "x": 0.77438,
+      "file": "p5.webp"
+     },
+     {
+      "kind": "det",
+      "y": 0.30802,
+      "x": 0.74762,
+      "file": "p6.webp"
+     },
+     {
+      "kind": "det",
+      "y": 0.32387,
+      "x": 0.45452,
+      "file": "p7.webp"
+     },
+     {
+      "kind": "det",
+      "y": 0.33508,
+      "x": 0.76247,
+      "file": "p8.webp"
+     },
+     {
+      "kind": "det",
+      "y": 0.34271,
+      "x": 0.75329,
+      "file": "p9.webp"
+     },
+     {
+      "kind": "det",
+      "y": 0.34479,
+      "x": 0.71932,
+      "file": "p10.webp"
+     },
+     {
+      "kind": "det",
+      "y": 0.34663,
+      "x": 0.57084,
+      "file": "p11.webp"
+     },
+     {
+      "kind": "det",
+      "y": 0.36252,
+      "x": 0.63925,
+      "file": "p12.webp"
+     },
+     {
+      "kind": "det",
+      "y": 0.39562,
+      "x": 0.47096,
+      "file": "p13.webp"
+     }
+    ]
+   },
+   {
+    "dir": "s4",
+    "organ": "kidney (clear cell)",
+    "width": 1600,
+    "height": 1355,
+    "mpp": 14.15,
+    "field_um": 1280,
+    "det": [
+     [
+      0.10523,
+      0.36003
+     ],
+     [
+      0.26528,
+      0.30834
+     ],
+     [
+      0.32479,
+      0.3941
+     ],
+     [
+      0.37224,
+      0.46207
+     ],
+     [
+      0.3888,
+      0.49921
+     ],
+     [
+      0.42917,
+      0.19372
+     ],
+     [
+      0.46305,
+      0.22251
+     ],
+     [
+      0.51306,
+      0.19626
+     ],
+     [
+      0.58576,
+      0.9031
+     ]
+    ],
+    "truth": [
+     [
+      0.45765,
+      0.19395
+     ],
+     [
+      0.51245,
+      0.19601
+     ],
+     [
+      0.10447,
+      0.36043
+     ],
+     [
+      0.26259,
+      0.30855
+     ],
+     [
+      0.42936,
+      0.19392
+     ],
+     [
+      0.46157,
+      0.22255
+     ],
+     [
+      0.38629,
+      0.50294
+     ]
+    ],
+    "n_det": 9,
+    "n_truth": 7,
+    "tp": 6,
+    "f1": 0.75,
+    "details": [
+     {
+      "kind": "det",
+      "y": 0.10523,
+      "x": 0.36003,
+      "file": "p0.webp"
+     },
+     {
+      "kind": "det",
+      "y": 0.26528,
+      "x": 0.30834,
+      "file": "p1.webp"
+     },
+     {
+      "kind": "det",
+      "y": 0.32479,
+      "x": 0.3941,
+      "file": "p2.webp"
+     },
+     {
+      "kind": "det",
+      "y": 0.37224,
+      "x": 0.46207,
+      "file": "p3.webp"
+     },
+     {
+      "kind": "det",
+      "y": 0.3888,
+      "x": 0.49921,
+      "file": "p4.webp"
+     },
+     {
+      "kind": "det",
+      "y": 0.42917,
+      "x": 0.19372,
+      "file": "p5.webp"
+     },
+     {
+      "kind": "det",
+      "y": 0.46305,
+      "x": 0.22251,
+      "file": "p6.webp"
+     },
+     {
+      "kind": "det",
+      "y": 0.51306,
+      "x": 0.19626,
+      "file": "p7.webp"
+     },
+     {
+      "kind": "det",
+      "y": 0.58576,
+      "x": 0.9031,
+      "file": "p8.webp"
+     },
+     {
+      "kind": "truth",
+      "y": 0.45765,
+      "x": 0.19395,
+      "file": "p9.webp"
+     }
+    ]
+   },
+   {
+    "dir": "s5",
+    "organ": "bladder",
+    "width": 1600,
+    "height": 1059,
+    "mpp": 20.13,
+    "field_um": 1280,
+    "det": [
+     [
+      0.31352,
+      0.43449
+     ],
+     [
+      0.50723,
+      0.90902
+     ],
+     [
+      0.51154,
+      0.31645
+     ],
+     [
+      0.5142,
+      0.78363
+     ],
+     [
+      0.51364,
+      0.78526
+     ],
+     [
+      0.55123,
+      0.33272
+     ],
+     [
+      0.55244,
+      0.33203
+     ],
+     [
+      0.57703,
+      0.62936
+     ],
+     [
+      0.57679,
+      0.76728
+     ],
+     [
+      0.60089,
+      0.34323
+     ],
+     [
+      0.65176,
+      0.28932
+     ],
+     [
+      0.66475,
+      0.59973
+     ],
+     [
+      0.67464,
+      0.65573
+     ],
+     [
+      0.68049,
+      0.74204
+     ],
+     [
+      0.69135,
+      0.82105
+     ],
+     [
+      0.72123,
+      0.84721
+     ],
+     [
+      0.76813,
+      0.22053
+     ],
+     [
+      0.80905,
+      0.22306
+     ]
+    ],
+    "truth": [
+     [
+      0.51394,
+      0.78445
+     ],
+     [
+      0.57739,
+      0.76706
+     ],
+     [
+      0.56502,
+      0.77182
+     ],
+     [
+      0.68221,
+      0.7417
+     ],
+     [
+      0.50721,
+      0.90844
+     ],
+     [
+      0.67502,
+      0.65565
+     ],
+     [
+      0.5503,
+      0.33341
+     ],
+     [
+      0.80768,
+      0.22299
+     ],
+     [
+      0.76898,
+      0.22173
+     ],
+     [
+      0.51108,
+      0.31645
+     ]
+    ],
+    "n_det": 18,
+    "n_truth": 10,
+    "tp": 9,
+    "f1": 0.643,
+    "details": [
+     {
+      "kind": "det",
+      "y": 0.31352,
+      "x": 0.43449,
+      "file": "p0.webp"
+     },
+     {
+      "kind": "det",
+      "y": 0.50723,
+      "x": 0.90902,
+      "file": "p1.webp"
+     },
+     {
+      "kind": "det",
+      "y": 0.51154,
+      "x": 0.31645,
+      "file": "p2.webp"
+     },
+     {
+      "kind": "det",
+      "y": 0.5142,
+      "x": 0.78363,
+      "file": "p3.webp"
+     },
+     {
+      "kind": "det",
+      "y": 0.51364,
+      "x": 0.78526,
+      "file": "p4.webp"
+     },
+     {
+      "kind": "det",
+      "y": 0.55123,
+      "x": 0.33272,
+      "file": "p5.webp"
+     },
+     {
+      "kind": "det",
+      "y": 0.55244,
+      "x": 0.33203,
+      "file": "p6.webp"
+     },
+     {
+      "kind": "det",
+      "y": 0.57703,
+      "x": 0.62936,
+      "file": "p7.webp"
+     },
+     {
+      "kind": "det",
+      "y": 0.57679,
+      "x": 0.76728,
+      "file": "p8.webp"
+     },
+     {
+      "kind": "det",
+      "y": 0.60089,
+      "x": 0.34323,
+      "file": "p9.webp"
+     },
+     {
+      "kind": "det",
+      "y": 0.65176,
+      "x": 0.28932,
+      "file": "p10.webp"
+     },
+     {
+      "kind": "det",
+      "y": 0.66475,
+      "x": 0.59973,
+      "file": "p11.webp"
+     },
+     {
+      "kind": "det",
+      "y": 0.67464,
+      "x": 0.65573,
+      "file": "p12.webp"
+     },
+     {
+      "kind": "det",
+      "y": 0.68049,
+      "x": 0.74204,
+      "file": "p13.webp"
+     }
+    ]
+   }
+  ],
+  "scatter": {
+   "gt": [
+    14,
+    12,
+    14,
+    0,
+    4,
+    52,
+    12,
+    29,
+    24,
+    46,
+    7,
+    2,
+    20,
+    10,
+    10,
+    29,
+    34,
+    26,
+    3,
+    7,
+    9,
+    0,
+    29,
+    57,
+    57,
+    1,
+    3,
+    2,
+    14,
+    2,
+    2,
+    6,
+    3,
+    8,
+    4,
+    9,
+    16,
+    3,
+    3,
+    23,
+    0,
+    13,
+    8,
+    10,
+    13,
+    0,
+    7,
+    24,
+    4,
+    3,
+    17,
+    42,
+    0,
+    0,
+    2,
+    14,
+    0,
+    5,
+    20,
+    21,
+    3,
+    3,
+    1,
+    51,
+    3,
+    5,
+    9,
+    2,
+    14,
+    14,
+    2,
+    22,
+    8,
+    20,
+    33,
+    17,
+    0,
+    17,
+    4,
+    33,
+    7,
+    4,
+    8,
+    8,
+    10,
+    5,
+    5,
+    22,
+    2,
+    13,
+    0,
+    24,
+    8,
+    26,
+    2,
+    1,
+    3,
+    6,
+    8,
+    6,
+    1,
+    0,
+    0,
+    0,
+    9,
+    0,
+    10,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    2,
+    6,
+    6,
+    4,
+    15,
+    10,
+    6,
+    2,
+    12,
+    4,
+    2,
+    3,
+    1,
+    5,
+    2,
+    5,
+    2,
+    0,
+    8,
+    13,
+    15,
+    10,
+    10,
+    17,
+    11,
+    0,
+    8,
+    5,
+    7,
+    8,
+    25,
+    12,
+    0,
+    14,
+    3,
+    7,
+    3,
+    42,
+    0,
+    1,
+    3,
+    48,
+    0,
+    7,
+    3,
+    2,
+    4,
+    3,
+    7,
+    0,
+    5,
+    7,
+    51,
+    0,
+    1,
+    0,
+    17,
+    0,
+    2,
+    8,
+    2,
+    2,
+    6,
+    2,
+    1,
+    8,
+    10,
+    23,
+    12,
+    4,
+    1,
+    9,
+    12,
+    31,
+    15,
+    20,
+    31,
+    0,
+    6,
+    7,
+    5,
+    19,
+    6,
+    37,
+    55,
+    10,
+    0,
+    26,
+    3,
+    7,
+    20,
+    19,
+    50,
+    9,
+    5,
+    19,
+    6,
+    8,
+    46,
+    3,
+    14,
+    1,
+    6,
+    24,
+    0,
+    30,
+    10,
+    3,
+    37,
+    34,
+    15,
+    7,
+    9,
+    2,
+    31,
+    58,
+    106,
+    30,
+    0,
+    3,
+    0,
+    0,
+    12,
+    0,
+    14,
+    41,
+    28,
+    4,
+    0,
+    4,
+    10,
+    4,
+    6,
+    0,
+    1,
+    2,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    4,
+    2,
+    0,
+    1,
+    8,
+    0,
+    1,
+    0,
+    4,
+    0,
+    10,
+    3,
+    4,
+    0,
+    1,
+    0,
+    4,
+    1,
+    0,
+    0,
+    1,
+    2,
+    0,
+    0,
+    0,
+    0,
+    1,
+    7,
+    0,
+    1,
+    2,
+    0,
+    1,
+    1,
+    5,
+    0,
+    1,
+    0,
+    0,
+    0,
+    2,
+    0,
+    4,
+    2,
+    0,
+    2,
+    2,
+    9,
+    8,
+    0,
+    0,
+    2,
+    4,
+    0,
+    2,
+    0,
+    0,
+    2,
+    0,
+    0,
+    2,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    3,
+    0,
+    0,
+    8,
+    0,
+    0,
+    6,
+    5,
+    4,
+    0,
+    2,
+    0,
+    0,
+    0,
+    0,
+    4,
+    0,
+    0,
+    7,
+    1,
+    0,
+    5,
+    3,
+    2,
+    0,
+    0,
+    1,
+    0,
+    0,
+    1,
+    5,
+    0,
+    4,
+    0,
+    7,
+    0,
+    6,
+    0,
+    0,
+    0,
+    0,
+    7,
+    0,
+    0,
+    0,
+    0,
+    0,
+    4,
+    0,
+    3,
+    0,
+    0,
+    0,
+    0,
+    0,
+    3,
+    0,
+    10,
+    0,
+    0,
+    0,
+    0,
+    0,
+    2,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    10,
+    2,
+    0,
+    6,
+    7,
+    1,
+    4,
+    6,
+    0,
+    0,
+    5,
+    0,
+    0,
+    0,
+    6,
+    0,
+    3,
+    3,
+    0,
+    7,
+    1,
+    9,
+    0,
+    2,
+    6,
+    2,
+    0,
+    3,
+    0,
+    0,
+    0,
+    2,
+    0,
+    0,
+    1,
+    2,
+    1,
+    0,
+    0,
+    0,
+    2,
+    0,
+    0,
+    0,
+    0,
+    7,
+    7,
+    0,
+    3,
+    1,
+    0,
+    3,
+    0,
+    16,
+    0,
+    0,
+    0,
+    7,
+    0,
+    7,
+    4,
+    4,
+    1,
+    1,
+    8,
+    1,
+    7,
+    3,
+    5,
+    11,
+    6,
+    0,
+    2,
+    3,
+    0,
+    0,
+    0,
+    9,
+    2,
+    0,
+    0,
+    8,
+    0,
+    7,
+    0,
+    1,
+    0,
+    0,
+    4,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    4,
+    3,
+    5,
+    4,
+    0,
+    0,
+    0,
+    0,
+    2,
+    0,
+    4,
+    4,
+    1,
+    12,
+    9,
+    6,
+    8,
+    0,
+    23,
+    4,
+    2,
+    8,
+    76,
+    0,
+    2,
+    17,
+    5,
+    23,
+    1,
+    6,
+    10,
+    0,
+    5,
+    9,
+    1,
+    1,
+    11,
+    0,
+    1,
+    6,
+    1,
+    1,
+    2,
+    26,
+    12,
+    1,
+    3,
+    12,
+    3,
+    2,
+    3,
+    1,
+    1,
+    1,
+    1,
+    13,
+    7,
+    4,
+    1,
+    0,
+    5,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    18,
+    0,
+    9,
+    3,
+    0,
+    3,
+    27,
+    0,
+    0,
+    0,
+    13,
+    7,
+    0,
+    4,
+    0,
+    8,
+    8,
+    19,
+    12,
+    2,
+    1,
+    58,
+    0,
+    3,
+    15,
+    17,
+    0,
+    24,
+    7,
+    9,
+    8,
+    15,
+    15,
+    9,
+    18,
+    0,
+    0,
+    21,
+    23,
+    21,
+    12,
+    9,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    2,
+    30,
+    4,
+    3,
+    21,
+    14,
+    0,
+    24,
+    8,
+    5,
+    6,
+    3,
+    5,
+    9,
+    14,
+    1,
+    11,
+    6,
+    6,
+    0,
+    25,
+    1,
+    0,
+    0,
+    0,
+    4,
+    1,
+    0,
+    1,
+    2,
+    3,
+    38,
+    0,
+    23,
+    0,
+    0,
+    2,
+    5,
+    0,
+    2,
+    1,
+    22,
+    1,
+    10,
+    16,
+    2,
+    6,
+    0,
+    0,
+    0,
+    7,
+    11,
+    1,
+    5,
+    5,
+    0,
+    3,
+    10,
+    3,
+    3,
+    3,
+    2,
+    0,
+    1,
+    14,
+    7
+   ],
+   "pred": [
+    21,
+    24,
+    27,
+    0,
+    3,
+    68,
+    9,
+    4,
+    24,
+    60,
+    9,
+    9,
+    27,
+    7,
+    8,
+    49,
+    30,
+    28,
+    2,
+    15,
+    33,
+    25,
+    39,
+    72,
+    85,
+    2,
+    9,
+    12,
+    31,
+    8,
+    7,
+    4,
+    8,
+    47,
+    35,
+    23,
+    25,
+    20,
+    15,
+    29,
+    5,
+    9,
+    21,
+    18,
+    3,
+    3,
+    32,
+    35,
+    35,
+    43,
+    43,
+    43,
+    33,
+    33,
+    33,
+    33,
+    33,
+    33,
+    57,
+    57,
+    79,
+    79,
+    22,
+    88,
+    46,
+    23,
+    36,
+    29,
+    44,
+    25,
+    11,
+    21,
+    54,
+    37,
+    44,
+    34,
+    0,
+    76,
+    35,
+    42,
+    36,
+    13,
+    31,
+    16,
+    48,
+    5,
+    21,
+    17,
+    19,
+    65,
+    1,
+    22,
+    15,
+    16,
+    2,
+    0,
+    1,
+    5,
+    5,
+    4,
+    10,
+    23,
+    3,
+    10,
+    4,
+    9,
+    19,
+    2,
+    5,
+    10,
+    8,
+    9,
+    17,
+    13,
+    29,
+    28,
+    10,
+    24,
+    20,
+    9,
+    7,
+    9,
+    4,
+    3,
+    8,
+    1,
+    14,
+    7,
+    18,
+    1,
+    1,
+    15,
+    42,
+    4,
+    11,
+    26,
+    11,
+    5,
+    11,
+    20,
+    9,
+    14,
+    22,
+    27,
+    23,
+    11,
+    21,
+    25,
+    69,
+    18,
+    141,
+    10,
+    7,
+    5,
+    61,
+    4,
+    24,
+    7,
+    10,
+    8,
+    9,
+    13,
+    6,
+    17,
+    7,
+    56,
+    8,
+    0,
+    1,
+    18,
+    10,
+    41,
+    17,
+    1,
+    0,
+    0,
+    0,
+    5,
+    19,
+    33,
+    27,
+    13,
+    19,
+    3,
+    36,
+    42,
+    66,
+    34,
+    56,
+    57,
+    4,
+    24,
+    53,
+    7,
+    24,
+    2,
+    28,
+    47,
+    7,
+    0,
+    39,
+    2,
+    16,
+    3,
+    25,
+    49,
+    5,
+    20,
+    45,
+    34,
+    2,
+    21,
+    3,
+    6,
+    1,
+    7,
+    10,
+    4,
+    43,
+    5,
+    4,
+    17,
+    53,
+    25,
+    14,
+    8,
+    5,
+    10,
+    35,
+    154,
+    16,
+    2,
+    15,
+    2,
+    34,
+    88,
+    16,
+    24,
+    30,
+    60,
+    0,
+    0,
+    2,
+    5,
+    4,
+    10,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    0,
+    2,
+    0,
+    0,
+    1,
+    0,
+    1,
+    9,
+    1,
+    5,
+    11,
+    32,
+    10,
+    12,
+    5,
+    14,
+    4,
+    33,
+    5,
+    4,
+    7,
+    8,
+    12,
+    10,
+    1,
+    4,
+    25,
+    12,
+    3,
+    17,
+    90,
+    12,
+    13,
+    4,
+    10,
+    2,
+    16,
+    7,
+    15,
+    13,
+    4,
+    21,
+    4,
+    5,
+    8,
+    3,
+    7,
+    7,
+    7,
+    48,
+    14,
+    8,
+    14,
+    5,
+    10,
+    36,
+    6,
+    2,
+    2,
+    5,
+    22,
+    3,
+    0,
+    0,
+    9,
+    3,
+    0,
+    5,
+    2,
+    0,
+    3,
+    5,
+    1,
+    10,
+    44,
+    22,
+    19,
+    38,
+    4,
+    1,
+    17,
+    17,
+    24,
+    11,
+    11,
+    13,
+    6,
+    17,
+    14,
+    9,
+    53,
+    8,
+    19,
+    5,
+    3,
+    44,
+    6,
+    25,
+    2,
+    7,
+    29,
+    2,
+    28,
+    18,
+    93,
+    12,
+    17,
+    15,
+    18,
+    72,
+    14,
+    6,
+    6,
+    1,
+    6,
+    22,
+    28,
+    4,
+    14,
+    116,
+    4,
+    10,
+    0,
+    16,
+    6,
+    7,
+    21,
+    8,
+    73,
+    11,
+    19,
+    38,
+    7,
+    1,
+    5,
+    4,
+    24,
+    15,
+    13,
+    20,
+    17,
+    1,
+    9,
+    7,
+    37,
+    22,
+    6,
+    2,
+    4,
+    27,
+    29,
+    26,
+    12,
+    0,
+    0,
+    20,
+    2,
+    0,
+    0,
+    7,
+    0,
+    0,
+    5,
+    7,
+    9,
+    3,
+    19,
+    17,
+    9,
+    16,
+    1,
+    6,
+    8,
+    3,
+    7,
+    10,
+    4,
+    0,
+    14,
+    10,
+    10,
+    6,
+    2,
+    0,
+    2,
+    4,
+    3,
+    5,
+    6,
+    4,
+    15,
+    47,
+    4,
+    11,
+    3,
+    7,
+    3,
+    6,
+    37,
+    14,
+    18,
+    25,
+    10,
+    15,
+    27,
+    4,
+    27,
+    9,
+    18,
+    18,
+    1,
+    15,
+    11,
+    14,
+    25,
+    20,
+    17,
+    12,
+    12,
+    31,
+    28,
+    10,
+    15,
+    20,
+    8,
+    1,
+    29,
+    1,
+    35,
+    8,
+    7,
+    8,
+    4,
+    27,
+    4,
+    0,
+    2,
+    13,
+    1,
+    8,
+    6,
+    18,
+    5,
+    12,
+    16,
+    13,
+    4,
+    4,
+    13,
+    25,
+    6,
+    12,
+    24,
+    9,
+    12,
+    13,
+    19,
+    21,
+    11,
+    38,
+    14,
+    5,
+    30,
+    77,
+    7,
+    10,
+    28,
+    7,
+    45,
+    6,
+    35,
+    18,
+    13,
+    24,
+    29,
+    9,
+    6,
+    15,
+    3,
+    6,
+    96,
+    8,
+    19,
+    19,
+    9,
+    32,
+    32,
+    32,
+    32,
+    20,
+    20,
+    20,
+    20,
+    20,
+    4,
+    4,
+    6,
+    5,
+    5,
+    0,
+    34,
+    18,
+    9,
+    2,
+    18,
+    4,
+    4,
+    1,
+    53,
+    11,
+    31,
+    12,
+    16,
+    22,
+    20,
+    2,
+    9,
+    39,
+    1,
+    14,
+    0,
+    20,
+    15,
+    5,
+    55,
+    2,
+    21,
+    18,
+    41,
+    29,
+    25,
+    53,
+    76,
+    14,
+    14,
+    14,
+    23,
+    6,
+    37,
+    9,
+    25,
+    43,
+    19,
+    60,
+    34,
+    156,
+    9,
+    19,
+    7,
+    22,
+    15,
+    36,
+    28,
+    8,
+    6,
+    6,
+    6,
+    6,
+    4,
+    13,
+    26,
+    8,
+    3,
+    13,
+    9,
+    10,
+    35,
+    7,
+    3,
+    4,
+    4,
+    14,
+    14,
+    24,
+    9,
+    6,
+    19,
+    12,
+    11,
+    27,
+    6,
+    8,
+    4,
+    7,
+    12,
+    14,
+    5,
+    3,
+    6,
+    7,
+    27,
+    7,
+    29,
+    12,
+    3,
+    11,
+    20,
+    9,
+    17,
+    7,
+    30,
+    16,
+    6,
+    40,
+    2,
+    5,
+    1,
+    12,
+    8,
+    4,
+    8,
+    5,
+    3,
+    21,
+    1,
+    3,
+    6,
+    4,
+    4,
+    3,
+    10,
+    0,
+    3,
+    14,
+    9
+   ]
+  },
+  "n_slides": 678,
+  "f1_all": 0.258,
+  "spearman": 0.53
+ },
+ "credits": [
+  {
+   "name": "TIGER (breast; regions of interest and tumour bulk)",
+   "licence": "CC BY-NC 4.0",
+   "n": 14,
+   "use": "tissue segmentation"
+  },
+  {
+   "name": "BEETLE (breast)",
+   "licence": "CC BY-NC-SA 4.0",
+   "n": 10,
+   "use": "tissue segmentation"
+  },
+  {
+   "name": "BCSS (breast)",
+   "licence": "CC BY 4.0",
+   "n": 6,
+   "use": "tissue segmentation"
+  },
+  {
+   "name": "Histo-Seg (skin)",
+   "licence": "CC BY 4.0; the article asks for non-commercial use",
+   "n": 6,
+   "use": "tissue segmentation"
+  },
+  {
+   "name": "IGNITE (lung)",
+   "licence": "CC BY-NC-SA 4.0",
+   "n": 6,
+   "use": "tissue segmentation"
+  },
+  {
+   "name": "PanNuke (pan-cancer nuclei)",
+   "licence": "CC BY-NC-SA 4.0",
+   "n": 26,
+   "use": "cell detection, nucleus instances, nuclei by type"
+  },
+  {
+   "name": "MoNuSAC (nuclei, four organs)",
+   "licence": "CC BY-NC-SA 4.0",
+   "n": 14,
+   "use": "cell detection, nucleus instances, nuclei by type"
+  },
+  {
+   "name": "TNBC (nuclei, breast and brain)",
+   "licence": "CC BY 4.0",
+   "n": 4,
+   "use": "nuclei by type"
+  },
+  {
+   "name": "PUMA (melanoma)",
+   "licence": "CC0 1.0",
+   "n": 4,
+   "use": "nuclei by type"
+  },
+  {
+   "name": "SegPath (eight immunofluorescence-derived markers)",
+   "licence": "CC BY-NC-SA 4.0",
+   "n": 44,
+   "use": "virtual IHC"
+  },
+  {
+   "name": "PANDA (prostate biopsies)",
+   "licence": "CC BY-NC-SA 4.0",
+   "n": 30,
+   "use": "Gleason grading, classification"
+  },
+  {
+   "name": "SICAPv2 (prostate)",
+   "licence": "CC BY 4.0",
+   "n": 14,
+   "use": "tissue segmentation, Gleason grading"
+  },
+  {
+   "name": "TCGA (six slides for TLS detection, low resolution and 4 um/px details)",
+   "licence": "CC BY 3.0",
+   "n": 6,
+   "use": "TLS detection"
+  },
+  {
+   "name": "TCGA pathology reports (summaries used as conditioning text for two generated regions)",
+   "licence": "public TCGA reports; summaries as printed in the paper",
+   "n": 2,
+   "use": "Large regions, teaser and video: text only"
+  },
+  {
+   "name": "TLS annotations of the HookNet-TLS study (centre points on that slide)",
+   "licence": "no licence stated; available from the authors on request",
+   "n": 6,
+   "use": "TLS detection, ground-truth points"
+  }
+ ]
+}
