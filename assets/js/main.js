@@ -755,14 +755,16 @@
     if (mascot && !reduceMotion) {
       mascot.addEventListener("click", function (e) {
         mascot.classList.remove("is-celebrating"); void mascot.offsetWidth; mascot.classList.add("is-celebrating");
-        var cols = ["#6a3fa0", "#d9488f", "#e8a500", "#399951"];
-        for (var k = 0; k < 14; k++) {
-          var s = document.createElement("span");
-          s.className = "banana-confetti"; s.textContent = "✦"; s.style.color = cols[k % cols.length];
+        var live = document.querySelectorAll(".banana-confetti").length, n = Math.min(10, 40 - live);      // at most 40 on screen
+        for (var k = 0; k < n; k++) {
+          var s = document.createElement("img");
+          s.className = "banana-confetti"; s.src = "assets/img/banana-icon.png"; s.alt = ""; s.setAttribute("aria-hidden", "true");
+          s.style.width = [18, 22, 26, 28][k % 4] + "px";
           s.style.left = e.clientX + "px"; s.style.top = e.clientY + "px";
-          var ang = Math.random() * 6.283, dist = 60 + Math.random() * 120;
+          var ang = Math.random() * 6.283, dist = 130 + Math.random() * 130;
           s.style.setProperty("--dx", Math.cos(ang) * dist + "px"); s.style.setProperty("--dy", Math.sin(ang) * dist + "px");
-          s.style.setProperty("--rot", Math.random() * 360 + "deg");
+          s.style.setProperty("--r0", (Math.random() * 60 - 30) + "deg"); s.style.setProperty("--rot", (Math.random() * 540 - 270) + "deg");
+          s.style.animationDuration = (900 + Math.random() * 400) + "ms";
           s.addEventListener("animationend", function () { this.remove(); });
           document.body.appendChild(s);
         }
